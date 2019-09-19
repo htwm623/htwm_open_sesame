@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import carParkMap from './page/carParkMap.vue'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path:'/',
+      redirect:'map'
+
+    },
+    {
+      path:'/map',
+      name:'map',
+      component:carParkMap
     },
     {
       path: '/about',
