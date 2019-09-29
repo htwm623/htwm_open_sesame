@@ -73,6 +73,6 @@ export default {
 
 <style scoped>
 body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
-#allmap{width:100%;height:500px;}
+#allmap{width:100%;height:700px;}
 p{margin-left:5px; font-size:14px;}
 </style>

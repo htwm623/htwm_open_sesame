@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import carParkMap from './page/carParkMap.vue'
+import carParkMap from '@/page/carParkMap.vue'
+import parkingHome from '@/parking/home.vue'
 
 Vue.use(Router)
 
@@ -9,13 +9,18 @@ export default new Router({
   routes: [
     {
       path:'/',
-      redirect:'map'
+      redirect:'parking'
 
     },
     {
       path:'/map',
       name:'map',
       component:carParkMap
+    },
+    {
+      path:'/parking',
+      name:'parking',
+      component:parkingHome,
     },
     {
       path: '/about',
