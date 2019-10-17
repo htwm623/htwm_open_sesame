@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import carParkMap from '@/page/carParkMap.vue'
 import parkingHome from '@/parking/home.vue'
+import choose from '@/page/choose.vue'
 
 Vue.use(Router)
 
@@ -9,8 +10,12 @@ export default new Router({
   routes: [
     {
       path:'/',
-      redirect:'parking'
+      redirect:'choose'
 
+    },
+    {
+      path:'/choose',
+      component:choose
     },
     {
       path:'/map',
@@ -21,6 +26,12 @@ export default new Router({
       path:'/parking',
       name:'parking',
       component:parkingHome,
+      children:[
+        {
+          path:'main',
+          component:() => import('@/parking/parkingMain.vue')
+        }
+      ]
     },
     {
       path: '/about',

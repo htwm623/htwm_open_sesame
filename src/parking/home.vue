@@ -5,7 +5,7 @@
       <el-container>
         <el-aside width="200px">
         </el-radio-group>
-<el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
+<el-menu default-active="1-4-1" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
   <el-submenu index="1">
     <template slot="title">
       <i class="el-icon-location"></i>
@@ -37,7 +37,11 @@
     <span slot="title">导航四</span>
   </el-menu-item>
 </el-menu></el-aside>
-        <el-main>Main</el-main>
+        <el-main>
+          <keep-alive>
+            <router-view></router-view>
+          </keep-alive>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -46,6 +50,15 @@
 <script>
 export default {
   
+  methods: {
+    handleOpen () {
+      console.log('open')
+    },
+    handleClose () {
+      console.log('close')
+    }
+
+  },
 }
 </script>
 
