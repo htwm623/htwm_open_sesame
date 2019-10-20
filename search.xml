@@ -1,21 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/htwm_open_sesame/2019/10/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+    <title>如何处理json文件结尾的逗号</title>
+    <url>/htwm_open_sesame/2019/10/20/python/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/</url>
+    <content><![CDATA[<h1 id="python如何处理json文件结尾多余的逗号"><a href="#python如何处理json文件结尾多余的逗号" class="headerlink" title="python如何处理json文件结尾多余的逗号"></a>python如何处理json文件结尾多余的逗号</h1><p>问题描述, json文件结尾是不允许使用逗号的</p>
+<p>正确格式如下:</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span>,</span><br><span class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>但如果使用json作为配置文件时,人为输入可能如下</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span>,</span><br><span class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>在使用上述格式的文件时, json.loads文件会报错</p>
+<a id="more"></a>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>参考来源 <a href="https://stackoverflow.com/questions/23705304/can-json-loads-ignore-trailing-commas" target="_blank" rel="noopener">https://stackoverflow.com/questions/23705304/can-json-loads-ignore-trailing-commas</a></p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>使用 jsoncomment 包进行解析</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> jsoncomment <span class="keyword">import</span> JsonComment</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> data_file:    </span><br><span class="line">    parser = JsonComment(json)</span><br><span class="line">    data = parser.load(data_file)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>缺陷 会从字符串中删除逗号 例如</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> jsoncomment <span class="keyword">import</span> JsonComment</span><br><span class="line">string = <span class="string">'&#123;"key1": "&#123;my special value,&#125;"&#125;'</span></span><br><span class="line">parser = JsonComment()</span><br><span class="line">json_boj = parser.loads(string)</span><br><span class="line">print(json_boj)</span><br><span class="line"><span class="comment"># &#123;'key1': '&#123;my special value&#125;'&#125;</span></span><br><span class="line"><span class="comment"># 原本值中的字符串逗号也被删除了</span></span><br></pre></td></tr></table></figure>
+
+<p>局限: 原本值中的字符串逗号也被删除了</p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>先通过python 将字符串进行eval,同时 替换null, true false例如</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> ast, json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">clean_json</span><span class="params">(str)</span>:</span></span><br><span class="line">  str = str.replace(<span class="string">'null'</span>, <span class="string">'None'</span>).replace(<span class="string">'true'</span>, <span class="string">'True'</span>).replace(<span class="string">'false'</span>, <span class="string">'False'</span>)</span><br><span class="line">  <span class="keyword">return</span> json.dumps(ast.literal_eval(str))</span><br></pre></td></tr></table></figure>
+
+<p>局限: </p>
+<ol>
+<li>会破坏原本字符串中包含 null, true, false </li>
+<li>即算使用 ast.literal_eval 也需要考虑一些安全性的问题</li>
+</ol>
 ]]></content>
+      <categories>
+        <category>踩的坑</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>json</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>归档</title>
+    <url>/htwm_open_sesame/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>categories</title>
+    <url>/htwm_open_sesame/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/htwm_open_sesame/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>

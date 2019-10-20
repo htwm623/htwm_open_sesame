@@ -55,30 +55,31 @@
   };
 </script>
 
-  <meta name="description" content="everyone has his weakness">
-<meta name="keywords" content="keywords">
-<meta property="og:type" content="website">
-<meta property="og:title" content="htwm623">
-<meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;index.html">
+  <meta name="description" content="python如何处理json文件结尾多余的逗号问题描述, json文件结尾是不允许使用逗号的 正确格式如下: 1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;&amp;#125;  但如果使用json作为配置文件时,人为输入可能如下 1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;,&amp;#125;">
+<meta name="keywords" content="python,json">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何处理json文件结尾的逗号">
+<meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;2019&#x2F;10&#x2F;20&#x2F;python&#x2F;%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7&#x2F;index.html">
 <meta property="og:site_name" content="htwm623">
-<meta property="og:description" content="everyone has his weakness">
+<meta property="og:description" content="python如何处理json文件结尾多余的逗号问题描述, json文件结尾是不允许使用逗号的 正确格式如下: 1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;&amp;#125;  但如果使用json作为配置文件时,人为输入可能如下 1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;,&amp;#125;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-20T15:17:57.714Z">
 <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/">
+  <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/2019/10/20/python/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>htwm623</title>
+  <title>如何处理json文件结尾的逗号 | htwm623</title>
   
 
 
@@ -259,10 +260,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2019/10/20/python/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -277,8 +278,9 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
+            如何处理json文件结尾的逗号
             
-            <a href="/htwm_open_sesame/2019/10/20/python/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/" class="post-title-link" itemprop="url">如何处理json文件结尾的逗号</a>
+
           
         </h1>
 
@@ -329,7 +331,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="python如何处理json文件结尾多余的逗号"><a href="#python如何处理json文件结尾多余的逗号" class="headerlink" title="python如何处理json文件结尾多余的逗号"></a>python如何处理json文件结尾多余的逗号</h1><p>问题描述, json文件结尾是不允许使用逗号的</p>
+        <h1 id="python如何处理json文件结尾多余的逗号"><a href="#python如何处理json文件结尾多余的逗号" class="headerlink" title="python如何处理json文件结尾多余的逗号"></a>python如何处理json文件结尾多余的逗号</h1><p>问题描述, json文件结尾是不允许使用逗号的</p>
 <p>正确格式如下:</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span>,</span><br><span class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -337,35 +339,56 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span>,</span><br><span class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>在使用上述格式的文件时, json.loads文件会报错</p>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/htwm_open_sesame/2019/10/20/python/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
+<a id="more"></a>
+
+<p>参考来源 <a href="https://stackoverflow.com/questions/23705304/can-json-loads-ignore-trailing-commas" target="_blank" rel="noopener">https://stackoverflow.com/questions/23705304/can-json-loads-ignore-trailing-commas</a></p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>使用 jsoncomment 包进行解析</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> jsoncomment <span class="keyword">import</span> JsonComment</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> data_file:    </span><br><span class="line">    parser = JsonComment(json)</span><br><span class="line">    data = parser.load(data_file)</span><br></pre></td></tr></table></figure>
+
+<p>缺陷 会从字符串中删除逗号 例如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> jsoncomment <span class="keyword">import</span> JsonComment</span><br><span class="line">string = <span class="string">'&#123;"key1": "&#123;my special value,&#125;"&#125;'</span></span><br><span class="line">parser = JsonComment()</span><br><span class="line">json_boj = parser.loads(string)</span><br><span class="line">print(json_boj)</span><br><span class="line"><span class="comment"># &#123;'key1': '&#123;my special value&#125;'&#125;</span></span><br><span class="line"><span class="comment"># 原本值中的字符串逗号也被删除了</span></span><br></pre></td></tr></table></figure>
+
+<p>局限: 原本值中的字符串逗号也被删除了</p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>先通过python 将字符串进行eval,同时 替换null, true false例如</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ast, json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">clean_json</span><span class="params">(str)</span>:</span></span><br><span class="line">  str = str.replace(<span class="string">'null'</span>, <span class="string">'None'</span>).replace(<span class="string">'true'</span>, <span class="string">'True'</span>).replace(<span class="string">'false'</span>, <span class="string">'False'</span>)</span><br><span class="line">  <span class="keyword">return</span> json.dumps(ast.literal_eval(str))</span><br></pre></td></tr></table></figure>
+
+<p>局限: </p>
+<ol>
+<li>会破坏原本字符串中包含 null, true, false </li>
+<li>即算使用 ast.literal_eval 也需要考虑一些安全性的问题</li>
+</ol>
+
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/htwm_open_sesame/tags/python/" rel="tag"># python</a>
+            
+              <a href="/htwm_open_sesame/tags/json/" rel="tag"># json</a>
+            
+          </div>
+        
+
+        
+
       </footer>
+    
   </article>
   
   
   
 
-    
   </div>
-
-  
-
 
 
           </div>
@@ -382,6 +405,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -394,6 +422,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python如何处理json文件结尾多余的逗号"><span class="nav-number">1.</span> <span class="nav-text">python如何处理json文件结尾多余的逗号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一"><span class="nav-number">1.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二"><span class="nav-number">1.2.</span> <span class="nav-text">方法二</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
