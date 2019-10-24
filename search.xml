@@ -75,23 +75,23 @@
       </tags>
   </entry>
   <entry>
-    <title>归档</title>
-    <url>/htwm_open_sesame/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>关于</title>
     <url>/htwm_open_sesame/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/htwm_open_sesame/tags/index.html</url>
+    <title>归档</title>
+    <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>categories</title>
     <url>/htwm_open_sesame/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
