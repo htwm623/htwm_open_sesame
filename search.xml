@@ -1,10 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>图片测试</title>
-    <url>/htwm_open_sesame/2019/10/24/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p><img src="D:%5CProgramData%5Ccode_pages%5Cblog%5Csource_posts%5C%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95.assets%5C1571931807280.png" alt="1571931807280"></p>
+    <title>yaml文件格式及python解析</title>
+    <url>/htwm_open_sesame/2019/10/26/yaml%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%8F%8Apython%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="yaml文件格式及python解析"><a href="#yaml文件格式及python解析" class="headerlink" title="yaml文件格式及python解析"></a>yaml文件格式及python解析</h1><h2 id="用途及基本规则"><a href="#用途及基本规则" class="headerlink" title="用途及基本规则"></a>用途及基本规则</h2><ul>
+<li>常用于配置文件</li>
+<li>大小写敏感</li>
+<li>使用缩进表示嵌套</li>
+<li>使用空格表示缩进,不允许使用  <kbd>Tab</kbd> 键作为缩进</li>
+<li>缩进的空格数目没有实际意义,左侧对其即为同级</li>
+</ul>
+<a id="more"></a>
+
+
+
+<h2 id="Python解析"><a href="#Python解析" class="headerlink" title="Python解析"></a>Python解析</h2><ul>
+<li>涉及到的包 pip install PyYAML</li>
+<li>示例代码</li>
+</ul>
+<p>yaml文件</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># test.yaml</span></span><br><span class="line"><span class="attr">age:</span> <span class="number">37</span></span><br><span class="line"><span class="attr">spouse:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">Jane</span> <span class="string">Smith</span></span><br><span class="line"><span class="attr">  age:</span> <span class="number">25</span></span><br><span class="line"><span class="attr">children:</span></span><br><span class="line"><span class="attr">  - name:</span> <span class="string">Jimmy</span> <span class="string">Smith</span></span><br><span class="line"><span class="attr">    age:</span> <span class="number">15</span></span><br><span class="line"><span class="attr">  - name1:</span> <span class="string">Jenny</span> <span class="string">Smith</span></span><br><span class="line"><span class="attr">    age1:</span> <span class="number">12</span></span><br></pre></td></tr></table></figure>
+
+<p>python 解析示例</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> yaml</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'test.yaml'</span>,<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>)<span class="keyword">as</span> fr:</span><br><span class="line">        data = yaml.load(fr, Loader=yaml.Loader)</span><br><span class="line">    print(data)</span><br><span class="line"><span class="comment"># &#123;'age': 37, 'spouse': &#123;'name': 'Jane Smith', 'age': 25&#125;, 'children': [&#123;'name': 'Jimmy Smith', 'age': 15&#125;, &#123;'name1': 'Jenny Smith', 'age1': 12&#125;]&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="yaml语法"><a href="#yaml语法" class="headerlink" title="yaml语法"></a>yaml语法</h2><ul>
+<li>参考 <a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">YAML语言教程 阮一峰</a></li>
+</ul>
 ]]></content>
+      <categories>
+        <category>踩的坑</category>
+      </categories>
+      <tags>
+        <tag>yaml</tag>
+        <tag>python</tag>
+      </tags>
   </entry>
   <entry>
     <title>vue创建组件</title>
@@ -75,11 +109,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>归档</title>
     <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
@@ -92,6 +121,11 @@
   <entry>
     <title>标签</title>
     <url>/htwm_open_sesame/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
