@@ -8,7 +8,7 @@
 <h2 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h2><ul>
 <li>如何批量将素材导入购物车 比如在以下页面</li>
 </ul>
-<p><img src="images%5C2019-10-28_220857.png" alt="2019-10-28_220857"></p>
+<p><img src="%5Cimages%5C2019-10-28_220857.png" alt="2019-10-28_220857"></p>
 <a id="more"></a>
 
 <p>在该页面下调出控制台 <kbd>F12</kbd>  在控制台执行如下代码 (亲测:2019年10月28日)</p>
@@ -22,7 +22,7 @@
 <li>在main.js 中将 iconfont.css 文件引入(个人使用,略过 原文章中修改iconfont.css )</li>
 <li>查看incofont.css 文件中 font-family的值,如:</li>
 </ol>
-<p><img src="images%5C2019-10-28_233757.png" alt="2019-10-28_233757"></p>
+<p><img src="%5Cimages%5C2019-10-28_233757.png" alt="2019-10-28_233757"></p>
 <p>红框即为 fontfamily</p>
 <ol start="4">
 <li><p>调用</p>
@@ -139,8 +139,8 @@
     <url>/htwm_open_sesame/2019/10/23/vue%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/</url>
     <content><![CDATA[<h1 id="vue创建组件及发布流程"><a href="#vue创建组件及发布流程" class="headerlink" title="vue创建组件及发布流程"></a>vue创建组件及发布流程</h1><h2 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h2><ol>
 <li>首先创建组件代码</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h3&gt;this is a web component  created in vue&lt;/h3&gt;  </span><br><span class="line">    &lt;div&gt; My name is &#123;&#123;name&#125;&#125; &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props:&#123;</span><br><span class="line">    name: &#123;type: String,default:&quot;mark&quot;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</ol><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h3&gt;this is a web component  created in vue&lt;/h3&gt;  </span><br><span class="line">    &lt;div&gt; My name is &#123;&#123;name&#125;&#125; &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props:&#123;</span><br><span class="line">    name: &#123;type: String,default:&quot;mark&quot;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><a id="more"></a>
+
 
 <ol start="2">
 <li>使用cli 进行组件封装</li>
@@ -203,11 +203,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>归档</title>
     <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
@@ -218,6 +213,11 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>标签</title>
     <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
@@ -225,15 +225,15 @@
   <entry>
     <title></title>
     <url>/htwm_open_sesame/lib/canvas-nest/README.html</url>
-    <content><![CDATA[<h1 align="center"><a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas-nest.js</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
+    <content><![CDATA[<h1 align="center"><a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas-nest.js</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1><h1 align="center">Installation</h1><h2>If you want to use the CDN instead of clone this repo, please jump to the Step 3.</h2><h2 align="center">Step 1 &rarr; Go to NexT dir</h2><p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p><a id="more"></a>
 
-<h1 align="center">Installation</h1>
 
-<h2>If you want to use the CDN instead of clone this repo, please jump to the Step 3.</h2>
 
-<h2 align="center">Step 1 &rarr; Go to NexT dir</h2>
 
-<p>Change dir to <strong>NexT</strong> directory. There must be <code>layout</code>, <code>source</code>, <code>languages</code> and other directories:</p>
+
+
+
+
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next</span><br><span class="line">$ ls</span><br><span class="line">_config.yml  crowdin.yml  docs  gulpfile.js  languages  layout  LICENSE.md  package.json  README.md  scripts  <span class="built_in">source</span></span><br></pre></td></tr></table></figure>
 
 <h2 align="center">Step 2 &rarr; Get module</h2>
