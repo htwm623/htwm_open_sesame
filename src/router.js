@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import carParkMap from '@/page/carParkMap.vue'
 import parkingHome from '@/parking/home.vue'
 import choose from '@/page/choose.vue'
+import my_test from '@/components/my-component.vue'
+import iconTest from '@/page/testEleIcon.vue'
 
 Vue.use(Router)
 
@@ -10,8 +12,16 @@ export default new Router({
   routes: [
     {
       path:'/',
-      redirect:'choose'
+      redirect:'icon'
 
+    },
+    {
+      path:'/icon',
+      component: iconTest
+    },
+    {
+      path:'/select',
+      component: my_test,
     },
     {
       path:'/choose',
