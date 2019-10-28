@@ -46,9 +46,14 @@
     <url>/htwm_open_sesame/2019/10/28/%E6%94%B6%E8%97%8F%E7%9A%84%E6%96%87%E7%AB%A0%E5%8F%8A%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<h1 id="收藏的文章及网站"><a href="#收藏的文章及网站" class="headerlink" title="收藏的文章及网站"></a>收藏的文章及网站</h1><h2 id="收藏的文章"><a href="#收藏的文章" class="headerlink" title="收藏的文章"></a>收藏的文章</h2><ol>
 <li><a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">vue使用第三方icon</a></li>
-<li></li>
 </ol>
-<h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2>]]></content>
+<h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2><ol>
+<li><p><a href="https://www.hackerrank.com/dashboard" target="_blank" rel="noopener">hackerrank</a>  学习和提高编码能力的网站</p>
+</li>
+<li><p><a href="https://codesandbox.io/" target="_blank" rel="noopener">codesandbox</a>  在线代码编辑器,可以快速编辑vue react 等一些示例代码,也支持下载 ( <a href="https://codesandbox.io/s/vue-template-4hxce" target="_blank" rel="noopener">https://codesandbox.io/s/vue-template-4hxce</a> )</p>
+</li>
+</ol>
+]]></content>
       <categories>
         <category>收藏文章</category>
       </categories>
@@ -203,13 +208,13 @@
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
+    <title>categories</title>
+    <url>/htwm_open_sesame/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/htwm_open_sesame/categories/index.html</url>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
