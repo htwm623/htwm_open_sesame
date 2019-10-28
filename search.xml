@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>如何批量导入阿里icon</title>
+    <url>/htwm_open_sesame/2019/10/28/%E5%A6%82%E4%BD%95%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E9%98%BF%E9%87%8Cicon/</url>
+    <content><![CDATA[<h1 id="如何批量导出阿里icon"><a href="#如何批量导出阿里icon" class="headerlink" title="如何批量导出阿里icon"></a>如何批量导出阿里icon</h1><p>原文章来源  <a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">https://www.jianshu.com/p/59dd28f0b9c9</a> </p>
+<p>阿里icon 素材网站  <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">https://www.iconfont.cn/</a> </p>
+<h2 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h2><ul>
+<li>如何批量将素材导入购物车 比如在以下页面</li>
+</ul>
+<p><img src="images%5C2019-10-28_220857.png" alt="2019-10-28_220857"></p>
+<a id="more"></a>
+
+<p>在该页面下调出控制台 <kbd>F12</kbd>  在控制台执行如下代码 (亲测:2019年10月28日)</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> icons = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.icon-gouwuche1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> auto_click = <span class="function"><span class="keyword">function</span>(<span class="params">i</span>) </span>&#123; <span class="keyword">if</span> (i &lt; icons.length) &#123; setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; icons.item(i).click(); auto_click(i + <span class="number">1</span>); &#125;, <span class="number">600</span>); &#125; &#125;;</span><br><span class="line"></span><br><span class="line">auto_click(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+<p>则会自动添加代码至购物车 -&gt; 添加至项目 -&gt; 选择 fontclass 然后下载至本地</p>
+<h2 id="调用图标"><a href="#调用图标" class="headerlink" title="调用图标"></a>调用图标</h2><ol>
+<li>将下载的文件全部放入项目的assert 文件下</li>
+<li>在main.js 中将 iconfont.css 文件引入(个人使用,略过 原文章中修改iconfont.css )</li>
+<li>查看incofont.css 文件中 font-family的值,如:</li>
+</ol>
+<p><img src="images%5C2019-10-28_233757.png" alt="2019-10-28_233757"></p>
+<p>红框即为 fontfamily</p>
+<ol start="4">
+<li><p>调用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"iconfont icon-bad-fill"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>class空格前部分为 fontfamliy的值 后面一部分可在阿里icon项目页面进行复制</p>
+</li>
+</ol>
+<p>   以上</p>
+]]></content>
+      <categories>
+        <category>技巧</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>收藏的文章及网站</title>
+    <url>/htwm_open_sesame/2019/10/28/%E6%94%B6%E8%97%8F%E7%9A%84%E6%96%87%E7%AB%A0%E5%8F%8A%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<h1 id="收藏的文章及网站"><a href="#收藏的文章及网站" class="headerlink" title="收藏的文章及网站"></a>收藏的文章及网站</h1><h2 id="收藏的文章"><a href="#收藏的文章" class="headerlink" title="收藏的文章"></a>收藏的文章</h2><ol>
+<li><a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">vue使用第三方icon</a></li>
+<li></li>
+</ol>
+<h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2>]]></content>
+      <categories>
+        <category>收藏文章</category>
+      </categories>
+      <tags>
+        <tag>收藏</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nvm安装过程记录</title>
     <url>/htwm_open_sesame/2019/10/27/nvm%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="nvm安装及简单使用-windows"><a href="#nvm安装及简单使用-windows" class="headerlink" title="nvm安装及简单使用(windows)"></a>nvm安装及简单使用(windows)</h1><ol>
@@ -168,11 +224,6 @@
   </entry>
   <entry>
     <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
-    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/htwm_open_sesame/lib/canvas-nest/README.html</url>
     <content><![CDATA[<h1 align="center"><a href="https://github.com/hustcc/canvas-nest.js" target="_blank" rel="noopener">canvas-nest.js</a> for <a href="https://github.com/theme-next" target="_blank" rel="noopener">NexT</a></h1>
 
@@ -202,6 +253,11 @@
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/canvas-nest</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
+    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
