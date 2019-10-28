@@ -8,7 +8,7 @@
 <h2 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h2><ul>
 <li>如何批量将素材导入购物车 比如在以下页面</li>
 </ul>
-<p><img src="%5Cimages%5C2019-10-28_220857.png" alt="2019-10-28_220857"></p>
+<p><img src="images/2019-10-28_220857.png" alt="2019-10-28_220857"></p>
 <a id="more"></a>
 
 <p>在该页面下调出控制台 <kbd>F12</kbd>  在控制台执行如下代码 (亲测:2019年10月28日)</p>
@@ -22,7 +22,7 @@
 <li>在main.js 中将 iconfont.css 文件引入(个人使用,略过 原文章中修改iconfont.css )</li>
 <li>查看incofont.css 文件中 font-family的值,如:</li>
 </ol>
-<p><img src="%5Cimages%5C2019-10-28_233757.png" alt="2019-10-28_233757"></p>
+<p><img src="/images/2019-10-28_233757.png" alt="2019-10-28_233757"></p>
 <p>红框即为 fontfamily</p>
 <ol start="4">
 <li><p>调用</p>
@@ -203,8 +203,8 @@
       </tags>
   </entry>
   <entry>
-    <title>归档</title>
-    <url>/htwm_open_sesame/archives/index.html</url>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -213,13 +213,13 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
+    <title>标签</title>
+    <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/htwm_open_sesame/tags/index.html</url>
+    <title>归档</title>
+    <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
