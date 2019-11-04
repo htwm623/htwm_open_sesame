@@ -85,3 +85,10 @@ def clean_json(str):
 1. 会破坏原本字符串中包含 null, true, false 
 2. 即算使用 ast.literal_eval 也需要考虑一些安全性的问题
 
+
+
+
+
+## 结论
+
+- json最好写对 :joy:, 如果作为需要手动添加内容的配置文件,最好还是改格式把

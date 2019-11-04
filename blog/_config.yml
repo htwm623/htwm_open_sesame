@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: htwm623
-subtitle: 沉默的大多数
-description: 大人,时代变了
+title: HTWM-623
+subtitle: 人之患在好为人师
+description: 最近有点膨胀,唉,得好好学习啦兄弟
 keywords: keywords
-author: htwm623
+author: HTWM-623
 language: zh-CN
 timezone:
 
@@ -96,6 +96,5 @@ search:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:htwm623/htwm_open_sesame.git
-  branch: gh-pages
-  
+  repository: 
+     github: git@github.com:htwm623/htwm_open_sesame.git,gh-pages
