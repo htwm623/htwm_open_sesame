@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>零散技巧</title>
-    <url>/htwm_open_sesame/2019/10/31/%E9%9B%B6%E6%95%A3%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[<h1 id="零散技巧"><a href="#零散技巧" class="headerlink" title="零散技巧"></a>零散技巧</h1><h2 id="将Python脚本编译成二进制文件"><a href="#将Python脚本编译成二进制文件" class="headerlink" title="将Python脚本编译成二进制文件"></a>将Python脚本编译成二进制文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">$ python -m compile &lt;file&gt;</span><br><span class="line"><span class="comment"># 会在当前文件夹中生成__pycache__ 文件夹中生成对应的pyc文件</span></span><br><span class="line"><span class="comment"># 调用方式和原始文件一致,但只能使用同版本的python解释器执行</span></span><br></pre></td></tr></table></figure><h2 id="Pycharm-文件头配置"><a href="#Pycharm-文件头配置" class="headerlink" title="Pycharm 文件头配置"></a>Pycharm 文件头配置</h2><p>File  &rArr;  Settings &rArr; Editor  &rArr; File and Code Templates </p><a id="more"></a>
+    <title>Ubuntu18.04安装的坑</title>
+    <url>/htwm_open_sesame/2019/11/05/Ubuntu18-04%E5%AE%89%E8%A3%85%E5%9D%91/</url>
+    <content><![CDATA[<h2 id="SSH服务安装"><a href="#SSH服务安装" class="headerlink" title="SSH服务安装"></a>SSH服务安装</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get install openssh-server</span><br><span class="line">sudo service ssh restart</span><br></pre></td></tr></table></figure>
 
 
 
+<h2 id="Linux链接SSR"><a href="#Linux链接SSR" class="headerlink" title="Linux链接SSR"></a>Linux链接SSR</h2><ul>
+<li>参考github electron-ssr</li>
+</ul>
+]]></content>
+      <categories>
+        <category>软件安装</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>积少成多</title>
+    <url>/htwm_open_sesame/2019/10/31/%E7%A7%AF%E5%B0%91%E6%88%90%E5%A4%9A/</url>
+    <content><![CDATA[<h1 id="零零碎碎-个人习惯性配置等等"><a href="#零零碎碎-个人习惯性配置等等" class="headerlink" title="零零碎碎 个人习惯性配置等等"></a>零零碎碎 个人习惯性配置等等</h1><h2 id="将Python脚本编译成二进制文件"><a href="#将Python脚本编译成二进制文件" class="headerlink" title="将Python脚本编译成二进制文件"></a>将Python脚本编译成二进制文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">$ python -m compile &lt;file&gt;</span><br><span class="line"><span class="comment"># 会在当前文件夹中生成__pycache__ 文件夹中生成对应的pyc文件</span></span><br><span class="line"><span class="comment"># 调用方式和原始文件一致,但只能使用同版本的python解释器执行</span></span><br></pre></td></tr></table></figure><h2 id="Pycharm-文件头配置"><a href="#Pycharm-文件头配置" class="headerlink" title="Pycharm 文件头配置"></a>Pycharm 文件头配置</h2><a id="more"></a>
 
+
+
+<p>File  &rArr;  Settings &rArr; Editor  &rArr; File and Code Templates </p>
 <p>其中python个人设置</p>
 <figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env python</span></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line"># file: $&#123;NAME&#125;.py</span><br><span class="line"># time: $&#123;DATE&#125; $&#123;TIME&#125;</span><br><span class="line"># desc:</span><br></pre></td></tr></table></figure>
 
+
+
+<h2 id="Vscode-配置背景图片"><a href="#Vscode-配置背景图片" class="headerlink" title="Vscode 配置背景图片"></a>Vscode 配置背景图片</h2><ol>
+<li><p>安装 vscode extension: background</p>
+</li>
+<li><p>修改配置文件如下</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"background.useDefault": false,</span><br><span class="line">    "background.enabled": true,</span><br><span class="line">    "background.customImages": [</span><br><span class="line">        <span class="string">"file:///C:/Users/haibo/Desktop/%E5%A3%81%E7%BA%B8/timg.jpeg"</span></span><br><span class="line">    ],</span><br><span class="line">    "background.style": &#123;</span><br><span class="line">        "content": "''",</span><br><span class="line">        "pointer-events": "none",</span><br><span class="line">        "position": "absolute",</span><br><span class="line">        "z-index": "99999",</span><br><span class="line">        "width": "100%",</span><br><span class="line">        "height": "100%",</span><br><span class="line">        "background-position": "center",</span><br><span class="line">        "background-repeat": "no-repeat",</span><br><span class="line">        "background-size": "100%,100%",</span><br><span class="line">        "opacity": 0.3</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其中 background.customImages 即为背景图片列表,最多可设置三张</p>
+</li>
+</ol>
 ]]></content>
       <categories>
-        <category>踩的坑</category>
+        <category>IT技术</category>
       </categories>
       <tags>
         <tag>零零碎碎</tag>
+        <tag>个人习惯配置</tag>
       </tags>
   </entry>
   <entry>
@@ -32,7 +62,7 @@
 
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>前端开发</category>
       </categories>
       <tags>
         <tag>electron</tag>
@@ -73,11 +103,11 @@
 <p>   以上</p>
 ]]></content>
       <categories>
-        <category>技巧</category>
+        <category>前端开发</category>
       </categories>
       <tags>
         <tag>vue</tag>
-        <tag>前端</tag>
+        <tag>图标</tag>
       </tags>
   </entry>
   <entry>
@@ -174,7 +204,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>踩的坑</category>
+        <category>IT技术</category>
       </categories>
       <tags>
         <tag>yaml</tag>
@@ -201,7 +231,7 @@
 <p>1. </p>
 ]]></content>
       <categories>
-        <category>踩的坑</category>
+        <category>前端开发</category>
       </categories>
       <tags>
         <tag>vue</tag>
@@ -242,7 +272,7 @@
 </ul>
 ]]></content>
       <categories>
-        <category>踩的坑</category>
+        <category>IT技术</category>
       </categories>
       <tags>
         <tag>python</tag>
@@ -250,18 +280,13 @@
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>categories</title>
-    <url>/htwm_open_sesame/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>归档</title>
     <url>/htwm_open_sesame/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -270,24 +295,9 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
-    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest-nomobile.min.js</url>
-    <content><![CDATA[!function(){
-	var userAgentInfo = navigator.userAgent;
-    var Agents = ["iPad", "iPhone", "Android", 
-          "SymbianOS", "Windows Phone",
-           "iPod", "webOS", "BlackBerry", "IEMobile"];
-    for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-        return;
-      }
-    }
-	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
+    <title>categories</title>
+    <url>/htwm_open_sesame/categories/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
@@ -320,5 +330,25 @@
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/canvas-nest</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest-nomobile.min.js</url>
+    <content><![CDATA[!function(){
+	var userAgentInfo = navigator.userAgent;
+    var Agents = ["iPad", "iPhone", "Android", 
+          "SymbianOS", "Windows Phone",
+           "iPod", "webOS", "BlackBerry", "IEMobile"];
+    for (var v = 0; v < Agents.length; v++) {
+      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+        return;
+      }
+    }
+	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
+    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
 </search>
