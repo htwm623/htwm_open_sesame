@@ -1,29 +1,9 @@
-# learning
+# htwm_open_sesane
 
-## Project setup
-```
-npm install
-```
+- 该项目主要存放前端使用过程中的一些示例代码
+- blog分支存放hexo相关代码
+- gh-pages 分支存放hexo生成并部署的文章
+- issue存放学习过程中遇到的问题
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
