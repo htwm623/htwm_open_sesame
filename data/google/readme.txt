@@ -1,0 +1,1 @@
+set GOOGLE_APPLICATION_CREDENTIALS=D:\ProgramData\ocr_requests\google\Ocrtest-d6a3c238074c.json

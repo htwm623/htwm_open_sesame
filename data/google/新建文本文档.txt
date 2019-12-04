@@ -1,4 +1,0 @@
-set GOOGLE_APPLICATION_CREDENTIALS="C:\Users\haibo\Desktop\ocrOcrtest-d6a3c238074c.json"
-$env:GOOGLE_APPLICATION_CREDENTIALS="D:\ProgramData\Python_Project\OCRÔÆ²â\google\Ocrtest-d6a3c238074c.json"
-$env:GOOGLE_APPLICATION_CREDENTIALS="C:\Users\haibo\Desktop\1.json"
-set GOOGLE_APPLICATION_CREDENTIALS=D:\ProgramData\ocr_requests\google\Ocrtest-d6a3c238074c.json
