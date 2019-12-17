@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>个人博客分类规划</title>
+    <url>/htwm_open_sesame/2019/12/16/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB%E8%A7%84%E5%88%92/</url>
+    <content><![CDATA[<p>分类 文章只写一个分类,避免重复</p>
+<ul>
+<li>前端开发</li>
+<li>IT技术</li>
+<li>网课笔记 </li>
+<li>读书笔记</li>
+<li>Linux</li>
+<li>软件安装</li>
+<li>其他</li>
+</ul>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
     <title>vue问题记录</title>
     <url>/htwm_open_sesame/2019/11/23/vue%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h2 id="vue使用-env文件保存全局变量"><a href="#vue使用-env文件保存全局变量" class="headerlink" title="vue使用.env文件保存全局变量"></a>vue使用.env文件保存全局变量</h2><ul>
@@ -32,7 +50,7 @@
 
 ]]></content>
       <categories>
-        <category>IT技术</category>
+        <category>前端开发</category>
       </categories>
       <tags>
         <tag>vue</tag>
@@ -165,7 +183,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>收藏文章</category>
+        <category>其他</category>
       </categories>
       <tags>
         <tag>收藏</tag>
@@ -318,8 +336,8 @@
       </tags>
   </entry>
   <entry>
-    <title>归档</title>
-    <url>/htwm_open_sesame/archives/index.html</url>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -333,8 +351,8 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
+    <title>归档</title>
+    <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
