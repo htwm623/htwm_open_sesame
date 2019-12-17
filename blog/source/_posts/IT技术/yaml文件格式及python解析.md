@@ -5,7 +5,7 @@ tags:
 - yaml
 - python
 categories:
-- 踩的坑
+- IT技术
 ---
 
 # yaml文件格式及python解析

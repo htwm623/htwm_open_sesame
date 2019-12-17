@@ -5,7 +5,7 @@ tags:
 - electron
 - javascript
 categories:
-- 前端
+- 前端开发
 ---
 
 # Electron桌面软件开发

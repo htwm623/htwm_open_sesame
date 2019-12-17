@@ -5,7 +5,7 @@ tags:
 - python
 - json
 categories:
-- 踩的坑
+- IT技术
 ---
 
 # python如何处理json文件结尾多余的逗号

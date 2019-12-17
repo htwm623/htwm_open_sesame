@@ -5,7 +5,7 @@ tags:
 - vue
 - component
 categories:
-- 踩的坑
+- 前端开发
 ---
 
 # vue创建组件及发布流程
