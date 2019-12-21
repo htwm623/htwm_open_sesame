@@ -263,6 +263,112 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2019/12/22/Linux/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8samba%E8%AE%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HTWM-623">
+      <meta itemprop="description" content="昨天不是刚胖过吗,怎么今天又胖了!">
+      <meta itemprop="image" content="/htwm_open_sesame/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119010115.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HTWM-623">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            
+            <a href="/htwm_open_sesame/2019/12/22/Linux/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8samba%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">云服务器samba设置</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-22 04:49:20 / 修改时间：05:03:03" itemprop="dateCreated datePublished" datetime="2019-12-22T04:49:20+08:00">2019-12-22</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>由于安全问题,云服务器运营商会默认限制部分端口的访问,如samba使用的445端口,则导致默认设置的samba无法访问,自己解决方案如下</p><ol>
+<li><p>linux samba 修改监听端口</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接在samba 配置文件中添加以下语句</span></span><br><span class="line">smb ports = 4455</span><br><span class="line"><span class="comment"># 重启smb服务 则samba监听端口修改为4455</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>windows设置端口转发</p>
+<p>原文来自于 <a href="https://www.zhihu.com/question/59814912" target="_blank" rel="noopener">https://www.zhihu.com/question/59814912</a> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 添加端口转发,添加端口转发之后 实际上访问 \\127.0.0.1 就是在访问设置ip的samba</span></span><br><span class="line">netsh interface portproxy add v4tov4 listenport=445 listenaddress=127.0.0.1 connectport=4455 connectaddress=xx.xx.xx.xxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 其他命令</span></span><br><span class="line"><span class="comment"># 查看全部端口转发</span></span><br><span class="line">netsh interface portproxy show all</span><br><span class="line"><span class="comment"># 删除端口转发</span></span><br><span class="line">netsh interface portproxy delete v4tov4 listenport=445 listenaddress=127.0.0.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过资源管理器访问 \\127.0.0.1 实际上就是在访问监听端口的samba</p>
+</li>
+</ol>
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/htwm_open_sesame/2019/12/22/Linux/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8samba%E8%AE%BE%E7%BD%AE/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2019/12/16/%E5%85%B6%E4%BB%96/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB%E8%A7%84%E5%88%92/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -304,7 +410,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 23:19:47" itemprop="dateModified" datetime="2019-12-17T23:19:47+08:00">2019-12-17</time>
+                <time title="修改时间：2019-12-22 04:49:53" itemprop="dateModified" datetime="2019-12-22T04:49:53+08:00">2019-12-22</time>
               </span>
             
           
@@ -337,7 +443,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>分类 文章只写一个分类,避免重复</p>
+          <p>分类 文章只写一个分类,避免重复,语言还是直接按照语言进行分类</p>
 <ul>
 <li>前端开发</li>
 <li>IT技术</li>
@@ -346,6 +452,9 @@
 <li>Linux</li>
 <li>软件安装</li>
 <li>其他</li>
+<li>Python</li>
+<li>Javascript</li>
+<li>Golang</li>
 </ul>
 
         
@@ -951,7 +1060,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-12-17 23:19:15" itemprop="dateModified" datetime="2019-12-17T23:19:15+08:00">2019-12-17</time>
+                <time title="修改时间：2019-12-19 01:30:11" itemprop="dateModified" datetime="2019-12-19T01:30:11+08:00">2019-12-19</time>
               </span>
             
           
@@ -984,19 +1093,25 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="收藏的文章及网站"><a href="#收藏的文章及网站" class="headerlink" title="收藏的文章及网站"></a>收藏的文章及网站</h1><h2 id="收藏的文章"><a href="#收藏的文章" class="headerlink" title="收藏的文章"></a>收藏的文章</h2><ol>
-<li><p><a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">vue使用第三方icon</a></p>
-</li>
-<li><p><a href="https://www.jianshu.com/p/7bcf4ad609cf" target="_blank" rel="noopener">markdown中使用特殊的符号</a></p>
-</li>
-</ol>
-<h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2><ol>
+          <h1 id="收藏的文章及网站"><a href="#收藏的文章及网站" class="headerlink" title="收藏的文章及网站"></a>收藏的文章及网站</h1><h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2><ol>
 <li><p><a href="https://www.hackerrank.com/dashboard" target="_blank" rel="noopener">hackerrank</a>  学习和提高编码能力的网站</p>
 </li>
 <li><p><a href="https://codesandbox.io/" target="_blank" rel="noopener">codesandbox</a>  在线代码编辑器,可以快速编辑vue react 等一些示例代码,也支持下载 ( <a href="https://codesandbox.io/s/vue-template-4hxce" target="_blank" rel="noopener">https://codesandbox.io/s/vue-template-4hxce</a> )</p>
 </li>
+</ol><h2 id="前端收藏库或文章"><a href="#前端收藏库或文章" class="headerlink" title="前端收藏库或文章"></a>前端收藏库或文章</h2><ol>
+<li><a href="https://github.com/le5le-com/topology" target="_blank" rel="noopener">https://github.com/le5le-com/topology</a>     功能丰富的绘图工具（微服务架构图、拓扑图、流程图、类图等ULM图、脑图，动画、视频支持） </li>
+<li><a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">vue使用第三方icon</a></li>
+<li><a href="https://www.jianshu.com/p/7bcf4ad609cf" target="_blank" rel="noopener">markdown中使用特殊的符号</a></li>
 </ol>
-
+          <!--noindex-->
+          
+            <div class="post-button">
+              <a class="btn" href="/htwm_open_sesame/2019/10/28/%E5%85%B6%E4%BB%96/%E6%94%B6%E8%97%8F%E7%9A%84%E6%96%87%E7%AB%A0%E5%8F%8A%E7%BD%91%E7%AB%99/" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1245,112 +1360,6 @@
   
 
     
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2019/10/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HTWM-623">
-      <meta itemprop="description" content="昨天不是刚胖过吗,怎么今天又胖了!">
-      <meta itemprop="image" content="/htwm_open_sesame/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119010115.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HTWM-623">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/htwm_open_sesame/2019/10/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/" class="post-title-link" itemprop="url">vue创建组件</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-23 23:42:21" itemprop="dateCreated datePublished" datetime="2019-10-23T23:42:21+08:00">2019-10-23</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-19 00:40:38" itemprop="dateModified" datetime="2019-11-19T00:40:38+08:00">2019-11-19</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/htwm_open_sesame/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
-                    <span itemprop="name">前端开发</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="vue创建组件及发布流程"><a href="#vue创建组件及发布流程" class="headerlink" title="vue创建组件及发布流程"></a>vue创建组件及发布流程</h1><h2 id="创建组件"><a href="#创建组件" class="headerlink" title="创建组件"></a>创建组件</h2><ol>
-<li>首先创建组件代码</li>
-</ol><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h3&gt;this is a web component  created in vue&lt;/h3&gt;  </span><br><span class="line">    &lt;div&gt; My name is &#123;&#123;name&#125;&#125; &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props:&#123;</span><br><span class="line">    name: &#123;type: String,default:&quot;mark&quot;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          
-            <div class="post-button">
-              <a class="btn" href="/htwm_open_sesame/2019/10/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
 
   
@@ -1403,7 +1412,7 @@
         
           <a href="/htwm_open_sesame/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1416,7 +1425,7 @@
             <a href="/htwm_open_sesame/categories/">
           
         
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1429,7 +1438,7 @@
             <a href="/htwm_open_sesame/tags/">
           
         
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">15</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

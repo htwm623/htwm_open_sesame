@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>云服务器samba设置</title>
+    <url>/htwm_open_sesame/2019/12/22/Linux/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8samba%E8%AE%BE%E7%BD%AE/</url>
+    <content><![CDATA[<p>由于安全问题,云服务器运营商会默认限制部分端口的访问,如samba使用的445端口,则导致默认设置的samba无法访问,自己解决方案如下</p><ol>
+<li><p>linux samba 修改监听端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 直接在samba 配置文件中添加以下语句</span></span><br><span class="line">smb ports = 4455</span><br><span class="line"><span class="comment"># 重启smb服务 则samba监听端口修改为4455</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>windows设置端口转发</p>
+<p>原文来自于 <a href="https://www.zhihu.com/question/59814912" target="_blank" rel="noopener">https://www.zhihu.com/question/59814912</a> </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1. 添加端口转发,添加端口转发之后 实际上访问 \\127.0.0.1 就是在访问设置ip的samba</span></span><br><span class="line">netsh interface portproxy add v4tov4 listenport=445 listenaddress=127.0.0.1 connectport=4455 connectaddress=xx.xx.xx.xxx</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 其他命令</span></span><br><span class="line"><span class="comment"># 查看全部端口转发</span></span><br><span class="line">netsh interface portproxy show all</span><br><span class="line"><span class="comment"># 删除端口转发</span></span><br><span class="line">netsh interface portproxy delete v4tov4 listenport=445 listenaddress=127.0.0.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过资源管理器访问 \\127.0.0.1 实际上就是在访问监听端口的samba</p>
+</li>
+</ol><a id="more"></a>
+
+<p>ps: 亲测有效(2019/12/22)</p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>samba</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>个人博客分类规划</title>
     <url>/htwm_open_sesame/2019/12/16/%E5%85%B6%E4%BB%96/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB%E8%A7%84%E5%88%92/</url>
-    <content><![CDATA[<p>分类 文章只写一个分类,避免重复</p>
+    <content><![CDATA[<p>分类 文章只写一个分类,避免重复,语言还是直接按照语言进行分类</p>
 <ul>
 <li>前端开发</li>
 <li>IT技术</li>
@@ -12,6 +37,9 @@
 <li>Linux</li>
 <li>软件安装</li>
 <li>其他</li>
+<li>Python</li>
+<li>Javascript</li>
+<li>Golang</li>
 </ul>
 ]]></content>
       <categories>
@@ -169,17 +197,20 @@
   <entry>
     <title>收藏的文章及网站</title>
     <url>/htwm_open_sesame/2019/10/28/%E5%85%B6%E4%BB%96/%E6%94%B6%E8%97%8F%E7%9A%84%E6%96%87%E7%AB%A0%E5%8F%8A%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<h1 id="收藏的文章及网站"><a href="#收藏的文章及网站" class="headerlink" title="收藏的文章及网站"></a>收藏的文章及网站</h1><h2 id="收藏的文章"><a href="#收藏的文章" class="headerlink" title="收藏的文章"></a>收藏的文章</h2><ol>
-<li><p><a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">vue使用第三方icon</a></p>
-</li>
-<li><p><a href="https://www.jianshu.com/p/7bcf4ad609cf" target="_blank" rel="noopener">markdown中使用特殊的符号</a></p>
-</li>
-</ol>
-<h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2><ol>
+    <content><![CDATA[<h1 id="收藏的文章及网站"><a href="#收藏的文章及网站" class="headerlink" title="收藏的文章及网站"></a>收藏的文章及网站</h1><h2 id="收藏的网站"><a href="#收藏的网站" class="headerlink" title="收藏的网站"></a>收藏的网站</h2><ol>
 <li><p><a href="https://www.hackerrank.com/dashboard" target="_blank" rel="noopener">hackerrank</a>  学习和提高编码能力的网站</p>
 </li>
 <li><p><a href="https://codesandbox.io/" target="_blank" rel="noopener">codesandbox</a>  在线代码编辑器,可以快速编辑vue react 等一些示例代码,也支持下载 ( <a href="https://codesandbox.io/s/vue-template-4hxce" target="_blank" rel="noopener">https://codesandbox.io/s/vue-template-4hxce</a> )</p>
 </li>
+</ol><h2 id="前端收藏库或文章"><a href="#前端收藏库或文章" class="headerlink" title="前端收藏库或文章"></a>前端收藏库或文章</h2><ol>
+<li><a href="https://github.com/le5le-com/topology" target="_blank" rel="noopener">https://github.com/le5le-com/topology</a>     功能丰富的绘图工具（微服务架构图、拓扑图、流程图、类图等ULM图、脑图，动画、视频支持） </li>
+<li><a href="https://www.jianshu.com/p/59dd28f0b9c9" target="_blank" rel="noopener">vue使用第三方icon</a></li>
+<li><a href="https://www.jianshu.com/p/7bcf4ad609cf" target="_blank" rel="noopener">markdown中使用特殊的符号</a></li>
+</ol><a id="more"></a>
+
+<h2 id="后台收藏库或文章"><a href="#后台收藏库或文章" class="headerlink" title="后台收藏库或文章"></a>后台收藏库或文章</h2><ol>
+<li><a href="https://github.com/OlafenwaMoses/ImageAI" target="_blank" rel="noopener">python可以直接使用的AI识别模型</a></li>
+<li></li>
 </ol>
 ]]></content>
       <categories>
@@ -263,8 +294,8 @@
         <category>IT技术</category>
       </categories>
       <tags>
-        <tag>yaml</tag>
         <tag>python</tag>
+        <tag>yaml</tag>
       </tags>
   </entry>
   <entry>
@@ -336,23 +367,23 @@
       </tags>
   </entry>
   <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/htwm_open_sesame/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>归档</title>
     <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>categories</title>
     <url>/htwm_open_sesame/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -369,6 +400,11 @@
       }
     }
 	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
+    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -401,10 +437,5 @@
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/canvas-nest</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
-    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
 </search>
