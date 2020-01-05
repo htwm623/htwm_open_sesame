@@ -1,6 +1,353 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>GraphQl学习</title>
+    <url>/htwm_open_sesame/2020/01/05/GraphQl%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="Graph介绍"><a href="#Graph介绍" class="headerlink" title="Graph介绍"></a>Graph介绍</h2><ul>
+<li><p>特点</p>
+<ul>
+<li>请求需要的数据 不多不少</li>
+<li>获取多个资源，只用一个请求</li>
+<li>描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段</li>
+</ul>
+</li>
+<li><p>node监听运行修改文件命令 nodemon执行命令</p>
+</li>
+<li><p>GraphHelloWolrd</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> &#123;buildSchema&#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>)</span><br><span class="line"><span class="keyword">const</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type Account&#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    hello: String</span></span><br><span class="line"><span class="string">    accountName: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    account: Account</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = &#123;</span><br><span class="line">  hello: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello world'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  accountName: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'xiaoming'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  age: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">18</span></span><br><span class="line">  &#125;,</span><br><span class="line">  account: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name: <span class="string">'nizi'</span>,</span><br><span class="line">      age: <span class="string">'18'</span>,</span><br><span class="line">      sex: <span class="string">'femail'</span>,</span><br><span class="line">      department: <span class="string">'school'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">  schema: schema,</span><br><span class="line">  rootValue: root,</span><br><span class="line">  graphiql: <span class="literal">true</span></span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ul>
+]]></content>
+      <categories>
+        <category>GraphQl</category>
+        <category>API</category>
+      </categories>
+      <tags>
+        <tag>网课笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端零碎知识点</title>
+    <url>/htwm_open_sesame/2020/01/03/%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/</url>
+    <content><![CDATA[<h2 id="前端笔记"><a href="#前端笔记" class="headerlink" title="前端笔记"></a>前端笔记</h2><ol>
+<li>解决浮动塌陷的问题  1. 给父元素增加高度 2. 在浮动元素后追加空元素 添加 clear属性</li>
+<li>元素分类  块元素 行内元素 可变元素</li>
+<li>宽元素的默认宽度为100%</li>
+<li>IE6常见css解析bug<ol>
+<li>图片间隙</li>
+<li>双倍浮向(双倍边距)</li>
+<li>部分元素拥有默认高度</li>
+<li>表单元素的高度不一致</li>
+<li>按钮元素默认大小不一致</li>
+<li></li>
+</ol>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>网课笔记</category>
+      </categories>
+      <tags>
+        <tag>前端基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>多媒体技术及应用</title>
+    <url>/htwm_open_sesame/2019/12/25/%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B0/%E5%A4%9A%E5%AA%92%E4%BD%93%E6%8A%80%E6%9C%AF%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<ul>
+<li>来源:  <a href="https://www.icourse163.org/learn/SZU-1001752002?tid=1206943287#/learn/announce" target="_blank" rel="noopener">https://www.icourse163.org/learn/SZU-1001752002?tid=1206943287#/learn/announce</a> </li>
+</ul><h2 id="第1章-多媒体技术基础"><a href="#第1章-多媒体技术基础" class="headerlink" title="第1章 多媒体技术基础"></a>第1章 多媒体技术基础</h2><h3 id="多媒体开发工具"><a href="#多媒体开发工具" class="headerlink" title="多媒体开发工具"></a>多媒体开发工具</h3><ol>
+<li>多媒体素材制作工具 :<ol>
+<li>文本处理word 艺术字  cool 3d</li>
+<li>音频处理 Audition  Cakewalk</li>
+<li>图像图像 Corel DRAW   Photoshop</li>
+<li>动画制作软件flash  3ds max\</li>
+<li>视频编辑软件 Premiere  会声会影</li>
+</ol>
+</li>
+<li>多媒体著作工具<ol>
+<li>ppt     dreamweaver</li>
+</ol>
+</li>
+<li>多媒体应用</li>
+</ol><a id="more"></a>
+
+<h2 id="第2章-数字音频技术"><a href="#第2章-数字音频技术" class="headerlink" title="第2章 数字音频技术"></a>第2章 数字音频技术</h2><h3 id="数字音频的基础"><a href="#数字音频的基础" class="headerlink" title="数字音频的基础"></a>数字音频的基础</h3><ol>
+<li>声音的重要指标<ol>
+<li>振幅</li>
+<li>周期</li>
+<li>频率</li>
+</ol>
+</li>
+<li>声音听觉特性<ol>
+<li>响度</li>
+<li>音调</li>
+<li>音色</li>
+</ol>
+</li>
+</ol>
+<h3 id="声音的数字化"><a href="#声音的数字化" class="headerlink" title="声音的数字化"></a>声音的数字化</h3><pre><code> 1. 声音信号的类型
+      1. 模拟信号 - 自然界 物理
+          2. 数字信号 - 计算机
+2. 数字音频质量的三要素
+        1. 采样频率
+                  2. 量化位数
+                3. 声道数
+3. 音频文件类型
+        1. WAV
+                  2. MP3
+                3. WMA
+                           4. MIDI</code></pre><ol start="4">
+<li>音频的处理<ol>
+<li>去除无用部分</li>
+<li>降噪</li>
+<li>调节均衡</li>
+<li>添加混响,延迟和变速</li>
+<li>音频文件的格式转换</li>
+</ol>
+</li>
+</ol>
+<h3 id="数字音频压缩标准"><a href="#数字音频压缩标准" class="headerlink" title="数字音频压缩标准"></a>数字音频压缩标准</h3><ol>
+<li>音频压缩方法概述<ol>
+<li>输入 -&gt; 编码器 -&gt; 存储传输 -&gt; 解码器 -&gt; 播放设备</li>
+</ol>
+</li>
+<li>音频压缩工具软件  (请自行补充网络可用工具)</li>
+</ol>
+<h3 id="声卡与电声设备"><a href="#声卡与电声设备" class="headerlink" title="声卡与电声设备"></a>声卡与电声设备</h3><ol>
+<li><p>声卡的性能指标</p>
+<ol>
+<li>采样和量化能力</li>
+<li>芯片类型</li>
+<li>总线类型</li>
+<li>输出声道数<ol>
+<li>2/2.1/4.1/5.1</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>传声器</p>
+<ol>
+<li>传声器原理<ol>
+<li>电动式传声器 -&gt; 电磁换能原理</li>
+</ol>
+</li>
+<li>传声器的性能指标<ol>
+<li>灵敏度</li>
+<li>频率响应</li>
+<li>指向性</li>
+<li>输出阻抗</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>扬声器</p>
+</li>
+<li><p>音箱</p>
+</li>
+</ol>
+<h3 id="电子音乐与MIDI"><a href="#电子音乐与MIDI" class="headerlink" title="电子音乐与MIDI"></a>电子音乐与MIDI</h3><ol>
+<li>电子音乐的发展<ol>
+<li>电声音乐  电子小提琴啥的</li>
+<li>电子音乐  完全同过电子设备和电子手段生成的音乐</li>
+<li>电脑音乐 计算机+ 电子音乐</li>
+</ol>
+</li>
+<li></li>
+</ol>
+<h3 id="音频编辑软件"><a href="#音频编辑软件" class="headerlink" title="音频编辑软件"></a>音频编辑软件</h3><ul>
+<li>Audition  (本章内容 目前暂时不是很感兴趣, 将不会记录笔记,听听流程过了)</li>
+</ul>
+<h2 id="第3章-数字图像技术"><a href="#第3章-数字图像技术" class="headerlink" title="第3章 数字图像技术"></a>第3章 数字图像技术</h2><h3 id="数字图像基础知识"><a href="#数字图像基础知识" class="headerlink" title="数字图像基础知识"></a>数字图像基础知识</h3><ol>
+<li><p>人眼感知颜色的度量 色调 饱和度 亮度 色调表示光的颜色。饱和度表示彩色的深浅。</p>
+<ol>
+<li>颜色模型<ol>
+<li>RGB模型</li>
+<li>Cmyk模型  一般打印的时候所采用的颜色模型</li>
+<li>HSB模型  模拟人眼所看到的方式</li>
+<li>Yuv YIq模型  彩色电视机中使用的彩色空间</li>
+<li>灰度模型 适用模拟黑白照片</li>
+<li>黑白模型  适应制作黑白线条</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>图像和图形的区别</p>
+</li>
+<li><p>图像的数字化</p>
+<ol>
+<li>图像的主要参数<ol>
+<li>分辨率 / 显示分辨率 、图像分辨率、 像素分辨率</li>
+<li>颜色深度(记录每个像素的二进制位数)</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>图像的文件格式</p>
+<ol>
+<li><p>BMP格式  Windows标准图像文件  特点，每个文件只能存放一幅图，像多种颜色存储格式</p>
+</li>
+<li><p>GIF格式 采用lzw压缩算法处理数据  最多可以存储256色 每个文件可以存放多幅图像</p>
+</li>
+<li><p>Jpg格式  一种高效率的压缩文件格式  对于计算机绘制的具有明显边界的图形，处理效果不佳</p>
+</li>
+<li><p>Png格式  支持24位色彩图像 存储灰度图像时，图像深度达16位  除彩色图像时，深度可以48位</p>
+</li>
+<li><p>TIff文件格式  通用的位映射文件格式</p>
+</li>
+<li><p>PSD格式  Photoshop的专用文件格式</p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="静止图像的压缩标准"><a href="#静止图像的压缩标准" class="headerlink" title="静止图像的压缩标准"></a>静止图像的压缩标准</h3><ol>
+<li>图像压缩的依据 <ol>
+<li>图像的冗余</li>
+<li>图像数据的相关性</li>
+<li>人眼对边缘急剧变化不敏感</li>
+</ol>
+</li>
+<li>图像压缩编码分为有失真编码和无失真编码   (依据能否恢复)</li>
+</ol>
+<h3 id="显示设备与扫描仪"><a href="#显示设备与扫描仪" class="headerlink" title="显示设备与扫描仪"></a>显示设备与扫描仪</h3><ol>
+<li><p>显示器</p>
+<ol>
+<li><p>显示设备主要有显示器与显卡组成</p>
+</li>
+<li><p>显示卡是用于将主机中的数字信号转换为图像信号，并显示在显示器上</p>
+</li>
+<li><p>显卡的基本结构</p>
+<ol>
+<li>显示芯片显示内存 DAC BIOS 总线接口</li>
+</ol>
+</li>
+<li><p>显卡的性能指标   分辨率 颜色深度 显存</p>
+</li>
+<li><p>显示器的性能指标  可视角度  屏幕尺寸</p>
+</li>
+</ol>
+</li>
+<li><p>扫描仪的性能指标</p>
+<ul>
+<li><p>分辨率  光学分辨率 插值分辨率</p>
+</li>
+<li><p>色彩位数</p>
+</li>
+<li><p>扫描速度  </p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="图像处理软件-Photoshop"><a href="#图像处理软件-Photoshop" class="headerlink" title="图像处理软件 Photoshop."></a>图像处理软件 Photoshop.</h3><ul>
+<li>此处主要了解, 具体实践课程 主要参考B站教学视频</li>
+</ul>
+<h2 id="计算机动画技术"><a href="#计算机动画技术" class="headerlink" title="计算机动画技术"></a>计算机动画技术</h2><h3 id="计算机动画基础"><a href="#计算机动画基础" class="headerlink" title="计算机动画基础"></a>计算机动画基础</h3><ol>
+<li>计算机分类<ol>
+<li>按动画的系统功能分类</li>
+<li>按动画的制作原理分类<ol>
+<li>计算机的辅助动画</li>
+<li>计算机的生成动画</li>
+</ol>
+</li>
+<li>按运动的控制方法分类<ol>
+<li>关键帧动画</li>
+<li>算法动画</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>常用动画文件格式<ul>
+<li>gif</li>
+<li>swf  flash文件格式  可以插入音乐</li>
+<li>flic</li>
+<li>qtm</li>
+<li>vrml</li>
+</ul>
+</li>
+<li>计算机动画的应用领域<ol>
+<li>影视广告</li>
+<li>工程设计</li>
+<li>飞行模拟</li>
+<li>教育与娱乐</li>
+<li>科学计算可视化</li>
+<li>虚拟现实技术</li>
+</ol>
+</li>
+</ol>
+<h3 id="计算机动画的制作环境"><a href="#计算机动画的制作环境" class="headerlink" title="计算机动画的制作环境"></a>计算机动画的制作环境</h3><ol>
+<li><p>硬件 高性能计算机 /  输入设备 (扫描仪 图像输入板凳)</p>
+</li>
+<li><p>软件 系统软件 / 动画软件(二维动画 三维动画)</p>
+</li>
+</ol>
+<h3 id="矢量动画制作软件flash"><a href="#矢量动画制作软件flash" class="headerlink" title="矢量动画制作软件flash"></a>矢量动画制作软件flash</h3><ol>
+<li><p>Flash概述</p>
+<ol>
+<li><p>矢量图形</p>
+</li>
+<li><p>交互式动画</p>
+</li>
+<li><p>流式播放技术</p>
+</li>
+<li><p>多种文件格式</p>
+</li>
+<li><p>插件工作方式</p>
+</li>
+</ol>
+</li>
+<li><p>ActionScript flash的一种动作脚本语言</p>
+</li>
+</ol>
+<h2 id="数字视频技术"><a href="#数字视频技术" class="headerlink" title="数字视频技术"></a>数字视频技术</h2><h3 id="数字视频基础知识"><a href="#数字视频基础知识" class="headerlink" title="数字视频基础知识"></a>数字视频基础知识</h3><ol>
+<li><p>数字视频的优点</p>
+<ol>
+<li>数字视频便于创造性的编辑与合成</li>
+<li>数字视频可不失真进行多次复制</li>
+<li>网络环境下容易实现资源共享</li>
+</ol>
+</li>
+<li><p>视频的文件格式</p>
+<ol>
+<li>AVI文件格式 音频视频交叉记录的文件格式 图像质量好，体积过于庞大</li>
+<li>MOV文件格式 跨平台存储空间小</li>
+<li>MPG文件  </li>
+<li>WMV文件  数字视频压缩格式</li>
+<li>RM 与 RMVB  合理运用网络传输</li>
+<li>MP4  高质量流媒体视频 啊你好你好你好</li>
+</ol>
+</li>
+<li><p>运动图像压缩标准</p>
+<ol>
+<li>压缩原理<ol>
+<li>运动图像的相邻帧之间存在冗余，并以帧速率进行预测压缩</li>
+<li>像素点颜色变化的阈值 和差值</li>
+</ol>
+</li>
+<li>数码摄像机的性能指标<ol>
+<li>清晰度</li>
+<li>最低照度</li>
+<li>自动增益控制</li>
+<li>信噪比</li>
+<li>背景光补偿</li>
+<li>电子快门</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="视频编辑软件"><a href="#视频编辑软件" class="headerlink" title="视频编辑软件"></a>视频编辑软件</h3><ol>
+<li>Premiere  </li>
+</ol>
+]]></content>
+      <categories>
+        <category>网课笔记</category>
+      </categories>
+      <tags>
+        <tag>中国大学mooc</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>云服务器samba设置</title>
     <url>/htwm_open_sesame/2019/12/22/Linux/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8samba%E8%AE%BE%E7%BD%AE/</url>
     <content><![CDATA[<p>由于安全问题,云服务器运营商会默认限制部分端口的访问,如samba使用的445端口,则导致默认设置的samba无法访问,自己解决方案如下</p><ol>
@@ -30,16 +377,28 @@
     <url>/htwm_open_sesame/2019/12/16/%E5%85%B6%E4%BB%96/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%88%86%E7%B1%BB%E8%A7%84%E5%88%92/</url>
     <content><![CDATA[<p>分类 文章只写一个分类,避免重复,语言还是直接按照语言进行分类</p>
 <ul>
-<li>前端开发</li>
-<li>IT技术</li>
-<li>网课笔记 </li>
-<li>读书笔记</li>
-<li>Linux</li>
-<li>软件安装</li>
-<li>其他</li>
-<li>Python</li>
-<li>Javascript</li>
-<li>Golang</li>
+<li><p>前端开发</p>
+</li>
+<li><p>IT技术</p>
+</li>
+<li><p>网课笔记 </p>
+</li>
+<li><p>读书笔记</p>
+</li>
+<li><p>Linux</p>
+</li>
+<li><p>软件安装</p>
+</li>
+<li><p>其他</p>
+</li>
+<li><p>Python</p>
+</li>
+<li><p>Javascript</p>
+</li>
+<li><p>Golang</p>
+</li>
+<li><p>时事新闻</p>
+</li>
 </ul>
 ]]></content>
       <categories>
@@ -367,6 +726,11 @@
       </tags>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/htwm_open_sesame/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>归档</title>
     <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
@@ -377,14 +741,14 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/htwm_open_sesame/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>标签</title>
     <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
+    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -400,11 +764,6 @@
       }
     }
 	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
-    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
