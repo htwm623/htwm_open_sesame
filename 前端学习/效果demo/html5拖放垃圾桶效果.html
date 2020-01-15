@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style type="text/css">
+    ul{
+      overflow: hidden;
+    }
+    li{
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      border: 1px solid #000;
+      margin: 20px;
+      list-style: none;
+      float: left;
+    }
+    #out{
+      width: 100px;
+      height: 150px;
+      margin: 100px;
+      background-color: red;
+      background-size: 100%;
+      border: 4px solid greenyellow;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li draggable="true">白色垃圾</li>
+    <li draggable="true">白色垃圾1</li>
+    <li draggable="true">白色垃圾2</li>
+    <li draggable="true">白色垃圾3</li>
+    <li draggable="true">白色垃圾4</li>
+    <li draggable="true">白色垃圾5</li>
+  </ul>
+  <p id="txt">
+
+  </p>
+
+  <div id="out">
+    垃圾箱
+  </div>
+</body>
+<script>
+  let aLI = document.getElementsByTagName('li')
+  let oDIv = document.getElementById('out')
+  let txt = document.getElementById('txt')
+  let targetLi = null
+
+  for (let index = 0; index < aLI.length; index++) { 
+    aLI[index].ondragstart = function(ev) {
+      this.style.background = 'yellow';
+      targetLi = this;
+      console.log(this.innerHTML)
+      ev.dataTransfer.setData('Text', this.innerHTML)
+      console.log(ev)
+      // ev.dataTransfer.setDragImage(img,20,20)
+    }
+    aLI[index].ondragend = function() {
+      this.style.background = ''
+    }
+
+  }
+  oDIv.ondragenter = function () {
+    this.style.borderColor = 'red'
+  }
+  oDIv.ondragover = function(ev) {
+    ev.preventDefault();
+  }
+  oDIv.ondragleave = function () {
+    this.style.borderColor = "#000"
+  }
+  oDIv.ondrop = function (ev) {
+    this.style.borderColor = 'red'
+    let oText = ev.dataTransfer.getData('Text')
+    console.log(oText)
+    txt.innerHTML = "删除的元素是" + oText
+    targetLi.parentNode.removeChild(targetLi) // 删除节点
+  }
+</script>
+</html>
