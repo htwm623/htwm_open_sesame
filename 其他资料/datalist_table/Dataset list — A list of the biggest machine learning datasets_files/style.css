@@ -1,0 +1,96 @@
+.HoverPopup {
+  font-size: 14px;
+  line-height: 22px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity .2s ease, transform .2s ease;
+  will-change: opacity, transform;
+  z-index: 1;
+}
+
+.HoverPopup:hover,
+.HoverTooltip:active + .HoverPopup,
+.HoverTooltip:focus + .HoverPopup,
+.HoverTooltip:hover + .HoverPopup {
+  opacity: 1;
+  transform: none;
+
+}
+
+.HoverPopup.Visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.TopLeftArrow:after {
+  background-color: #22292f;
+  content: ' ';
+  top: -4px;
+  border-radius: 2px;
+  height: 8px;
+  left: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+.TopRightArrow:after {
+  background-color: #22292f;
+  content: ' ';
+  top: -4px;
+  border-radius: 2px;
+  height: 8px;
+  right: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8px;
+}
+
+.License {
+  max-width: 160px;
+}
+
+@media (max-width: 768px){
+  .License {
+    max-width: 100px;
+  }
+}
+
+.Filters {
+  width: 100%;
+}
+
+@media (min-width: 992px){
+  .Filters {
+    min-width: 160px;
+  }
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.font-12 {
+  font-size: 12px;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expanded {
+  overflow: visible;
+  white-space: normal;
+}
+
+.width-100 {
+  width: 100%;
+}

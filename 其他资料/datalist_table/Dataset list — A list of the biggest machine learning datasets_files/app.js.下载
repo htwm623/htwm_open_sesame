@@ -1,0 +1,191 @@
+Vue.component('filters', {
+  template: `
+    <div class="flex flex-col text-grey pt-2">
+      <div class="relative mb-2">
+         <div class="HoverTooltip font-12 cursor-default uppercase text-indigo-darker flex items-center" style="letter-spacing:1px">
+          <span>Search</span>
+          <i class="fas fa-question-circle text-indigo-lighter ml-2"></i>
+         </div>
+         <div class="HoverPopup TopLeftArrow absolute text-grey-darker bg-black text-white rounded p-2 mt-2">
+          Search datasets by name and desription.
+         </div>
+      </div>
+
+      <div class="mb-8">
+        <input 
+          class="text-sm py-2 px-4 text-indigo-darkest border border-grey-lighter rounded width-100"
+          type="text"
+          v-model="$parent.search"
+          placeholder="Search">
+      </div>
+
+      <div class="relative mb-2">
+         <div class="HoverTooltip font-12 cursor-default uppercase text-indigo-darker flex items-center" style="letter-spacing:1px">
+          <span>Category</span>
+          <i class="fas fa-question-circle text-indigo-lighter ml-2"></i>
+         </div>
+         <div class="HoverPopup TopLeftArrow absolute text-grey-darker bg-black text-white rounded p-2 mt-2">
+          Filter by category: computer vision, natural language processing, self-driving, question answering, audio and medical.
+         </div>
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': !$parent.isFiltered(), 'opacity-100': !$parent.isFiltered() }"
+              @click="$parent.resetCategories()">
+        <i class="fas fa-globe text-sm mr-2 text-indigo-dark"></i>
+        <span>All</span>
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isActive('cv'), 'opacity-100': $parent.isActive('cv') }"
+              @click="$parent.filterCategory('cv')">
+        <i class="far fa-eye text-sm mr-2 text-indigo-dark"></i>
+        <span>CV</span>
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isActive('nlp'), 'opacity-100': $parent.isActive('nlp') }"
+              @click="$parent.filterCategory('nlp')">
+        <i class="fas fa-align-left text-sm mr-2 text-indigo-dark"></i>
+        NLP
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isActive('self-driving'), 'opacity-100': $parent.isActive('self-driving') }"
+              @click="$parent.filterCategory('self-driving')">
+        <i class="fas fa-car text-sm mr-2 text-indigo-dark"></i>
+        <span>Self-driving</span>
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isActive('qa'), 'opacity-100': $parent.isActive('qa') }"
+              @click="$parent.filterCategory('qa')">
+        <i class="far fa-question-circle text-sm mr-2 text-indigo-dark"></i>
+        QA
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isActive('audio'), 'opacity-100': $parent.isActive('audio') }"
+              @click="$parent.filterCategory('audio')">
+        <i class="fas fa-music text-sm mr-2 text-indigo-dark"></i>
+        Audio
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-8 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isActive('medical'), 'opacity-100': $parent.isActive('medical') }"
+              @click="$parent.filterCategory('medical')">
+        <i class="far fa-plus-square text-sm mr-2 text-indigo-dark"></i>
+        Medical
+      </div>
+
+      <div class="relative mb-2">
+        <div class="HoverTooltip font-12 cursor-default uppercase text-indigo-darker flex items-center" style="letter-spacing:1px">
+          <span>License</span>
+          <i class="fas fa-question-circle text-indigo-lighter ml-2"></i>
+        </div>
+        <div class="HoverPopup TopLeftArrow absolute text-grey-darker bg-black text-white rounded p-2 mt-2">
+          Filter by type of license: non-commercial licenses allow use for research and educational purposes while a commercial license also allows using the dataset for commercial licenses. Additional restrictions may apply, check the full license text.
+        </div>
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isLicenseActive('non-commercial') && $parent.isLicenseActive('commercial'), 'opacity-100': $parent.isLicenseActive('non-commercial') && $parent.isLicenseActive('commercial') }"
+              @click="$parent.resetLicenses()">
+        All
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-2 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isLicenseActive('non-commercial'), 'opacity-100': $parent.isLicenseActive('non-commercial') }"
+              @click="$parent.filterLicense('non-commercial')">
+        Non-commercial
+      </div>
+      <div class="text-sm py-2 px-4 text-indigo-darkest opacity-50 mb-8 border shadow border-grey-lighter rounded flex items-center width-100 cursor-pointer"
+              :class="{ 'bg-white': $parent.isLicenseActive('commercial'), 'opacity-100': $parent.isLicenseActive('commercial') }"
+              @click="$parent.filterLicense('commercial')">
+        Commercial
+      </div>
+
+      <a class="text-sm text-indigo hover:text-indigo-lighter pl-2 no-underline font-semibold mb-8"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdK4xeYnemLBp4zYOmnJsSCh905dpkTbXKAFFqFP7T5I4RBPA/viewform"
+            target="_blank">Add a dataset</a>
+
+    </div>
+    `
+});
+
+var defaultCategories = ['cv', 'nlp', 'self-driving', 'qa', 'audio', 'medical'];
+var defaultLicenses = ['commercial', 'non-commercial'];
+  
+var theApp = new Vue({
+  el: '#theApp',
+  data: {
+    activeCategories: defaultCategories,
+    activeLicenses: defaultLicenses,
+    datasets: datasetList,
+    openDatasets: [],
+    openLicences: [],
+    search: ''
+  },
+  watch: {
+    search: function() {
+      this.applyFilter();
+    }
+  },
+  methods: {
+    applyFilter: function() {
+      var list = [];
+      for (let index = 0; index < datasetList.length; index++) {
+        var dataset = datasetList[index];
+        if (this.activeCategories.indexOf(dataset.type) !== -1 
+            && this.activeLicenses.indexOf(dataset.licenseType) !== -1
+            && (!this.search || dataset.name.toLowerCase().indexOf(this.search) !== -1 || dataset.description.toLowerCase().indexOf(this.search) !== -1)) {
+            list.push(dataset);
+        }  
+      }
+      this.datasets = list;
+    },
+    filterCategory: function(category) {
+      this.activeCategories = [category];
+      this.applyFilter();
+    },
+    filterLicense: function(license) {
+      this.activeLicenses = [license];
+      this.applyFilter();
+    },
+    isActive: function(category) {
+      return this.activeCategories.indexOf(category) !== -1; 
+    },
+    isFiltered: function() {
+      return this.activeCategories.length === 1; 
+    },
+    isDescriptionOpen: function(dataset) {
+      return this.openDatasets.indexOf(dataset) !== -1; 
+    },
+    isLicenseActive: function(category) {
+      return this.activeLicenses.indexOf(category) !== -1; 
+    },
+    isLicenseOpen: function(dataset) {
+      return this.openLicences.indexOf(dataset) !== -1; 
+    },
+    isVisible: function(datasetId) {
+      return this.datasets.find(function(dataset) {
+        return dataset.id === datasetId;
+      });
+    },
+    resetCategories: function() {
+      this.activeCategories = defaultCategories;
+      this.applyFilter();
+    },
+    resetLicenses: function() {
+      this.activeLicenses = defaultLicenses;
+      this.applyFilter();
+    },
+    toggleDescription: function(dataset) {
+      var index = this.openDatasets.indexOf(dataset);
+      if (index !== -1) {
+        this.openDatasets.splice(index, 1);
+      } else {
+        this.openDatasets.push(dataset);
+      }
+    },
+    toggleShowLicense: function(dataset) {
+      var index = this.openLicences.indexOf(dataset);
+      if (index !== -1) {
+        this.openLicences.splice(index, 1);
+      } else {
+        this.openLicences.push(dataset);
+      }
+    },
+  }
+})
