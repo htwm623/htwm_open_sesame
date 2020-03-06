@@ -53,3 +53,21 @@ categories:
 
 <!--more-->
 
+## VUE打包后静态资源访问为空
+
+- 参考链接  [https://cli.vuejs.org/zh/config/#%E7%9B%AE%E6%A0%87%E6%B5%8F%E8%A7%88%E5%99%A8](https://cli.vuejs.org/zh/config/#目标浏览器) 
+
+- 解决方案
+
+  - 在项目根目录新建文件 vue.config.js
+
+  - 文件中包含如下内容
+
+    ```javascript
+    module.exports = {
+      // 选项...
+      publicPath: './'
+    }
+    ```
+
+    
