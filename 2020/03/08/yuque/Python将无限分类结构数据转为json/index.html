@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="yaml文件格式及python解析用途及基本规则 常用于配置文件 大小写敏感 使用缩进表示嵌套 使用空格表示缩进,不允许使用  Tab 键作为缩进 缩进的空格数目没有实际意义,左侧对其即为同级">
-<meta name="keywords" content="yaml,python">
+  <meta name="description" content="原文链接 12345678910source=[    &amp;#123;&quot;name&quot;:&quot;my document&quot;,&quot;id&quot;:1 , &quot;parentid&quot;: 0 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;photos&quot;,&quot;id&quot;:2 , &quot;parentid&quot;: 1 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;Friend&quot;,&quot;id&quot;:3 , &quot;parentid&quot;: 2 &amp;#125;,">
+<meta name="keywords" content="无限分类结构数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="yaml文件格式及python解析">
-<meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;2019&#x2F;10&#x2F;26&#x2F;IT%E6%8A%80%E6%9C%AF&#x2F;yaml%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%8F%8Apython%E8%A7%A3%E6%9E%90&#x2F;index.html">
+<meta property="og:title" content="Python将无限分类结构数据转为json">
+<meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;2020&#x2F;03&#x2F;08&#x2F;yuque&#x2F;Python%E5%B0%86%E6%97%A0%E9%99%90%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E4%B8%BAjson&#x2F;index.html">
 <meta property="og:site_name" content="HTWM-623">
-<meta property="og:description" content="yaml文件格式及python解析用途及基本规则 常用于配置文件 大小写敏感 使用缩进表示嵌套 使用空格表示缩进,不允许使用  Tab 键作为缩进 缩进的空格数目没有实际意义,左侧对其即为同级">
+<meta property="og:description" content="原文链接 12345678910source=[    &amp;#123;&quot;name&quot;:&quot;my document&quot;,&quot;id&quot;:1 , &quot;parentid&quot;: 0 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;photos&quot;,&quot;id&quot;:2 , &quot;parentid&quot;: 1 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;Friend&quot;,&quot;id&quot;:3 , &quot;parentid&quot;: 2 &amp;#125;,">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T16:38:07.669Z">
+<meta property="og:updated_time" content="2020-03-07T17:35:26.387Z">
 <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/2019/10/26/IT%E6%8A%80%E6%9C%AF/yaml%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%8F%8Apython%E8%A7%A3%E6%9E%90/">
+  <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/2020/03/08/yuque/Python%E5%B0%86%E6%97%A0%E9%99%90%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E4%B8%BAjson/">
 
 
 <script id="page-configurations">
@@ -79,7 +79,7 @@
   };
 </script>
 
-  <title>yaml文件格式及python解析 | HTWM-623</title>
+  <title>Python将无限分类结构数据转为json | HTWM-623</title>
   
 
 
@@ -264,7 +264,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2019/10/26/IT%E6%8A%80%E6%9C%AF/yaml%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%8F%8Apython%E8%A7%A3%E6%9E%90/">
+    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2020/03/08/yuque/Python%E5%B0%86%E6%97%A0%E9%99%90%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E4%B8%BAjson/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta name="referrer" content="no-referrer"/>
@@ -279,7 +279,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            yaml文件格式及python解析
+            Python将无限分类结构数据转为json
             
 
           
@@ -296,19 +296,11 @@
                 
               
 
-              <time title="创建时间：2019-10-26 21:52:22" itemprop="dateCreated datePublished" datetime="2019-10-26T21:52:22+08:00">2019-10-26</time>
+              <time title="创建时间：2020-03-08 01:07:48 / 修改时间：01:35:26" itemprop="dateCreated datePublished" datetime="2020-03-08T01:07:48+08:00">2020-03-08</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-11-19 00:38:07" itemprop="dateModified" datetime="2019-11-19T00:38:07+08:00">2019-11-19</time>
-              </span>
             
           
             <span class="post-meta-item">
@@ -318,8 +310,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/htwm_open_sesame/categories/IT%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">IT技术</span>
+                  <a href="/htwm_open_sesame/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
                   </a>
                 </span>
 
@@ -340,34 +332,21 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="yaml文件格式及python解析"><a href="#yaml文件格式及python解析" class="headerlink" title="yaml文件格式及python解析"></a>yaml文件格式及python解析</h1><h2 id="用途及基本规则"><a href="#用途及基本规则" class="headerlink" title="用途及基本规则"></a>用途及基本规则</h2><ul>
-<li>常用于配置文件</li>
-<li>大小写敏感</li>
-<li>使用缩进表示嵌套</li>
-<li>使用空格表示缩进,不允许使用  <kbd>Tab</kbd> 键作为缩进</li>
-<li>缩进的空格数目没有实际意义,左侧对其即为同级</li>
-</ul>
-<a id="more"></a>
+        <ul>
+<li><a href="https://segmentfault.com/q/1010000008541784" target="_blank" rel="noopener">原文链接</a></li>
+</ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">source=[</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"my document"</span>,<span class="string">"id"</span>:<span class="number">1</span> , <span class="string">"parentid"</span>: <span class="number">0</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"photos"</span>,<span class="string">"id"</span>:<span class="number">2</span> , <span class="string">"parentid"</span>: <span class="number">1</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Friend"</span>,<span class="string">"id"</span>:<span class="number">3</span> , <span class="string">"parentid"</span>: <span class="number">2</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Wife"</span>,<span class="string">"id"</span>:<span class="number">4</span> , <span class="string">"parentid"</span>: <span class="number">2</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Company"</span>,<span class="string">"id"</span>:<span class="number">5</span> , <span class="string">"parentid"</span>: <span class="number">2</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Program Files"</span>,<span class="string">"id"</span>:<span class="number">6</span> , <span class="string">"parentid"</span>: <span class="number">1</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"intel"</span>,<span class="string">"id"</span>:<span class="number">7</span> , <span class="string">"parentid"</span>: <span class="number">6</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"java"</span>,<span class="string">"id"</span>:<span class="number">8</span> , <span class="string">"parentid"</span>: <span class="number">6</span> &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure><a id="more"></a>
 
 
-
-<h2 id="Python解析"><a href="#Python解析" class="headerlink" title="Python解析"></a>Python解析</h2><ul>
-<li>涉及到的包 pip install PyYAML</li>
-<li>示例代码</li>
-</ul>
-<p>yaml文件</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># test.yaml</span></span><br><span class="line"><span class="attr">age:</span> <span class="number">37</span></span><br><span class="line"><span class="attr">spouse:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">Jane</span> <span class="string">Smith</span></span><br><span class="line"><span class="attr">  age:</span> <span class="number">25</span></span><br><span class="line"><span class="attr">children:</span></span><br><span class="line"><span class="attr">  - name:</span> <span class="string">Jimmy</span> <span class="string">Smith</span></span><br><span class="line"><span class="attr">    age:</span> <span class="number">15</span></span><br><span class="line"><span class="attr">  - name1:</span> <span class="string">Jenny</span> <span class="string">Smith</span></span><br><span class="line"><span class="attr">    age1:</span> <span class="number">12</span></span><br></pre></td></tr></table></figure>
-
-<p>python 解析示例</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> yaml</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="keyword">with</span> open(<span class="string">'test.yaml'</span>,<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>)<span class="keyword">as</span> fr:</span><br><span class="line">        data = yaml.load(fr, Loader=yaml.Loader)</span><br><span class="line">    print(data)</span><br><span class="line"><span class="comment"># &#123;'age': 37, 'spouse': &#123;'name': 'Jane Smith', 'age': 25&#125;, 'children': [&#123;'name': 'Jimmy Smith', 'age': 15&#125;, &#123;'name1': 'Jenny Smith', 'age1': 12&#125;]&#125;</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>递归</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getChildren</span><span class="params">(id=<span class="number">0</span>)</span>:</span></span><br><span class="line">    res =[]</span><br><span class="line">    <span class="keyword">for</span> obj <span class="keyword">in</span> source:</span><br><span class="line">        <span class="keyword">if</span> obj[<span class="string">"parentid"</span>] ==id:</span><br><span class="line">            res.append(&#123;<span class="string">"id"</span>:obj[<span class="string">"id"</span>],<span class="string">"text"</span>:obj[<span class="string">"name"</span>],<span class="string">"children"</span>:getChildren(obj[<span class="string">"id"</span>])&#125;)</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>哈希表</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">tree_dict = &#123;&#125;</span><br><span class="line">tree_data = []</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> source:</span><br><span class="line">    tree_dict[item[<span class="string">"id"</span>]] = item</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> tree_dict:</span><br><span class="line">    <span class="keyword">if</span> tree_dict[i][<span class="string">"parentid"</span>]:</span><br><span class="line">        parentid = tree_dict[i][<span class="string">"parentid"</span>]</span><br><span class="line">        parent = tree_dict[parentid]</span><br><span class="line">        parent.setdefault(<span class="string">"children"</span>, []).append(tree_dict[i])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        tree_data.append(tree_dict[i])</span><br></pre></td></tr></table></figure>
 
 
-
-
-
-<h2 id="yaml语法"><a href="#yaml语法" class="headerlink" title="yaml语法"></a>yaml语法</h2><ul>
-<li>参考 <a href="http://www.ruanyifeng.com/blog/2016/07/yaml.html" target="_blank" rel="noopener">YAML语言教程 阮一峰</a></li>
-</ul>
 
     </div>
 
@@ -383,9 +362,7 @@
           
           <div class="post-tags">
             
-              <a href="/htwm_open_sesame/tags/yaml/" rel="tag"># yaml</a>
-            
-              <a href="/htwm_open_sesame/tags/python/" rel="tag"># python</a>
+              <a href="/htwm_open_sesame/tags/%E6%97%A0%E9%99%90%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE/" rel="tag"># 无限分类结构数据</a>
             
           </div>
         
@@ -395,8 +372,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/htwm_open_sesame/2019/10/23/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/vue%E5%88%9B%E5%BB%BA%E7%BB%84%E4%BB%B6/" rel="next" title="vue创建组件">
-                  <i class="fa fa-chevron-left"></i> vue创建组件
+                <a href="/htwm_open_sesame/2020/02/02/yuque/%E4%BD%BF%E7%94%A8Jupyter%20Notebook%20%E5%AE%89%E8%A3%85%E5%85%B6%E4%BB%96%E5%86%85%E6%A0%B8/" rel="next" title="使用Jupyter Notebook 安装其他内核">
+                  <i class="fa fa-chevron-left"></i> 使用Jupyter Notebook 安装其他内核
                 </a>
               
             </div>
@@ -404,10 +381,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/htwm_open_sesame/2019/10/27/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/nvm%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95/" rel="prev" title="nvm安装过程记录">
-                  nvm安装过程记录 <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -453,8 +426,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#yaml文件格式及python解析"><span class="nav-number">1.</span> <span class="nav-text">yaml文件格式及python解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#用途及基本规则"><span class="nav-number">1.1.</span> <span class="nav-text">用途及基本规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python解析"><span class="nav-number">1.2.</span> <span class="nav-text">Python解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#yaml语法"><span class="nav-number">1.3.</span> <span class="nav-text">yaml语法</span></a></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
