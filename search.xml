@@ -1,6 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用Jupyter Notebook 安装其他内核</title>
+    <url>/htwm_open_sesame/2020/02/02/yuque/%E4%BD%BF%E7%94%A8Jupyter%20Notebook%20%E5%AE%89%E8%A3%85%E5%85%B6%E4%BB%96%E5%86%85%E6%A0%B8/</url>
+    <content><![CDATA[<p><a name="l0Uar"></a></p>
+<h2 id="javascript-内核安装"><a href="#javascript-内核安装" class="headerlink" title="javascript 内核安装"></a>javascript 内核安装</h2><p>参考<a href="https://github.com/n-riesco/ijavascript" target="_blank" rel="noopener">ijavascript</a></p>
+<ol>
+<li><p>windows </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip3 install --upgrade pip</span><br><span class="line">pip3 install jupyter</span><br><span class="line">npm install -g ijavascript</span><br><span class="line">ijsinstall</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>正常运行 jupyter notebook 选择node 的内核即可</p>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>Jetbrains软件破解</title>
+    <url>/htwm_open_sesame/2020/02/01/yuque/Jetbrains%E8%BD%AF%E4%BB%B6%E7%A0%B4%E8%A7%A3/</url>
+    <content><![CDATA[<ol>
+<li>下载jetbrains破解jar包  jetbrainsCrack.jar</li>
+<li>修改jetbrains安装目录下 bin下 *.exe.vmoptions文件 在文件末尾追加如下所示 后面位jetbrainsCrack.jar绝对目录</li>
+</ol><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-javaagent:D:\ProgramEnv\jetbrainsfree\jetbrainsCrack.jar</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+<p>新安装的软件会现实激活码格式不对, 附录当前可用文件全文件内容</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">-Xms128m</span><br><span class="line">-Xmx750m</span><br><span class="line">-XX:ReservedCodeCacheSize=240m</span><br><span class="line">-XX:+UseConcMarkSweepGC</span><br><span class="line">-XX:SoftRefLRUPolicyMSPerMB=50</span><br><span class="line">-ea</span><br><span class="line">-Dsun.io.useCanonCaches=false</span><br><span class="line">-Djava.net.preferIPv4Stack=true</span><br><span class="line">-Djdk.http.auth.tunneling.disabledSchemes=&quot;&quot;</span><br><span class="line">-XX:+HeapDumpOnOutOfMemoryError</span><br><span class="line">-XX:-OmitStackTraceInFastThrow</span><br><span class="line">-javaagent:D:\ProgramEnv\jetbrainsfree\jetbrainsCrack.jar</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>启动软件在Activation code中输入如下 激活码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">A82DEE284F-eyJsaWNlbnNlSWQiOiJBODJERUUyODRGIiwibGljZW5zZWVOYW1lIjoiaHR0cHM6Ly96aGlsZS5pbyIsImFzc2lnbmVlTmFtZSI6IiIsImFzc2lnbmVlRW1haWwiOiIiLCJsaWNlbnNlUmVzdHJpY3Rpb24iOiJVbmxpbWl0ZWQgbGljZW5zZSB0aWxsIGVuZCBvZiB0aGUgY2VudHVyeS4iLCJjaGVja0NvbmN1cnJlbnRVc2UiOmZhbHNlLCJwcm9kdWN0cyI6W3siY29kZSI6IklJIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiV1MiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJEQiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlJNIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiRE0iLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IkdPIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUFMiLCJwYWlkVXBUbyI6IjIwODktMDctMDcifSx7ImNvZGUiOiJDTCIsInBhaWRVcFRvIjoiMjA4OS0wNy0wNyJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In0seyJjb2RlIjoiUlNVIiwicGFpZFVwVG8iOiIyMDg5LTA3LTA3In1dLCJoYXNoIjoiODkwNzA3MC8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-5epo90Xs7KIIBb8ckoxnB/AZQ8Ev7rFrNqwFhBAsQYsQyhvqf1FcYdmlecFWJBHSWZU9b41kvsN4bwAHT5PiznOTmfvGv1MuOzMO0VOXZlc+edepemgpt+t3GUHvfGtzWFYeKeyCk+CLA9BqUzHRTgl2uBoIMNqh5izlDmejIwUHLl39QOyzHiTYNehnVN7GW5+QUeimTr/koVUgK8xofu59Tv8rcdiwIXwTo71LcU2z2P+T3R81fwKkt34evy7kRch4NIQUQUno//Pl3V0rInm3B2oFq9YBygPUdBUbdH/KHROyohZRD8SaZJO6kUT0BNvtDPKF4mCT1saWM38jkw==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA5ndaik1GD0nyTdqkZgURQZGW+RGxCdBITPXIwpjhhaD0SXGa4XSZBEBoiPdY6XV6pOfUJeyfi9dXsY4MmT0D+sKoST3rSw96xaf9FXPvOjn4prMTdj3Ji3CyQrGWeQU2nzYqFrp1QYNLAbaViHRKuJrYHI6GCvqCbJe0LQ8qqUiVMA9wG/PQwScpNmTF9Kp2Iej+Z5OUxF33zzm+vg/nYV31HLF7fJUAplI/1nM+ZG8K+AXWgYKChtknl3sW9PCQa3a3imPL9GVToUNxc0wcuTil8mqveWcSQCHYxsIaUajWLpFzoO2AhK4mfYBSStAqEjoXRTuj17mo8Q6M2SHOcwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQBonMu8oa3vmNAa4RQP8gPGlX3SQaA3WCRUAj6Zrlk8AesKV1YSkh5D2l+yUk6njysgzfr1bIR5xF8eup5xXc4/G7NtVYRSMvrd6rfQcHOyK5UFJLm+8utmyMIDrZOzLQuTsT8NxFpbCVCfV5wNRu4rChrCuArYVGaKbmp9ymkw1PU6+HoO5i2wU3ikTmRv8IRjrlSStyNzXpnPTwt7bja19ousk56r40SmlmC04GdDHErr0ei2UbjUua5kw71Qn9g02tL9fERI2sSRjQrvPbn9INwRWl5+k05mlKekbtbu2ev2woJFZK4WEXAd/GaAdeZZdumv8T2idDFL7cAirJwcrbfpawPeXr52oKTPnXfi0l5+g9Gnt/wfiXCrPElX6ycTR6iL3GC2VR4jTz6YatT4Ntz59/THOT7NJQhr6AyLkhhJCdkzE2cob/KouVp4ivV7Q3Fc6HX7eepHAAF/DpxwgOrg9smX6coXLgfp0b1RU2u/tUNID04rpNxTMueTtrT8WSskqvaJd3RH8r7cnRj6Y2hltkja82HlpDURDxDTRvv+krbwMr26SB/40BjpMUrDRCeKuiBahC0DCoU/4+ze1l94wVUhdkCfL0GpJrMSCDEK+XEurU18Hb7WT+ThXbkdl6VpFdHsRvqAnhR2g4b+Qzgidmuky5NUZVfEaZqV/g==</span><br></pre></td></tr></table></figure>
+
+<p>即可激活</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学习计划</title>
+    <url>/htwm_open_sesame/2020/01/19/yuque/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p><a name="GyT3e"></a></p><h3 id="学习重点"><a href="#学习重点" class="headerlink" title="学习重点"></a>学习重点</h3><p><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567514692551-49e3e165-3fab-4dd7-895e-4b7e9a57ec24.png#align=left&display=inline&height=25&name=image.png&originHeight=25&originWidth=25&size=1539&status=done&style=none&width=25" alt="image.png">插入「脑图」并进行编辑<br><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567567603546-29ab2829-0200-4200-94a0-c2757113ac2c.png" alt><br><a name="3undK"></a></p><h3 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h3><p><a name="8rOoc"></a></p><h4 id="课堂PPT"><a href="#课堂PPT" class="headerlink" title="课堂PPT"></a>课堂PPT</h4><p><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567514692551-49e3e165-3fab-4dd7-895e-4b7e9a57ec24.png#align=left&display=inline&height=25&name=image.png&originHeight=25&originWidth=25&size=1539&status=done&style=none&width=25" alt="image.png">嵌入「本地文件」，在文档中可预览此文件：</p><blockquote>
+<p>脑图（XMind、Mind Manager、Mind Node）<br>设计文件（PhotoShop、Sketch、Axure)<br>办公文件（PDF、PPT、Word、Excel、Keynote、Pages、Numbers）</p>
+</blockquote><a id="more"></a>
+
+
+
+
+<p><a name="yaExx"></a></p>
+<h4 id="教学视频"><a href="#教学视频" class="headerlink" title="教学视频"></a>教学视频</h4><p><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567514692551-49e3e165-3fab-4dd7-895e-4b7e9a57ec24.png#align=left&display=inline&height=25&name=image.png&originHeight=25&originWidth=25&size=1539&status=done&style=none&width=25" alt="image.png">嵌入「本地视频」或「在线视频」，如优酷及Bilibili视频：</p>
+<iframe src="https://player.bilibili.com/player.html?aid=55895675" frameborder="no" allowfullscreen="true"></iframe>
+<br>
+<a name="LmSGl"></a>
+#### 阅读材料
+
+<p><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567514692551-49e3e165-3fab-4dd7-895e-4b7e9a57ec24.png#align=left&display=inline&height=25&name=image.png&originHeight=25&originWidth=25&size=1539&status=done&style=none&width=25" alt="image.png">插入「附件」</p>
+<p><a href="https://www.yuque.com/attachments/yuque/0/2019/pdf/105911/1570525820813-a79b3d0f-38cb-4a73-a2bb-ce8f091f2049.pdf?_lake_card=%7B%22uid%22%3A%22rc-upload-1567514495288-26%22%2C%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2019%2Fpdf%2F105911%2F1570525820813-a79b3d0f-38cb-4a73-a2bb-ce8f091f2049.pdf%22%2C%22name%22%3A%22%E7%A4%BA%E4%BE%8BPDF.pdf%22%2C%22size%22%3A16189%2C%22type%22%3A%22application%2Fpdf%22%2C%22ext%22%3A%22pdf%22%2C%22progress%22%3A%7B%22percent%22%3A0%7D%2C%22status%22%3A%22done%22%2C%22percent%22%3A0%2C%22id%22%3A%22wTSXR%22%2C%22refSrc%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2019%2Fpdf%2F105911%2F1569247460410-d74712f0-05ce-474b-b914-d76439248860.pdf%22%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener">示例PDF.pdf</a></p>
+<p><a name="s1eYj"></a></p>
+<h3 id="学习计划"><a href="#学习计划" class="headerlink" title="学习计划"></a>学习计划</h3><p><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567514692551-49e3e165-3fab-4dd7-895e-4b7e9a57ec24.png#align=left&display=inline&height=25&name=image.png&originHeight=25&originWidth=25&size=1539&status=done&style=none&width=25" alt="image.png">插入「表格」，可以在表格框里插入对应的图片、附件、状态</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>书名</strong></th>
+<th align="center"><strong>章节</strong></th>
+<th align="center"><strong>计划阅读时间</strong></th>
+<th align="center"><strong>进程</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">《基础有机化学》</td>
+<td align="center">第三章</td>
+<td align="center">2h</td>
+<td align="center">已完成</td>
+</tr>
+<tr>
+<td align="center">《无机化学》</td>
+<td align="center">第一章</td>
+<td align="center">1h</td>
+<td align="center">进行中</td>
+</tr>
+<tr>
+<td align="center">《物理化学》</td>
+<td align="center">第四章</td>
+<td align="center">1h</td>
+<td align="center">未开始</td>
+</tr>
+<tr>
+<td align="center"><img src="https://cdn.nlark.com/yuque/0/2019/jpeg/105911/1571983625842-9d347225-731e-41e0-ab51-91a232a2db72.jpeg#align=left&display=inline&height=3264&name=alex-knight-2EJCSULRwC8-unsplash.jpg&originHeight=3264&originWidth=4896&size=1555309&status=done&width=4896" alt="alex-knight-2EJCSULRwC8-unsplash.jpg"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p><a name="D75yv"></a></p>
+<h3 id="hello"><a href="#hello" class="headerlink" title="hello"></a>hello</h3>]]></content>
+  </entry>
+  <entry>
+    <title>读书笔记</title>
+    <url>/htwm_open_sesame/2020/01/19/yuque/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p><a name="30e8c"></a></p><h4 id><a href="#" class="headerlink" title></a><img src="https://cdn.nlark.com/yuque/0/2019/png/215718/1567507815646-d739438a-8ffd-4107-9d87-130e2104446a.png#align=left&display=inline&height=232&name=image.png&originHeight=1553&originWidth=1080&size=367334&status=done&style=none&width=161" alt="image.png"></h4><p><em>插入封面图片，点击图片，设置图片大小</em><br><a name="K3ibk"></a></p><h4 id="关于本书"><a href="#关于本书" class="headerlink" title="关于本书"></a>关于本书</h4><p>插入「表格」</p><table>
+<thead>
+<tr>
+<th><strong>书名</strong></th>
+<th><a href="https://book.douban.com/subject/25944034/" target="_blank" rel="noopener">《菊次郎与佐纪》</a></th>
+<th><strong>作者</strong></th>
+<th>北野武日本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>出版社</strong></td>
+<td>译林出版社</td>
+<td><strong>阅读日期</strong></td>
+<td>2019年2月</td>
+</tr>
+<tr>
+<td><strong>豆瓣评分</strong></td>
+<td>8.1</td>
+<td><strong>我的评分</strong></td>
+<td>☆☆☆☆</td>
+</tr>
+</tbody></table><p><a name="uLRxc"></a></p><h4 id="内容简介"><a href="#内容简介" class="headerlink" title="内容简介"></a>内容简介</h4><p>在此处输入文本<br>你将读到的是北野武的出身、父母、兄弟和家庭的故事。<br>但请放心，这绝非一个自我感觉良好的人写的那种“优良课外读物”。<br>相反，北野武用搞笑到甚至刻薄方式描绘这些人和事，让我们在笑与泪的交织中，看到真情和真实，看到那么多情、柔软的心。</p><a id="more"></a>
+
+
+
+
+
+<p><a name="E9053"></a></p>
+<h4 id="书摘"><a href="#书摘" class="headerlink" title="书摘"></a>书摘</h4><p>在此处输入文本</p>
+<ul>
+<li>你将读到的是北野武的出身、父母、兄弟和家庭的故事。</li>
+<li>但请放心，这绝非一个自我感觉良好的人写的那种“优良课外读物”。很喜欢这句←方便打标签的状态卡片</li>
+<li>相反，北野武用搞笑到甚至刻薄方式描绘这些人和事，让我们在笑与泪的交织中，看到真情和真实，看到那么多情、柔软的心。</li>
+</ul>
+<p><a name="vEdHo"></a></p>
+<h4 id="读后感"><a href="#读后感" class="headerlink" title="读后感"></a>读后感</h4><p>在此处输入文本</p>
+<ul>
+<li>你将读到的是北野武的出身、父母、兄弟和家庭的故事。</li>
+<li>但请放心，这绝非一个自我感觉良好的人写的那种“优良课外读物”。</li>
+<li>相反，北野武用搞笑到甚至刻薄方式描绘这些人和事，让我们在笑与泪的交织中，看到真情和真实，看到那么多情、柔软的心。</li>
+</ul>
+<br>
+<a name="Hello"></a>
+### Hello
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>node基础操作</title>
     <url>/htwm_open_sesame/2020/01/15/node%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h3 id="遍历文件夹"><a href="#遍历文件夹" class="headerlink" title="遍历文件夹"></a>遍历文件夹</h3><ol>
@@ -49,6 +193,63 @@
       <categories>
         <category>GraphQl</category>
         <category>API</category>
+      </categories>
+      <tags>
+        <tag>网课笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GraphQl学习</title>
+    <url>/htwm_open_sesame/2020/01/05/yuque/GraphQl%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p><a name="cd02615d"></a></p><h2 id="Graph介绍"><a href="#Graph介绍" class="headerlink" title="Graph介绍"></a>Graph介绍</h2><ul>
+<li>特点<ul>
+<li>请求需要的数据 不多不少</li>
+<li>获取多个资源，只用一个请求</li>
+<li>描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段</li>
+</ul>
+</li>
+<li>node监听运行修改文件命令 nodemon执行命令</li>
+<li>GraphHelloWolrd<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="keyword">const</span> &#123;buildSchema&#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>)</span><br><span class="line"><span class="keyword">const</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  type Account&#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    hello: String</span></span><br><span class="line"><span class="string">    accountName: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    account: Account</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">`</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = &#123;</span><br><span class="line">  hello: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'hello world'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  accountName: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'xiaoming'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  age: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">18</span></span><br><span class="line">  &#125;,</span><br><span class="line">  account: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      name: <span class="string">'nizi'</span>,</span><br><span class="line">      age: <span class="string">'18'</span>,</span><br><span class="line">      sex: <span class="string">'femail'</span>,</span><br><span class="line">      department: <span class="string">'school'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">  schema: schema,</span><br><span class="line">  rootValue: root,</span><br><span class="line">  graphiql: <span class="literal">true</span></span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>)</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul><a id="more"></a>
+
+<p><a name="9WsJ8"></a></p>
+<h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><ul>
+<li>基本类型 String,Int,Float,Boolean和ID<br><a name="DCuaR"></a><h2 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h2>query</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">query&#123;</span><br><span class="line">	getClassMates(classNo: <span class="number">31</span>)</span><br><span class="line">  account(username:<span class="string">"xiaoming"</span>) &#123;</span><br><span class="line">    name</span><br><span class="line">    age</span><br><span class="line">    sex</span><br><span class="line">    department</span><br><span class="line">    salary(city:<span class="string">"canton"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>示例2 js<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> &#123;buildSchema&#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"><span class="keyword">const</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">    type Account &#123;</span></span><br><span class="line"><span class="string">        name: String</span></span><br><span class="line"><span class="string">        age: Int</span></span><br><span class="line"><span class="string">        sex: String</span></span><br><span class="line"><span class="string">        department: String</span></span><br><span class="line"><span class="string">        salary(city: String): Int     </span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">        getClassMates(classNo: Int!): [String]</span></span><br><span class="line"><span class="string">        account(username: String): Account</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = &#123;</span><br><span class="line">    getClassMates: <span class="function">(<span class="params">&#123;classNo&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> obj = &#123;</span><br><span class="line">            <span class="number">31</span>: [<span class="string">'张三'</span>],</span><br><span class="line">            <span class="number">61</span>: [<span class="string">'李四'</span>]</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> obj[classNo]</span><br><span class="line">    &#125;,</span><br><span class="line">    account: <span class="function">(<span class="params">&#123;username&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> name = username;</span><br><span class="line">        <span class="keyword">const</span> sex = <span class="string">'man'</span>;</span><br><span class="line">        <span class="keyword">const</span> age = <span class="number">18</span>;</span><br><span class="line">        <span class="keyword">const</span> department = <span class="string">"development"</span>;</span><br><span class="line">        <span class="keyword">const</span> salary = <span class="function">(<span class="params">&#123;city&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (city === <span class="string">'canton'</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">10000</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">3000</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            name,</span><br><span class="line">            sex,</span><br><span class="line">            age,</span><br><span class="line">            department,</span><br><span class="line">            salary</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span></span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<p><a name="sdBuX"></a></p>
+<h2 id="GrqphQl-客户端访问"><a href="#GrqphQl-客户端访问" class="headerlink" title="GrqphQl 客户端访问"></a>GrqphQl 客户端访问</h2><p>示例3 获取示例2中的数据</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"getData()"</span>&gt;</span>获取数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="function"><span class="keyword">function</span> <span class="title">getData</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> query = `</span></span><br><span class="line"><span class="javascript">    query Account($username: <span class="built_in">String</span>,<span class="attr">$city</span>: <span class="built_in">String</span>) &#123;</span></span><br><span class="line">      account(username: $username) &#123;</span><br><span class="line">        name</span><br><span class="line">        age</span><br><span class="line">        sex</span><br><span class="line">        salary(city: $city)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    `;</span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> variables = &#123;username: <span class="string">'xiaoming'</span>, city: <span class="string">"canton"</span>&#125;;</span></span><br><span class="line"><span class="actionscript">    fetch(<span class="string">'/graphql'</span>, &#123;</span></span><br><span class="line"><span class="actionscript">      method: <span class="string">"POST"</span>,</span></span><br><span class="line">      headers: &#123;</span><br><span class="line"><span class="actionscript">        <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>,</span></span><br><span class="line"><span class="actionscript">        <span class="string">"Accept"</span>: <span class="string">"application/json"</span></span></span><br><span class="line">      &#125;,</span><br><span class="line"><span class="javascript">      body: <span class="built_in">JSON</span>.stringify(&#123;</span></span><br><span class="line">        query: query,</span><br><span class="line">        variables: variables</span><br><span class="line">      &#125;)</span><br><span class="line"><span class="javascript">    &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> res.json)</span></span><br><span class="line"><span class="javascript">    .then(<span class="function"><span class="params">json</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(json)</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<p><a name="LdNqC"></a></p>
+<h2 id="使用Mutations-修改数据"><a href="#使用Mutations-修改数据" class="headerlink" title="使用Mutations 修改数据"></a>使用Mutations 修改数据</h2><p>示例 创建数据查询体</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">  createAccount(input: &#123;</span><br><span class="line">    name: <span class="string">"xiaoming"</span>,</span><br><span class="line">    age:<span class="number">20</span></span><br><span class="line">    sex: <span class="string">"female"</span></span><br><span class="line">    department: <span class="string">"test"</span></span><br><span class="line">  &#125;) &#123;</span><br><span class="line">    name</span><br><span class="line">    age</span><br><span class="line">    sex</span><br><span class="line">    department</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例 更新数据查询体</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">  updateAccount(id: <span class="string">"xiaoming"</span>, <span class="attr">input</span>:&#123;</span><br><span class="line">    age:<span class="number">100</span></span><br><span class="line">  &#125;) &#123;</span><br><span class="line">    age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例 查询数据 查询体</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">  account&#123;</span><br><span class="line">    name</span><br><span class="line">    sex</span><br><span class="line">    age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例 mutation.js文件</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> &#123;buildSchema&#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"><span class="keyword">const</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  input AccountInput &#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Account &#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Mutation &#123;</span></span><br><span class="line"><span class="string">    createAccount(input: AccountInput): Account</span></span><br><span class="line"><span class="string">    updateAccount(id: ID!, input: AccountInput): Account   </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    account: [Account] </span></span><br><span class="line"><span class="string">   &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"><span class="keyword">const</span> fakeDb = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = &#123;</span><br><span class="line">  account() &#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> fakeDb) &#123;</span><br><span class="line">      arr.push(fakeDb[key])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;,</span><br><span class="line">  createAccount(&#123;input&#125;) &#123;</span><br><span class="line">    fakeDb[input.name] = input;</span><br><span class="line">    <span class="keyword">return</span> fakeDb[input.name]</span><br><span class="line">  &#125;,</span><br><span class="line">  updateAccount(&#123;id, input&#125;) &#123;</span><br><span class="line">    <span class="keyword">const</span> updatedAccount = <span class="built_in">Object</span>.assign(&#123;&#125;, fakeDb[id], input)</span><br><span class="line">    <span class="built_in">console</span>.log(id, updatedAccount)</span><br><span class="line">    fakeDb[id] = updatedAccount;</span><br><span class="line">    <span class="built_in">console</span>.log(fakeDb)</span><br><span class="line">    <span class="keyword">return</span> updatedAccount</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">  schema: schema,</span><br><span class="line">  rootValue: root,</span><br><span class="line">  graphiql: <span class="literal">true</span></span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">'.'</span>))</span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>GraphQl,API</category>
       </categories>
       <tags>
         <tag>网课笔记</tag>
@@ -705,8 +906,8 @@
         <category>IT技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>yaml</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
