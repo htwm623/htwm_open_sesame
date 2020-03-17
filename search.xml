@@ -1,6 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>freecodecampe出题</title>
+    <url>/htwm_open_sesame/2020/03/18/freecodecampe%E5%87%BA%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="freecodecamp-advanced-algorithm-scripting"><a href="#freecodecamp-advanced-algorithm-scripting" class="headerlink" title="freecodecamp advanced algorithm scripting"></a>freecodecamp advanced algorithm scripting</h1><h2 id="1-Validate-US-Telephtone-Numbers"><a href="#1-Validate-US-Telephtone-Numbers" class="headerlink" title="1.  Validate US Telephtone Numbers"></a>1.  Validate US Telephtone Numbers</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">telephoneCheck</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 祝你好运</span></span><br><span class="line">  <span class="keyword">var</span> regex = <span class="regexp">/^(1\s?)?(\(\d&#123;3&#125;\)|\d&#123;3&#125;)[\s\-]?\d&#123;3&#125;[\s\-]?\d&#123;4&#125;$/</span></span><br><span class="line">  <span class="keyword">return</span> regex.test(str)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">telephoneCheck(<span class="string">"555-555-5555"</span>);</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">如果传入字符串是一个有效的美国电话号码，则返回 true.</span><br><span class="line"></span><br><span class="line">用户可以在表单中填入一个任意有效美国电话号码. 下面是一些有效号码的例子(还有下面测试时用到的一些变体写法):</span><br><span class="line"></span><br><span class="line">555-555-5555</span><br><span class="line">(555)555-5555</span><br><span class="line">(555) 555-5555</span><br><span class="line">555 555 5555</span><br><span class="line">5555555555</span><br><span class="line">1 555 555 5555</span><br><span class="line">在本节中你会看见如 800-692-7753 or 8oo-six427676;laskdjf这样的字符串. 你的任务就是验证前面给出的字符串是否是有效的美国电话号码. 区号是必须有的. 如果字符串中给出了国家代码, 你必须验证其是 1. 如果号码有效就返回 true ; 否则返回 false.</span><br><span class="line"></span><br><span class="line">telephoneCheck(&quot;555-555-5555&quot;) 应该返回一个布尔值.</span><br><span class="line">telephoneCheck(&quot;1 555-555-5555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;1 (555) 555-5555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;5555555555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;555-555-5555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;(555)555-5555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;1(555)555-5555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;1 555)555-5555&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;1 555 555 5555&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;1 456 789 4444&quot;) 应该返回 true.</span><br><span class="line">telephoneCheck(&quot;123**&amp;!!asdf#&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;55555555&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;(6505552368)&quot;) 应该返回 false</span><br><span class="line">telephoneCheck(&quot;2 (757) 622-7382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;0 (757) 622-7382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;-1 (757) 622-7382&quot;) 应该返回 false</span><br><span class="line">telephoneCheck(&quot;2 757 622-7382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;10 (757) 622-7382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;27576227382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;(275)76227382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;2(757)6227382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;2(757)622-7382&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;555)-555-5555&quot;) 应该返回 false.</span><br><span class="line">telephoneCheck(&quot;(555-555-5555&quot;) 应该返回 false.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="2-Symmetruc-Dufference"><a href="#2-Symmetruc-Dufference" class="headerlink" title="2. Symmetruc Dufference"></a>2. Symmetruc Dufference</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sym</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> args;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sym([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>]);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">创建一个函数，接受两个或多个数组，返回所给数组的 对等差分(symmetric difference) (△ or ⊕)数组.</span><br><span class="line"></span><br><span class="line">给出两个集合 (如集合 A = &#123;1, 2, 3&#125; 和集合 B = &#123;2, 3, 4&#125;), 而数学术语 &quot;对等差分&quot; 的集合就是指由所有只在两个集合其中之一的元素组成的集合(A △ B = C = &#123;1, 4&#125;). 对于传入的额外集合 (如 D = &#123;2, 3&#125;), 你应该安装前面原则求前两个集合的结果与新集合的对等差分集合 (C △ D = &#123;1, 4&#125; △ &#123;2, 3&#125; = &#123;1, 2, 3, 4&#125;).</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得查看错误提示、阅读文档、搜索、提问。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Array.reduce()</span><br><span class="line">Symmetric Difference</span><br><span class="line"></span><br><span class="line">sym([1, 2, 3], [5, 2, 1, 4]) 应该返回 [3, 4, 5].</span><br><span class="line">sym([1, 2, 3], [5, 2, 1, 4]) 应该只包含三个元素.</span><br><span class="line">sym([1, 2, 5], [2, 3, 5], [3, 4, 5]) 应该返回 [1, 4, 5]</span><br><span class="line">sym([1, 2, 5], [2, 3, 5], [3, 4, 5]) 应该只包含三个元素.</span><br><span class="line">sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]) 应该返回 [1, 4, 5].</span><br><span class="line">sym([1, 1, 2, 5], [2, 2, 3, 5], [3, 4, 5, 5]) 应该只包含三个元素.</span><br><span class="line">sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]) 应该返回 [2, 3, 4, 6, 7].</span><br><span class="line">sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3]) 应该只包含五个元素.</span><br><span class="line">sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]) 应该返回 [1, 2, 4, 5, 6, 7, 8, 9].</span><br><span class="line">sym([3, 3, 3, 2, 5], [2, 1, 5, 7], [3, 4, 6, 6], [1, 2, 3], [5, 3, 9, 8], [1]) 应该只包含八个元素.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="3-Exact-Cgabge"><a href="#3-Exact-Cgabge" class="headerlink" title="3. Exact Cgabge"></a>3. Exact Cgabge</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkCashRegister</span>(<span class="params">price, cash, cid</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> change;</span><br><span class="line">  <span class="keyword">return</span> change;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Example cash-in-drawer array:</span></span><br><span class="line"><span class="comment">// [["PENNY", 1.01],</span></span><br><span class="line"><span class="comment">// ["NICKEL", 2.05],</span></span><br><span class="line"><span class="comment">// ["DIME", 3.10],</span></span><br><span class="line"><span class="comment">// ["QUARTER", 4.25],</span></span><br><span class="line"><span class="comment">// ["ONE", 90.00],</span></span><br><span class="line"><span class="comment">// ["FIVE", 55.00],</span></span><br><span class="line"><span class="comment">// ["TEN", 20.00],</span></span><br><span class="line"><span class="comment">// ["TWENTY", 60.00],</span></span><br><span class="line"><span class="comment">// ["ONE HUNDRED", 100.00]]</span></span><br><span class="line"></span><br><span class="line">checkCashRegister(<span class="number">19.50</span>, <span class="number">20.00</span>, [[<span class="string">"PENNY"</span>, <span class="number">1.01</span>], [<span class="string">"NICKEL"</span>, <span class="number">2.05</span>], [<span class="string">"DIME"</span>, <span class="number">3.10</span>], [<span class="string">"QUARTER"</span>, <span class="number">4.25</span>], [<span class="string">"ONE"</span>, <span class="number">90.00</span>], [<span class="string">"FIVE"</span>, <span class="number">55.00</span>], [<span class="string">"TEN"</span>, <span class="number">20.00</span>], [<span class="string">"TWENTY"</span>, <span class="number">60.00</span>], [<span class="string">"ONE HUNDRED"</span>, <span class="number">100.00</span>]]);</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">设计一个收银程序 checkCashRegister() ，其把购买价格(price)作为第一个参数 , 付款金额 (cash)作为第二个参数, 和收银机中零钱 (cid) 作为第三个参数.</span><br><span class="line"></span><br><span class="line">cid 是一个二维数组，存着当前可用的找零.</span><br><span class="line"></span><br><span class="line">当收银机中的钱不够找零时返回字符串 &quot;Insufficient Funds&quot;. 如果正好则返回字符串 &quot;Closed&quot;.</span><br><span class="line"></span><br><span class="line">否则, 返回应找回的零钱列表,且由大到小存在二维数组中.</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得查看错误提示、阅读文档、搜索、提问。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Global Object</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 1.01], [&quot;NICKEL&quot;, 2.05], [&quot;DIME&quot;, 3.10], [&quot;QUARTER&quot;, 4.25], [&quot;ONE&quot;, 90.00], [&quot;FIVE&quot;, 55.00], [&quot;TEN&quot;, 20.00], [&quot;TWENTY&quot;, 60.00], [&quot;ONE HUNDRED&quot;, 100.00]]) 应该返回一个数组.</span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 0.01], [&quot;NICKEL&quot;, 0], [&quot;DIME&quot;, 0], [&quot;QUARTER&quot;, 0], [&quot;ONE&quot;, 0], [&quot;FIVE&quot;, 0], [&quot;TEN&quot;, 0], [&quot;TWENTY&quot;, 0], [&quot;ONE HUNDRED&quot;, 0]]) 应该返回一个字符串.</span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 0.50], [&quot;NICKEL&quot;, 0], [&quot;DIME&quot;, 0], [&quot;QUARTER&quot;, 0], [&quot;ONE&quot;, 0], [&quot;FIVE&quot;, 0], [&quot;TEN&quot;, 0], [&quot;TWENTY&quot;, 0], [&quot;ONE HUNDRED&quot;, 0]]) 应该返回一个字符串.</span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 1.01], [&quot;NICKEL&quot;, 2.05], [&quot;DIME&quot;, 3.10], [&quot;QUARTER&quot;, 4.25], [&quot;ONE&quot;, 90.00], [&quot;FIVE&quot;, 55.00], [&quot;TEN&quot;, 20.00], [&quot;TWENTY&quot;, 60.00], [&quot;ONE HUNDRED&quot;, 100.00]]) 应该返回 [[&quot;QUARTER&quot;, 0.50]].</span><br><span class="line">checkCashRegister(3.26, 100.00, [[&quot;PENNY&quot;, 1.01], [&quot;NICKEL&quot;, 2.05], [&quot;DIME&quot;, 3.10], [&quot;QUARTER&quot;, 4.25], [&quot;ONE&quot;, 90.00], [&quot;FIVE&quot;, 55.00], [&quot;TEN&quot;, 20.00], [&quot;TWENTY&quot;, 60.00], [&quot;ONE HUNDRED&quot;, 100.00]]) 应该返回 [[&quot;TWENTY&quot;, 60.00], [&quot;TEN&quot;, 20.00], [&quot;FIVE&quot;, 15], [&quot;ONE&quot;, 1], [&quot;QUARTER&quot;, 0.50], [&quot;DIME&quot;, 0.20], [&quot;PENNY&quot;, 0.04]].</span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 0.01], [&quot;NICKEL&quot;, 0], [&quot;DIME&quot;, 0], [&quot;QUARTER&quot;, 0], [&quot;ONE&quot;, 0], [&quot;FIVE&quot;, 0], [&quot;TEN&quot;, 0], [&quot;TWENTY&quot;, 0], [&quot;ONE HUNDRED&quot;, 0]]) 应该返回 &quot;Insufficient Funds&quot;.</span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 0.01], [&quot;NICKEL&quot;, 0], [&quot;DIME&quot;, 0], [&quot;QUARTER&quot;, 0], [&quot;ONE&quot;, 1.00], [&quot;FIVE&quot;, 0], [&quot;TEN&quot;, 0], [&quot;TWENTY&quot;, 0], [&quot;ONE HUNDRED&quot;, 0]]) 应该返回 &quot;Insufficient Funds&quot;.</span><br><span class="line">checkCashRegister(19.50, 20.00, [[&quot;PENNY&quot;, 0.50], [&quot;NICKEL&quot;, 0], [&quot;DIME&quot;, 0], [&quot;QUARTER&quot;, 0], [&quot;ONE&quot;, 0], [&quot;FIVE&quot;, 0], [&quot;TEN&quot;, 0], [&quot;TWENTY&quot;, 0], [&quot;ONE HUNDRED&quot;, 0]]) 应该返回 &quot;Closed&quot;.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="4-inventory-Update"><a href="#4-inventory-Update" class="headerlink" title="4.inventory Update"></a>4.inventory Update</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">updateInventory</span>(<span class="params">arr1, arr2</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 请保证你的代码考虑到所有情况</span></span><br><span class="line">    <span class="keyword">return</span> arr1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 仓库库存示例</span></span><br><span class="line"><span class="keyword">var</span> curInv = [</span><br><span class="line">    [<span class="number">21</span>, <span class="string">"Bowling Ball"</span>],</span><br><span class="line">    [<span class="number">2</span>, <span class="string">"Dirty Sock"</span>],</span><br><span class="line">    [<span class="number">1</span>, <span class="string">"Hair Pin"</span>],</span><br><span class="line">    [<span class="number">5</span>, <span class="string">"Microphone"</span>]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> newInv = [</span><br><span class="line">    [<span class="number">2</span>, <span class="string">"Hair Pin"</span>],</span><br><span class="line">    [<span class="number">3</span>, <span class="string">"Half-Eaten Apple"</span>],</span><br><span class="line">    [<span class="number">67</span>, <span class="string">"Bowling Ball"</span>],</span><br><span class="line">    [<span class="number">7</span>, <span class="string">"Toothpaste"</span>]</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">updateInventory(curInv, newInv);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">依照一个存着新进货物的二维数组，更新存着现有库存(在 arr1 中)的二维数组. 如果货物已存在则更新数量 . 如果没有对应货物则把其加入到数组中，更新最新的数量. 返回当前的库存数组，且按货物名称的字母顺序排列.</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得查看错误提示、阅读文档、搜索、提问。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Global Array Object&apos;</span><br><span class="line"></span><br><span class="line">updateInventory() 应该返回一个数组.</span><br><span class="line">updateInventory([[21, &quot;Bowling Ball&quot;], [2, &quot;Dirty Sock&quot;], [1, &quot;Hair Pin&quot;], [5, &quot;Microphone&quot;]], [[2, &quot;Hair Pin&quot;], [3, &quot;Half-Eaten Apple&quot;], [67, &quot;Bowling Ball&quot;], [7, &quot;Toothpaste&quot;]]).length 应该返回一个长度为6的数组.</span><br><span class="line">updateInventory([[21, &quot;Bowling Ball&quot;], [2, &quot;Dirty Sock&quot;], [1, &quot;Hair Pin&quot;], [5, &quot;Microphone&quot;]], [[2, &quot;Hair Pin&quot;], [3, &quot;Half-Eaten Apple&quot;], [67, &quot;Bowling Ball&quot;], [7, &quot;Toothpaste&quot;]]) 应该返回 [[88, &quot;Bowling Ball&quot;], [2, &quot;Dirty Sock&quot;], [3, &quot;Hair Pin&quot;], [3, &quot;Half-Eaten Apple&quot;], [5, &quot;Microphone&quot;], [7, &quot;Toothpaste&quot;]].</span><br><span class="line">updateInventory([[21, &quot;Bowling Ball&quot;], [2, &quot;Dirty Sock&quot;], [1, &quot;Hair Pin&quot;], [5, &quot;Microphone&quot;]], []) 应该返回 [[21, &quot;Bowling Ball&quot;], [2, &quot;Dirty Sock&quot;], [1, &quot;Hair Pin&quot;], [5, &quot;Microphone&quot;]].</span><br><span class="line">updateInventory([], [[2, &quot;Hair Pin&quot;], [3, &quot;Half-Eaten Apple&quot;], [67, &quot;Bowling Ball&quot;], [7, &quot;Toothpaste&quot;]]) 应该返回 [[67, &quot;Bowling Ball&quot;], [2, &quot;Hair Pin&quot;], [3, &quot;Half-Eaten Apple&quot;], [7, &quot;Toothpaste&quot;]].</span><br><span class="line">updateInventory([[0, &quot;Bowling Ball&quot;], [0, &quot;Dirty Sock&quot;], [0, &quot;Hair Pin&quot;], [0, &quot;Microphone&quot;]], [[1, &quot;Hair Pin&quot;], [1, &quot;Half-Eaten Apple&quot;], [1, &quot;Bowling Ball&quot;], [1, &quot;Toothpaste&quot;]]) 应该返回 [[1, &quot;Bowling Ball&quot;], [0, &quot;Dirty Sock&quot;], [1, &quot;Hair Pin&quot;], [1, &quot;Half-Eaten Apple&quot;], [0, &quot;Microphone&quot;], [1, &quot;Toothpaste&quot;]].</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="5-No-repeats-please"><a href="#5-No-repeats-please" class="headerlink" title="5. No repeats please"></a>5. No repeats please</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function permAlone(str) &#123;</span><br><span class="line">  return str;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">permAlone(&apos;aab&apos;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">把一个字符串中的字符重新排列生成新的字符串，返回新生成的字符串里没有连续重复字符的字符串个数.连续重复只以单个字符为准</span><br><span class="line"></span><br><span class="line">例如, aab 应该返回 2 因为它总共有6中排列 (aab, aab, aba, aba, baa, baa), 但是只有两个 (aba and aba)没有连续重复的字符 (在本例中是 a).</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得查看错误提示、阅读文档、搜索、提问。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Permutations</span><br><span class="line">RegExp</span><br><span class="line">/**</span><br><span class="line">  * Your output will go here.</span><br><span class="line">  * Any console.log() -type</span><br><span class="line">  * statements will appear in</span><br><span class="line">  * your browser&apos;s DevTools</span><br><span class="line">  * JavaScript console.</span><br><span class="line">  */</span><br><span class="line"></span><br><span class="line">permAlone(&quot;aab&quot;) 应该返回一个数字.</span><br><span class="line">permAlone(&quot;aab&quot;) 应该返回 2.</span><br><span class="line">permAlone(&quot;aaa&quot;) 应该返回 0.</span><br><span class="line">permAlone(&quot;aabb&quot;) 应该返回 8.</span><br><span class="line">permAlone(&quot;abcdefa&quot;) 应该返回 3600.</span><br><span class="line">permAlone(&quot;abfdefa&quot;) 应该返回 2640.</span><br><span class="line">permAlone(&quot;zzzzzzzz&quot;) 应该返回 0.</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="6-Friendly-Date-Ranges"><a href="#6-Friendly-Date-Ranges" class="headerlink" title="6. Friendly Date Ranges"></a>6. Friendly Date Ranges</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function makeFriendlyDates(arr) &#123;</span><br><span class="line">  return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">makeFriendlyDates([&apos;2017-01-02&apos;, &apos;2017-01-05&apos;]);</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">makeFriendlyDates([&quot;2017-01-02&quot;, &quot;2017-01-05&quot;]) 应该返回 [&quot;January 2nd&quot;,&quot;5th&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2017-02-01&quot;, &quot;2017-03-03&quot;]) 应该返回 [&quot;February 1st&quot;,&quot;March 3rd&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2016-05-11&quot;, &quot;2017-04-04&quot;]) 应该返回 [&quot;May 11th, 2016&quot;,&quot;April 4th&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2017-07-12&quot;, &quot;2018-06-13&quot;]) 应该返回 [&quot;July 12th&quot;,&quot;June 13th&quot;]</span><br><span class="line">makeFriendlyDates([&quot;2003-08-15&quot;, &quot;2009-09-21&quot;]) 应该返回 [&quot;August 15th, 2003&quot;, &quot;September 21st, 2009&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2010-10-23&quot;, &quot;2011-10-22&quot;]) 应该返回 [&quot;October 23rd, 2010&quot;,&quot;October 22nd&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2008-10-31&quot;, &quot;2009-10-31&quot;]) 应该返回 [&quot;October 31st, 2008&quot;,&quot;October 31st, 2009&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2004-11-17&quot;, &quot;2005-12-25&quot;]) 应该返回 [&quot;November 17th, 2004&quot;,&quot;December 25th, 2005&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2001-12-20&quot;, &quot;2001-12-20&quot;]) 应该返回 [&quot;December 20th, 2001&quot;].</span><br><span class="line">makeFriendlyDates([&quot;2002-12-20&quot;, &quot;2001-12-20&quot;]) 不应该返回数组</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-Make-a-Person"><a href="#7-Make-a-Person" class="headerlink" title="7. Make a Person"></a>7. Make a Person</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var Person = function(firstAndLast) &#123;</span><br><span class="line">    return firstAndLast;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var bob = new Person(&apos;Bob Ross&apos;);</span><br><span class="line">bob.getFullName();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">用下面给定的方法构造一个对象.</span><br><span class="line"></span><br><span class="line">方法有 getFirstName(), getLastName(), getFullName(), setFirstName(first), setLastName(last), and setFullName(firstAndLast).</span><br><span class="line"></span><br><span class="line">所有有参数的方法只接受一个字符串参数.</span><br><span class="line"></span><br><span class="line">所有的方法只与实体对象交互.</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得查看错误提示、阅读文档、搜索、提问。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Closures</span><br><span class="line">Details of the Object Model</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="8-Map-the-Debris"><a href="#8-Map-the-Debris" class="headerlink" title="8. Map the Debris"></a>8. Map the Debris</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function orbitalPeriod(arr) &#123;</span><br><span class="line">  var GM = 398600.4418;</span><br><span class="line">  var earthRadius = 6367.4447;</span><br><span class="line">  return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">orbitalPeriod([&#123;name : &quot;sputnik&quot;, avgAlt : 35873.5553&#125;]);</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">返回一个数组，其内容是把原数组中对应元素的平均海拔转换成其对应的轨道周期.</span><br><span class="line"></span><br><span class="line">原数组中会包含格式化的对象内容，像这样 &#123;name: &apos;name&apos;, avgAlt: avgAlt&#125;.</span><br><span class="line"></span><br><span class="line">至于轨道周期怎么求，戳这里 on wikipedia (不想看英文的话可以自行搜索以轨道高度计算轨道周期的公式).</span><br><span class="line"></span><br><span class="line">求得的值应该是一个与其最接近的整数，轨道是以地球为基准的.</span><br><span class="line"></span><br><span class="line">地球半径是 6367.4447 kilometers, 地球的GM值是 398600.4418, 圆周率为Math.PI</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得查看错误提示、阅读文档、搜索、提问。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Math.pow()</span><br><span class="line">/**</span><br><span class="line">  * Your output will go here.</span><br><span class="line">  * Any console.log() -type</span><br><span class="line">  * statements will appear in</span><br><span class="line">  * your browser&apos;s DevTools</span><br><span class="line">  * JavaScript console.</span><br><span class="line">  */</span><br><span class="line"></span><br><span class="line">orbitalPeriod([&#123;name : &quot;sputnik&quot;, avgAlt : 35873.5553&#125;]) 应该返回 [&#123;name: &quot;sputnik&quot;, orbitalPeriod: 86400&#125;].</span><br><span class="line">orbitalPeriod([&#123;name: &quot;iss&quot;, avgAlt: 413.6&#125;, &#123;name: &quot;hubble&quot;, avgAlt: 556.7&#125;, &#123;name: &quot;moon&quot;, avgAlt: 378632.553&#125;]) 应该返回 [&#123;name : &quot;iss&quot;, orbitalPeriod: 5557&#125;, &#123;name: &quot;hubble&quot;, orbitalPeriod: 5734&#125;, &#123;name: &quot;moon&quot;, orbitalPeriod: 2377399&#125;].</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Pairwise"><a href="#Pairwise" class="headerlink" title="Pairwise"></a>Pairwise</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function pairwise(arr, arg) &#123;</span><br><span class="line">  return arg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pairwise([1,4,2,3,0,5], 7);</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">找到你的另一半</span><br><span class="line"></span><br><span class="line">都说优秀的程序员擅长面向对象编程，但却经常找不到另一半，这是为什么呢？因为你总是把自己局限成为一个程序员，没有打开自己的思维。</span><br><span class="line"></span><br><span class="line">这是一个社群的时代啊，在这里你应该找到与你有相同价值观但又互补的另一半。</span><br><span class="line"></span><br><span class="line">譬如：你编程能力强，估值11分，如果以20分为最佳情侣来计算，你应该找一个设计能力强，估值为9分的女生。</span><br><span class="line"></span><br><span class="line">那么当你遇到一个设计能力为9分的女生，千万别犹豫，大胆去表白。千万别以为后面的瓜比前面的甜哦。</span><br><span class="line"></span><br><span class="line">举个例子：有一个能力数组[7,9,11,13,15]，按照最佳组合值为20来计算，只有7+13和9+11两种组合。而7在数组的索引为0，13在数组的索引为3，9在数组的索引为1，11在数组的索引为2。</span><br><span class="line"></span><br><span class="line">所以我们说函数：pairwise([7,9,11,13,15],20) 的返回值应该是0+3+1+2的和，即6。</span><br><span class="line"></span><br><span class="line">我们可以通过表格来更直观地查看数组中索引和值的关系：</span><br><span class="line"></span><br><span class="line">Index	0	1	2	3	4</span><br><span class="line">Value	7	9	11	13	15</span><br><span class="line">任务：帮右边的pairwise函数实现上面的功能。</span><br><span class="line"></span><br><span class="line">当你遇到困难的时候，记得开大招&apos;Read-Search-Ask&apos;。</span><br><span class="line"></span><br><span class="line">这是一些对你有帮助的资源:</span><br><span class="line"></span><br><span class="line">Array.reduce()</span><br><span class="line">/**</span><br><span class="line">  * Your output will go here.</span><br><span class="line">  * Any console.log() -type</span><br><span class="line">  * statements will appear in</span><br><span class="line">  * your browser&apos;s DevTools</span><br><span class="line">  * JavaScript console.</span><br><span class="line">  */</span><br><span class="line"></span><br><span class="line">pairwise([1, 4, 2, 3, 0, 5], 7) 应该返回 11.</span><br><span class="line">pairwise([1, 3, 2, 4], 4) 应该返回 1.</span><br><span class="line">pairwise([1, 1, 1], 2) 应该返回 1.</span><br><span class="line">pairwise([0, 0, 0, 0, 1, 1], 1) 应该返回 10.</span><br><span class="line">pairwise([], 100) 应该返回 0.</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>pandas读写csv及追加</title>
     <url>/htwm_open_sesame/2020/03/11/yuque/pandas%E8%AF%BB%E5%86%99csv%E5%8F%8A%E8%BF%BD%E5%8A%A0/</url>
     <content><![CDATA[<p><a name="jBSla"></a></p><h2 id="pandas写入csv"><a href="#pandas写入csv" class="headerlink" title="pandas写入csv"></a>pandas写入csv</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">result = pd.DataFrame(columns=[<span class="string">'key1'</span>, <span class="string">'key2'</span>, <span class="string">'key3'</span>, <span class="string">'key4'</span>])</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    result = result.append(&#123;<span class="string">'key1'</span>: <span class="number">1</span>, <span class="string">'key2'</span>: <span class="number">2</span>, <span class="string">'key3'</span>: <span class="number">3</span>, <span class="string">'key4'</span>: <span class="number">4</span>&#125;,ignore_index=<span class="literal">True</span>)</span><br><span class="line">result.to_csv(<span class="string">'test.csv'</span>, sep=<span class="string">','</span>, index=<span class="literal">False</span>,mode=<span class="string">'w'</span>)</span><br></pre></td></tr></table></figure><a id="more"></a>
@@ -88,6 +173,17 @@
 ]]></content>
   </entry>
   <entry>
+    <title>自定义模板</title>
+    <url>/htwm_open_sesame/2020/01/05/yuque/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>123</category>
+      </categories>
+      <tags>
+        <tag>123</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GraphQl学习</title>
     <url>/htwm_open_sesame/2020/01/05/yuque/GraphQl%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p><a name="cd02615d"></a></p><h2 id="Graph介绍"><a href="#Graph介绍" class="headerlink" title="Graph介绍"></a>Graph介绍</h2><ul>
@@ -142,17 +238,6 @@
       </categories>
       <tags>
         <tag>GraphQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>自定义模板</title>
-    <url>/htwm_open_sesame/2020/01/05/yuque/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>123</category>
-      </categories>
-      <tags>
-        <tag>123</tag>
       </tags>
   </entry>
   <entry>
@@ -610,37 +695,6 @@
       </tags>
   </entry>
   <entry>
-    <title>积少成多</title>
-    <url>/htwm_open_sesame/2019/10/31/IT%E6%8A%80%E6%9C%AF/%E7%A7%AF%E5%B0%91%E6%88%90%E5%A4%9A/</url>
-    <content><![CDATA[<h1 id="零零碎碎-个人习惯性配置等等"><a href="#零零碎碎-个人习惯性配置等等" class="headerlink" title="零零碎碎 个人习惯性配置等等"></a>零零碎碎 个人习惯性配置等等</h1><h2 id="将Python脚本编译成二进制文件"><a href="#将Python脚本编译成二进制文件" class="headerlink" title="将Python脚本编译成二进制文件"></a>将Python脚本编译成二进制文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">$ python -m compile &lt;file&gt;</span><br><span class="line"><span class="comment"># 会在当前文件夹中生成__pycache__ 文件夹中生成对应的pyc文件</span></span><br><span class="line"><span class="comment"># 调用方式和原始文件一致,但只能使用同版本的python解释器执行</span></span><br></pre></td></tr></table></figure><h2 id="Pycharm-文件头配置"><a href="#Pycharm-文件头配置" class="headerlink" title="Pycharm 文件头配置"></a>Pycharm 文件头配置</h2><a id="more"></a>
-
-
-
-<p>File  &rArr;  Settings &rArr; Editor  &rArr; File and Code Templates </p>
-<p>其中python个人设置</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env python</span></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line"># file: $&#123;NAME&#125;.py</span><br><span class="line"># time: $&#123;DATE&#125; $&#123;TIME&#125;</span><br><span class="line"># desc:</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Vscode-配置背景图片"><a href="#Vscode-配置背景图片" class="headerlink" title="Vscode 配置背景图片"></a>Vscode 配置背景图片</h2><ol>
-<li><p>安装 vscode extension: background</p>
-</li>
-<li><p>修改配置文件如下</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"background.useDefault": false,</span><br><span class="line">    "background.enabled": true,</span><br><span class="line">    "background.customImages": [</span><br><span class="line">        <span class="string">"file:///C:/Users/haibo/Desktop/%E5%A3%81%E7%BA%B8/timg.jpeg"</span></span><br><span class="line">    ],</span><br><span class="line">    "background.style": &#123;</span><br><span class="line">        "content": "''",</span><br><span class="line">        "pointer-events": "none",</span><br><span class="line">        "position": "absolute",</span><br><span class="line">        "z-index": "99999",</span><br><span class="line">        "width": "100%",</span><br><span class="line">        "height": "100%",</span><br><span class="line">        "background-position": "center",</span><br><span class="line">        "background-repeat": "no-repeat",</span><br><span class="line">        "background-size": "100%,100%",</span><br><span class="line">        "opacity": 0.3</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>其中 background.customImages 即为背景图片列表,最多可设置三张</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>IT技术</category>
-      </categories>
-      <tags>
-        <tag>零零碎碎</tag>
-        <tag>个人习惯配置</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Electron桌面软件开发</title>
     <url>/htwm_open_sesame/2019/10/31/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/Electron%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</url>
     <content><![CDATA[<h1 id="Electron桌面软件开发"><a href="#Electron桌面软件开发" class="headerlink" title="Electron桌面软件开发"></a>Electron桌面软件开发</h1><h2 id="Electron-官方示例代码"><a href="#Electron-官方示例代码" class="headerlink" title="Electron 官方示例代码"></a>Electron 官方示例代码</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/electron/electron-api-demos</span><br><span class="line">$ <span class="built_in">cd</span> electron-api-demos</span><br><span class="line">$ npm install <span class="comment"># 需要配置镜像 或者vpn</span></span><br><span class="line">$ npm start</span><br></pre></td></tr></table></figure>
@@ -879,6 +933,11 @@
       </tags>
   </entry>
   <entry>
+    <title>关于</title>
+    <url>/htwm_open_sesame/about/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>categories</title>
     <url>/htwm_open_sesame/categories/index.html</url>
     <content><![CDATA[]]></content>
@@ -892,16 +951,6 @@
     <title>标签</title>
     <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>关于</title>
-    <url>/htwm_open_sesame/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
-    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -949,5 +998,10 @@
 
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> themes/next/<span class="built_in">source</span>/lib/canvas-nest</span><br><span class="line">$ git pull</span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
+    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
 </search>
