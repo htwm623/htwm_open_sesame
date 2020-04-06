@@ -1,6 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>30DaysOfJavaScript 学习</title>
+    <url>/htwm_open_sesame/2020/04/06/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<hr><p>title: 30DaysOfJavaScript 学习<br>date: 2020-04-06 19:44:21<br>tags:</p><ul>
+<li>30DaysOfJavaScript</li>
+</ul><p>categories:</p><ul>
+<li>JavaScript</li>
+</ul><hr><ul>
+<li><a href="https://github.com/Asabeneh/30DaysOfJavaScript" target="_blank" rel="noopener">原始库</a></li>
+</ul><ul>
+<li>只会收录部分自己不清楚的数据<br><a name="QkceJ"></a><h2 id="Data-types-数据类型"><a href="#Data-types-数据类型" class="headerlink" title="Data types 数据类型"></a>Data types 数据类型</h2><a name="hmyf7"></a><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><a name="mDzTr"></a><h4 id="Math-Object-内置数学代码"><a href="#Math-Object-内置数学代码" class="headerlink" title="Math Object  (内置数学代码)"></a>Math Object  (内置数学代码)</h4></li>
+</ul><a id="more"></a>
+
+
+
+
+
+
+
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(PI)                           <span class="comment">// 3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Rounding to the closest number</span></span><br><span class="line"><span class="comment">// if above .5 up if less 0.5 down rounding</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(PI))               <span class="comment">// 3 to round values to the nearest number</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(<span class="number">9.81</span>))             <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(PI))               <span class="comment">// 3 rounding down</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(PI))                <span class="comment">// 4 rounding up</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// -5, returns the minimum value</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// 20, returns the maximum value</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> randNum = <span class="built_in">Math</span>.random() <span class="comment">// creates random number between 0 to 0.999999</span></span><br><span class="line"><span class="built_in">console</span>.log(randNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Let us  create random number between 0 to 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random () * <span class="number">11</span>) <span class="comment">// creates random number between 0 and 10</span></span><br><span class="line"><span class="built_in">console</span>.log(num)</span><br><span class="line"></span><br><span class="line"><span class="comment">//Absolute value</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.abs(<span class="number">-10</span>))      <span class="comment">//10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Square root</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">100</span>))     <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">2</span>))      <span class="comment">//1.4142135623730951</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Power</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.pow(<span class="number">3</span>, <span class="number">2</span>)) <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 2.718</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Logarithm</span></span><br><span class="line"><span class="comment">//Returns the natural logarithm of base E of x, Math.log(x)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">2</span>))    <span class="comment">// 0.6931471805599453</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">10</span>))   <span class="comment">// 2.302585092994046</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigonometry</span></span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
+
+
+<p><a name="bkTWv"></a></p>
+<h4 id="Random-number-generator-随机数生成"><a href="#Random-number-generator-随机数生成" class="headerlink" title="Random number generator (随机数生成)"></a>Random number generator (随机数生成)</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> randomNum = <span class="built_in">Math</span>.random()         <span class="comment">// generates 0 to 0.999</span></span><br><span class="line"><span class="keyword">let</span> numBtnZeroAndTen = randomNum * <span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(numBtnZeroAndTen)         <span class="comment">// this gives: min 0 and max 10.99</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> randomNumRoundToFloor = <span class="built_in">Math</span>.floor(numBtnZeroAndTen)</span><br><span class="line"><span class="built_in">console</span>.log(randomNumRoundToFloor)    <span class="comment">// this gives between 0 and 10</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><a name="VY0vc"></a></p>
+<h4 id="Template-Strings-字符串格式化"><a href="#Template-Strings-字符串格式化" class="headerlink" title="Template Strings (字符串格式化)"></a>Template Strings (字符串格式化)</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">`The sum of 2 and 3 is 5`</span>)              <span class="comment">// statically writing the data</span></span><br><span class="line"><span class="keyword">let</span> a = <span class="number">2</span></span><br><span class="line"><span class="keyword">let</span> b = <span class="number">3</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">`The sum of <span class="subst">$&#123;a&#125;</span> and <span class="subst">$&#123;b&#125;</span> is <span class="subst">$&#123;a + b&#125;</span>`</span>) <span class="comment">// injecting the data</span></span><br></pre></td></tr></table></figure>
+
+
+<p><a name="dvx2J"></a></p>
+<h3 id="String-字符串"><a href="#String-字符串" class="headerlink" title="String (字符串)"></a>String (字符串)</h3><p><a name="UHlYb"></a></p>
+<h4 id="String-Methods-字符串方法"><a href="#String-Methods-字符串方法" class="headerlink" title="String Methods (字符串方法)"></a>String Methods (字符串方法)</h4><ol>
+<li><em>toUpperCase(), __toLowerCase()</em></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.toUpperCase())     <span class="comment">// JAVASCRIPT</span></span><br><span class="line"><span class="keyword">let</span> string = <span class="string">'JavasCript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.toLowerCase())     <span class="comment">// javascript</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li><em>substr(),__substring()</em>:</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.substr(<span class="number">4</span>,<span class="number">6</span>))    <span class="comment">// Script</span></span><br><span class="line"><span class="keyword">let</span> string = <span class="string">'JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.substring(<span class="number">0</span>,<span class="number">4</span>))     <span class="comment">// Java</span></span><br><span class="line"><span class="built_in">console</span>.log(string.substring(<span class="number">4</span>,<span class="number">10</span>))    <span class="comment">// Script</span></span><br><span class="line"><span class="built_in">console</span>.log(string.substring(<span class="number">4</span>))       <span class="comment">// Script</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="3">
+<li><em>split()</em></li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30 Days Of JavaScript'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(string.split())     <span class="comment">// ["30 Days Of JavaScript"]</span></span><br><span class="line"><span class="built_in">console</span>.log(string.split(<span class="string">' '</span>))  <span class="comment">// ["30", "Days", "Of", "JavaScript"]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>_trim()  _删除空字符串</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'   30 Days Of JavaScript   '</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(string)  <span class="comment">// '   30 Days Of JavasCript   '</span></span><br><span class="line"><span class="built_in">console</span>.log(string.trim(<span class="string">' '</span>)) <span class="comment">// '30 Days Of JavasCript'</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="5">
+<li>_includes() _判断字符串是否包含某个字符</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30 Days Of JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.includes(<span class="string">' '</span>))    <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(string.includes(<span class="string">'Days'</span>))     <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(string.includes(<span class="string">'days'</span>))     <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="6">
+<li>_replace() _替换字符串</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30 Days Of JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.replace(<span class="string">'JavaScript'</span>, <span class="string">'Python'</span>)) <span class="comment">// 30 Days Of Python</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="7">
+<li>_charAt() _ 字符串中指定下标对应得字符</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30 Days Of JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.charAt(<span class="number">0</span>))        <span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="8">
+<li>_charCodeAt() _字符串中指定的下标对应的ASCII字符编码</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30 Days Of JavaScript'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.charCodeAt(<span class="number">3</span>))        <span class="comment">// D ASCII number is 51</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="9">
+<li>_indexOf(), lastIndexOf() _找出字符串中某一个字符 第一次/最后一次 出现的下标, 不存在时返回 -1</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30 Days Of JavaScript'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(string.indexOf(<span class="string">'D'</span>))          <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">console</span>.log(string.indexOf(<span class="string">'Days'</span>))       <span class="comment">// 3</span></span><br><span class="line"><span class="built_in">console</span>.log(string.indexOf(<span class="string">'days'</span>))       <span class="comment">// -1</span></span><br><span class="line"><span class="built_in">console</span>.log(string.indexOf(<span class="string">'a'</span>))          <span class="comment">// 4</span></span><br><span class="line"><span class="built_in">console</span>.log(string.indexOf(<span class="string">'JavaScript'</span>)) <span class="comment">// 11</span></span><br><span class="line"><span class="built_in">console</span>.log(string.indexOf(<span class="string">'Script'</span>))     <span class="comment">//15</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> string = <span class="string">'I love JavaScript. If you do not love JavaScript what else can you love.'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(string.lastIndexOf(<span class="string">'love'</span>))       <span class="comment">// 67</span></span><br><span class="line"><span class="built_in">console</span>.log(string.lastIndexOf(<span class="string">'you'</span>))        <span class="comment">// 63</span></span><br><span class="line"><span class="built_in">console</span>.log(string.lastIndexOf(<span class="string">'JavaScript'</span>)) <span class="comment">// 38</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="10">
+<li>_concat() _将字符串与其他字符组合成新的字符串</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'30'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.concat(<span class="string">"Days"</span>, <span class="string">"Of"</span>, <span class="string">"JavaScript"</span>)) <span class="comment">// 30DaysOfJavaScript</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="11">
+<li>_startsWith(), endsWith()  _判断字符串是否以指定字符串开头 / 结尾</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'Love is the best to in this world'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(string.startsWith(<span class="string">'Love'</span>))   <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(string.startsWith(<span class="string">'love'</span>))   <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> string = <span class="string">'Love is the best to in this world'</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(string.endsWith(<span class="string">'world'</span>))         <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(string.endsWith(<span class="string">'love'</span>))          <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="12">
+<li><em>search() _ 返回搜索的字符串第一次出现的下标, 与_indexOf()_相比</em> search  _支持正则表达式</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'I love JavaScript. If you do not love JavaScript what else can you love.'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.search(<span class="string">'love'</span>)) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="13">
+<li>_match()  _匹配字符串,并返回相关信息, 支持正则表达式</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">string = <span class="string">'I love JavaScript. If you do not love JavaScript what else can you love.'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.match(<span class="string">'love'</span>))</span><br><span class="line"><span class="comment">/* [</span></span><br><span class="line"><span class="comment">  'love',</span></span><br><span class="line"><span class="comment">  index: 2,</span></span><br><span class="line"><span class="comment">  input: 'I love JavaScript. If you do not love JavaScript what else can you love.',</span></span><br><span class="line"><span class="comment">  groups: undefined</span></span><br><span class="line"><span class="comment">] */</span></span><br><span class="line"><span class="keyword">let</span> pattern = <span class="regexp">/love/gi</span></span><br><span class="line"><span class="built_in">console</span>.log(string.match(pattern))   <span class="comment">// ["love", "love", "love"]</span></span><br></pre></td></tr></table></figure>
+
+
+<ol start="14">
+<li>_repeat() _将字符串重复指定次数</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> string = <span class="string">'love'</span></span><br><span class="line"><span class="built_in">console</span>.log(string.repeat(<span class="number">10</span>)) <span class="comment">// lovelovelovelovelovelovelovelovelovelove</span></span><br></pre></td></tr></table></figure>
+
+
+<p><a name="KwkVG"></a></p>
+<h3 id="Change-data-type-改变数据类型"><a href="#Change-data-type-改变数据类型" class="headerlink" title="Change data type (改变数据类型)"></a>Change data type (改变数据类型)</h3><p><a name="wGJwp"></a></p>
+<h4 id="String-to-Int"><a href="#String-to-Int" class="headerlink" title="String to Int"></a>String to Int</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="string">"10"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(num))  <span class="comment">// 10 </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(num))  <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> numInt = +num</span><br><span class="line"><span class="built_in">console</span>.log(numInt)  <span class="comment">// 10</span></span><br></pre></td></tr></table></figure>
+
+
+<p><a name="2AUbp"></a></p>
+<h4 id="String-to-Float"><a href="#String-to-Float" class="headerlink" title="String to Float"></a>String to Float</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="string">"9.81"</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">parseInt</span>(num))  <span class="number">9.81</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(num))  <span class="number">9.81</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> numFloat = +num</span><br><span class="line"><span class="built_in">console</span>.log(numFloat)  <span class="comment">// 9.81</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><a name="oAaOm"></a></p>
+<h3 id="三元表达式"><a href="#三元表达式" class="headerlink" title="三元表达式"></a>三元表达式</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> number = <span class="number">5</span></span><br><span class="line">number &gt; <span class="number">0</span></span><br><span class="line">  ? <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;number&#125;</span> is a positive number`</span>)</span><br><span class="line">  : <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;number&#125;</span> is a negative number`</span>)</span><br><span class="line">number = <span class="number">-5</span></span><br><span class="line"></span><br><span class="line">number &gt; <span class="number">0</span></span><br><span class="line">  ? <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;number&#125;</span> is a positive number`</span>)</span><br><span class="line">  : <span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;number&#125;</span> is a negative number`</span>)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><a name="mHyzS"></a></p>
+<h3 id="Window-Methods-浏览器窗口操作"><a href="#Window-Methods-浏览器窗口操作" class="headerlink" title="Window Methods (浏览器窗口操作)"></a>Window Methods (浏览器窗口操作)</h3><ol>
+<li>alert()  提示框</li>
+<li>prompt()  输入框</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> number = prompt(<span class="string">'Enter number'</span>, <span class="string">'number goes here'</span>)</span><br><span class="line"><span class="built_in">console</span>.log(number)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>confirm() 确认框</li>
+</ol>
+<br>
+
+<p><a name="aklH4"></a></p>
+<h3 id="Data-Object-日期时间类型"><a href="#Data-Object-日期时间类型" class="headerlink" title="Data Object (日期时间类型)"></a>Data Object (日期时间类型)</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> now = <span class="keyword">new</span> Data()  <span class="comment">// 创建时间对象</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getFullYear())  <span class="comment">// 2020 获取年份</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getMonth()) <span class="comment">// 3 获取月份 (0-11)</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getDate()) <span class="comment">// 7 获取日期 1-31</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getDay()) <span class="comment">// 2 获取星期几  0-6</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getHours())  <span class="comment">// 获取当前时间的小时</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getMinutes())  <span class="comment">// 获取当前时间的分钟</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getSeconds())   <span class="comment">// 获取当前时间的秒钟数</span></span><br><span class="line"><span class="built_in">console</span>.log(now.getTime())   <span class="comment">// 1586189490787 获取当前时间的时间戳</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>10_datas_of_js</title>
     <url>/htwm_open_sesame/2020/04/02/10_datas_of_js/</url>
     <content><![CDATA[<h1 id="hackrank-10-days-of-js"><a href="#hackrank-10-days-of-js" class="headerlink" title="hackrank 10 days of js"></a>hackrank 10 days of js</h1><h2 id="day-7-Regular-Expressions-I"><a href="#day-7-Regular-Expressions-I" class="headerlink" title="day 7 Regular Expressions I"></a>day 7 Regular Expressions I</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Objective</span><br><span class="line"></span><br><span class="line">In this challenge, we use a Regular Expression to evaluate a string. Check out the attached tutorial for more details.</span><br><span class="line"></span><br><span class="line">Task</span><br><span class="line"></span><br><span class="line">Complete the function in the editor below by returning a RegExp object, , that matches any string  that begins and ends with the same vowel. Recall that the English vowels are a, e, i, o, and u.</span><br><span class="line"></span><br><span class="line">Constraints</span><br><span class="line"></span><br><span class="line">The length of string  is  .</span><br><span class="line">String  consists of lowercase letters only (i.e., [a-z]).</span><br><span class="line">Output Format</span><br><span class="line"></span><br><span class="line">The function must return a RegExp object that matches any string  beginning with and ending in the same vowel.</span><br><span class="line"></span><br><span class="line">Sample Input 0</span><br><span class="line"></span><br><span class="line">bcd</span><br><span class="line">Sample Output 0</span><br><span class="line"></span><br><span class="line">false</span><br><span class="line">Explanation 0</span><br><span class="line"></span><br><span class="line">This string starts with (and ends in) a consonant, so it cannot start and end with the same vowel.</span><br><span class="line"></span><br><span class="line">Sample Input 1</span><br><span class="line"></span><br><span class="line">abcd</span><br><span class="line">Sample Output 1</span><br><span class="line"></span><br><span class="line">false</span><br><span class="line">Explanation 1</span><br><span class="line"></span><br><span class="line">This string ends in a consonant, so it cannot start and end with the same vowel.</span><br><span class="line"></span><br><span class="line">Sample Input 2</span><br><span class="line"></span><br><span class="line">abcda</span><br><span class="line">Sample Output 2</span><br><span class="line"></span><br><span class="line">true</span><br><span class="line">Explanation 2</span><br><span class="line"></span><br><span class="line">This string starts and ends with the same vowel (a).</span><br><span class="line"></span><br><span class="line">Sample Input 3</span><br><span class="line"></span><br><span class="line">abcdo</span><br><span class="line">Sample Output 3</span><br><span class="line"></span><br><span class="line">false</span><br><span class="line">Explanation 3</span><br><span class="line"></span><br><span class="line">This string starts with the vowel a but ends in the vowel o.</span><br></pre></td></tr></table></figure><a id="more"></a>
@@ -28,6 +178,45 @@
 
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>Python 收藏文章</title>
+    <url>/htwm_open_sesame/2020/03/23/yuque/Python%20%E6%94%B6%E8%97%8F%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<p><a name="upFGe"></a></p>
+<h2 id="django文章收藏"><a href="#django文章收藏" class="headerlink" title="django文章收藏"></a>django文章收藏</h2><ul>
+<li><a href="https://blog.csdn.net/Dopamy_BusyMonkey/article/details/70620676" target="_blank" rel="noopener">djanjo登陆和session过期跳转</a></li>
+<li><br />
+
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>IT技术</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>django</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>freeCodeCamp Advanced Algorithm Scripting</title>
+    <url>/htwm_open_sesame/2020/03/18/yuque/freeCodeCamp%20Advanced%20Algorithm%20Scripting/</url>
+    <content><![CDATA[<p><a name="mhqDV"></a></p><h2 id="01-Validate-US-Telephone-Numbers"><a href="#01-Validate-US-Telephone-Numbers" class="headerlink" title="01.Validate US Telephone Numbers"></a>01.Validate US Telephone Numbers</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">telephoneCheck</span>(<span class="params">str</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> regex = <span class="regexp">/^(1\s?)?(\(\d&#123;3&#125;\)|\d&#123;3&#125;)[\s\-]?\d&#123;3&#125;[\s\-]?\d&#123;4&#125;$/</span>;</span><br><span class="line">  <span class="keyword">return</span> regex.test(str);</span><br><span class="line">&#125;</span><br><span class="line">telephoneCheck(<span class="string">"555-555-5555"</span>);</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+<p><a name="mNikM"></a></p>
+<h2 id="02-Symmetric-Difference"><a href="#02-Symmetric-Difference" class="headerlink" title="02. Symmetric Difference"></a>02. Symmetric Difference</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sym</span>(<span class="params">args</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">let</span> arr1 = <span class="built_in">Array</span>.from(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">let</span> result = arr1.reduce(<span class="function">(<span class="params">pre,curr</span>)=&gt;</span>&#123;</span><br><span class="line">		pre = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(pre));</span><br><span class="line">    curr = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(curr));</span><br><span class="line">    <span class="keyword">let</span> intersection = pre.filter(<span class="function"><span class="params">x</span> =&gt;</span> curr.indexOf(x) !== <span class="number">-1</span> );</span><br><span class="line">    <span class="keyword">let</span> concat = <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(pre.concat(curr)));</span><br><span class="line">    <span class="keyword">return</span> concat.filter(<span class="function"><span class="params">x</span> =&gt;</span> intersection.indexOf(x) === <span class="number">-1</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> result.sort();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sym([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">5</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>]);</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>freecodecamp</tag>
+      </tags>
   </entry>
   <entry>
     <title>freecodecampe出题</title>
@@ -202,17 +391,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>自定义模板</title>
-    <url>/htwm_open_sesame/2020/01/05/yuque/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>123</category>
-      </categories>
-      <tags>
-        <tag>123</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GraphQl学习</title>
     <url>/htwm_open_sesame/2020/01/05/yuque/GraphQl%E5%AD%A6%E4%B9%A0/</url>
     <content><![CDATA[<p><a name="cd02615d"></a></p><h2 id="Graph介绍"><a href="#Graph介绍" class="headerlink" title="Graph介绍"></a>Graph介绍</h2><ul>
@@ -267,6 +445,46 @@
       </categories>
       <tags>
         <tag>GraphQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自定义模板</title>
+    <url>/htwm_open_sesame/2020/01/05/yuque/%E4%B8%AA%E4%BA%BA%E4%B9%A0%E6%83%AF%E8%AE%BE%E7%BD%AE%E5%8F%8A%E8%BD%AF%E4%BB%B6%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
+    <content><![CDATA[<p><a name="f13a19ca"></a></p><h2 id="将Python脚本编译成二进制文件"><a href="#将Python脚本编译成二进制文件" class="headerlink" title="将Python脚本编译成二进制文件"></a>将Python脚本编译成二进制文件</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># bash</span></span><br><span class="line">$ python -m compile &lt;file&gt;</span><br><span class="line"><span class="comment"># 会在当前文件夹中生成__pycache__ 文件夹中生成对应的pyc文件</span></span><br><span class="line"><span class="comment"># 调用方式和原始文件一致,但只能使用同版本的python解释器执行</span></span><br></pre></td></tr></table></figure><p><a name="7c18b8d8"></a></p><h2 id="Pycharm-文件头配置"><a href="#Pycharm-文件头配置" class="headerlink" title="Pycharm 文件头配置"></a>Pycharm 文件头配置</h2><p>File  ⇒  Settings ⇒ Editor  ⇒ File and Code Templates</p><a id="more"></a>
+
+
+
+
+<p>其中python个人设置</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="meta">#! /usr/bin/env python</span></span><br><span class="line"># coding:utf-8</span><br><span class="line"></span><br><span class="line"># file: $&#123;NAME&#125;.py</span><br><span class="line"># time: $&#123;DATE&#125; $&#123;TIME&#125;</span><br><span class="line"># desc:</span><br></pre></td></tr></table></figure>
+
+<p><a name="a3b3bac0"></a></p>
+<h2 id="Vscode-配置背景图片"><a href="#Vscode-配置背景图片" class="headerlink" title="Vscode 配置背景图片"></a>Vscode 配置背景图片</h2><ol>
+<li><p>安装 vscode extension: background</p>
+</li>
+<li><p>修改配置文件如下</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"background.useDefault": false,</span><br><span class="line">    "background.enabled": true,</span><br><span class="line">    "background.customImages": [</span><br><span class="line">        <span class="string">"file:///C:/Users/haibo/Desktop/%E5%A3%81%E7%BA%B8/timg.jpeg"</span></span><br><span class="line">    ],</span><br><span class="line">    "background.style": &#123;</span><br><span class="line">        "content": "''",</span><br><span class="line">        "pointer-events": "none",</span><br><span class="line">        "position": "absolute",</span><br><span class="line">        "z-index": "99999",</span><br><span class="line">        "width": "100%",</span><br><span class="line">        "height": "100%",</span><br><span class="line">        "background-position": "center",</span><br><span class="line">        "background-repeat": "no-repeat",</span><br><span class="line">        "background-size": "100%,100%",</span><br><span class="line">        "opacity": 0.3</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其中 background.customImages 即为背景图片列表,最多可设置三张</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>iT技术</category>
+      </categories>
+      <tags>
+        <tag>个人习惯配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>自定义模板</title>
+    <url>/htwm_open_sesame/2020/01/05/yuque/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E6%9D%BF/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>123</category>
+      </categories>
+      <tags>
+        <tag>123</tag>
       </tags>
   </entry>
   <entry>
@@ -889,8 +1107,8 @@
         <category>IT技术</category>
       </categories>
       <tags>
-        <tag>yaml</tag>
         <tag>python</tag>
+        <tag>yaml</tag>
       </tags>
   </entry>
   <entry>
@@ -967,19 +1185,24 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>归档</title>
-    <url>/htwm_open_sesame/archives/index.html</url>
+    <title>categories</title>
+    <url>/htwm_open_sesame/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/htwm_open_sesame/categories/index.html</url>
+    <title>归档</title>
+    <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>标签</title>
     <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
+    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -995,11 +1218,6 @@
       }
     }
 	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
-    <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
