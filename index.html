@@ -263,7 +263,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2020/04/06/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/">
+    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2020/04/07/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta name="referrer" content="no-referrer"/>
@@ -279,7 +279,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/htwm_open_sesame/2020/04/06/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">30DaysOfJavaScript 学习</a>
+            <a href="/htwm_open_sesame/2020/04/07/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">30DaysOfJavaScript 学习</a>
           
         </h1>
 
@@ -294,20 +294,29 @@
                 
               
 
-              <time title="创建时间：2020-04-06 22:54:42" itemprop="dateCreated datePublished" datetime="2020-04-06T22:54:42+08:00">2020-04-06</time>
+              <time title="创建时间：2020-04-07 19:44:21 / 修改时间：08:02:42" itemprop="dateCreated datePublished" datetime="2020-04-07T19:44:21+08:00">2020-04-07</time>
             </span>
           
             
 
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
               </span>
-            
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -321,22 +330,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <hr><p>title: 30DaysOfJavaScript 学习<br>date: 2020-04-06 19:44:21<br>tags:</p><ul>
-<li>30DaysOfJavaScript</li>
-</ul><p>categories:</p><ul>
-<li>JavaScript</li>
-</ul><hr><ul>
-<li><a href="https://github.com/Asabeneh/30DaysOfJavaScript" target="_blank" rel="noopener">原始库</a></li>
-</ul><ul>
-<li>只会收录部分自己不清楚的数据<br><a name="QkceJ"></a><h2 id="Data-types-数据类型"><a href="#Data-types-数据类型" class="headerlink" title="Data types 数据类型"></a>Data types 数据类型</h2><a name="hmyf7"></a><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><a name="mDzTr"></a><h4 id="Math-Object-内置数学代码"><a href="#Math-Object-内置数学代码" class="headerlink" title="Math Object  (内置数学代码)"></a>Math Object  (内置数学代码)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(PI)                           <span class="comment">// 3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Rounding to the closest number</span></span><br><span class="line"><span class="comment">// if above .5 up if less 0.5 down rounding</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(PI))               <span class="comment">// 3 to round values to the nearest number</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(<span class="number">9.81</span>))             <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(PI))               <span class="comment">// 3 rounding down</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(PI))                <span class="comment">// 4 rounding up</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// -5, returns the minimum value</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// 20, returns the maximum value</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> randNum = <span class="built_in">Math</span>.random() <span class="comment">// creates random number between 0 to 0.999999</span></span><br><span class="line"><span class="built_in">console</span>.log(randNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Let us  create random number between 0 to 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random () * <span class="number">11</span>) <span class="comment">// creates random number between 0 and 10</span></span><br><span class="line"><span class="built_in">console</span>.log(num)</span><br><span class="line"></span><br><span class="line"><span class="comment">//Absolute value</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.abs(<span class="number">-10</span>))      <span class="comment">//10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Square root</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">100</span>))     <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">2</span>))      <span class="comment">//1.4142135623730951</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Power</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.pow(<span class="number">3</span>, <span class="number">2</span>)) <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 2.718</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Logarithm</span></span><br><span class="line"><span class="comment">//Returns the natural logarithm of base E of x, Math.log(x)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">2</span>))    <span class="comment">// 0.6931471805599453</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">10</span>))   <span class="comment">// 2.302585092994046</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigonometry</span></span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
+          <p><a name="QkceJ"></a></p><h2 id="Data-types-数据类型"><a href="#Data-types-数据类型" class="headerlink" title="Data types 数据类型"></a>Data types 数据类型</h2><p><a name="hmyf7"></a></p><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p><a name="mDzTr"></a></p><h4 id="Math-Object-内置数学代码"><a href="#Math-Object-内置数学代码" class="headerlink" title="Math Object  (内置数学代码)"></a>Math Object  (内置数学代码)</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(PI)                           <span class="comment">// 3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Rounding to the closest number</span></span><br><span class="line"><span class="comment">// if above .5 up if less 0.5 down rounding</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(PI))               <span class="comment">// 3 to round values to the nearest number</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(<span class="number">9.81</span>))             <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(PI))               <span class="comment">// 3 rounding down</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(PI))                <span class="comment">// 4 rounding up</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// -5, returns the minimum value</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// 20, returns the maximum value</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> randNum = <span class="built_in">Math</span>.random() <span class="comment">// creates random number between 0 to 0.999999</span></span><br><span class="line"><span class="built_in">console</span>.log(randNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Let us  create random number between 0 to 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random () * <span class="number">11</span>) <span class="comment">// creates random number between 0 and 10</span></span><br><span class="line"><span class="built_in">console</span>.log(num)</span><br><span class="line"></span><br><span class="line"><span class="comment">//Absolute value</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.abs(<span class="number">-10</span>))      <span class="comment">//10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Square root</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">100</span>))     <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">2</span>))      <span class="comment">//1.4142135623730951</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Power</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.pow(<span class="number">3</span>, <span class="number">2</span>)) <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 2.718</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Logarithm</span></span><br><span class="line"><span class="comment">//Returns the natural logarithm of base E of x, Math.log(x)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">2</span>))    <span class="comment">// 0.6931471805599453</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">10</span>))   <span class="comment">// 2.302585092994046</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigonometry</span></span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/htwm_open_sesame/2020/04/06/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/" rel="contents">
+              <a class="btn" href="/htwm_open_sesame/2020/04/07/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -484,7 +482,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -588,7 +586,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -773,7 +771,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -878,7 +876,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -889,8 +887,63 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/htwm_open_sesame/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
+                  <a href="/htwm_open_sesame/categories/P/" itemprop="url" rel="index">
+                    <span itemprop="name">P</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/P/y/" itemprop="url" rel="index">
+                    <span itemprop="name">y</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/P/y/t/" itemprop="url" rel="index">
+                    <span itemprop="name">t</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/P/y/t/h/" itemprop="url" rel="index">
+                    <span itemprop="name">h</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/P/y/t/h/o/" itemprop="url" rel="index">
+                    <span itemprop="name">o</span>
+                  </a>
+                </span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/P/y/t/h/o/n/" itemprop="url" rel="index">
+                    <span itemprop="name">n</span>
                   </a>
                 </span>
 
@@ -985,7 +1038,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -1073,7 +1126,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -1164,7 +1217,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-07 07:45:50" itemprop="dateModified" datetime="2020-04-07T07:45:50+08:00">2020-04-07</time>
+                <time title="修改时间：2020-04-07 08:02:42" itemprop="dateModified" datetime="2020-04-07T08:02:42+08:00">2020-04-07</time>
               </span>
             
           
@@ -1300,7 +1353,7 @@
             <a href="/htwm_open_sesame/categories/">
           
         
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1313,7 +1366,7 @@
             <a href="/htwm_open_sesame/tags/">
           
         
-        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-count">24</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

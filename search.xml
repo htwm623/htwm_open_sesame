@@ -2,21 +2,8 @@
 <search>
   <entry>
     <title>30DaysOfJavaScript 学习</title>
-    <url>/htwm_open_sesame/2020/04/06/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<hr><p>title: 30DaysOfJavaScript 学习<br>date: 2020-04-06 19:44:21<br>tags:</p><ul>
-<li>30DaysOfJavaScript</li>
-</ul><p>categories:</p><ul>
-<li>JavaScript</li>
-</ul><hr><ul>
-<li><a href="https://github.com/Asabeneh/30DaysOfJavaScript" target="_blank" rel="noopener">原始库</a></li>
-</ul><ul>
-<li>只会收录部分自己不清楚的数据<br><a name="QkceJ"></a><h2 id="Data-types-数据类型"><a href="#Data-types-数据类型" class="headerlink" title="Data types 数据类型"></a>Data types 数据类型</h2><a name="hmyf7"></a><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><a name="mDzTr"></a><h4 id="Math-Object-内置数学代码"><a href="#Math-Object-内置数学代码" class="headerlink" title="Math Object  (内置数学代码)"></a>Math Object  (内置数学代码)</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(PI)                           <span class="comment">// 3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Rounding to the closest number</span></span><br><span class="line"><span class="comment">// if above .5 up if less 0.5 down rounding</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(PI))               <span class="comment">// 3 to round values to the nearest number</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(<span class="number">9.81</span>))             <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(PI))               <span class="comment">// 3 rounding down</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(PI))                <span class="comment">// 4 rounding up</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// -5, returns the minimum value</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// 20, returns the maximum value</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> randNum = <span class="built_in">Math</span>.random() <span class="comment">// creates random number between 0 to 0.999999</span></span><br><span class="line"><span class="built_in">console</span>.log(randNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Let us  create random number between 0 to 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random () * <span class="number">11</span>) <span class="comment">// creates random number between 0 and 10</span></span><br><span class="line"><span class="built_in">console</span>.log(num)</span><br><span class="line"></span><br><span class="line"><span class="comment">//Absolute value</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.abs(<span class="number">-10</span>))      <span class="comment">//10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Square root</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">100</span>))     <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">2</span>))      <span class="comment">//1.4142135623730951</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Power</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.pow(<span class="number">3</span>, <span class="number">2</span>)) <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 2.718</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Logarithm</span></span><br><span class="line"><span class="comment">//Returns the natural logarithm of base E of x, Math.log(x)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">2</span>))    <span class="comment">// 0.6931471805599453</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">10</span>))   <span class="comment">// 2.302585092994046</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigonometry</span></span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul><a id="more"></a>
-
-
+    <url>/htwm_open_sesame/2020/04/07/yuque/30DaysOfJavaScript%20%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p><a name="QkceJ"></a></p><h2 id="Data-types-数据类型"><a href="#Data-types-数据类型" class="headerlink" title="Data types 数据类型"></a>Data types 数据类型</h2><p><a name="hmyf7"></a></p><h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p><a name="mDzTr"></a></p><h4 id="Math-Object-内置数学代码"><a href="#Math-Object-内置数学代码" class="headerlink" title="Math Object  (内置数学代码)"></a>Math Object  (内置数学代码)</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(PI)                           <span class="comment">// 3.141592653589793</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Rounding to the closest number</span></span><br><span class="line"><span class="comment">// if above .5 up if less 0.5 down rounding</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(PI))               <span class="comment">// 3 to round values to the nearest number</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.round(<span class="number">9.81</span>))             <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.floor(PI))               <span class="comment">// 3 rounding down</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.ceil(PI))                <span class="comment">// 4 rounding up</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.min(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// -5, returns the minimum value</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.max(<span class="number">-5</span>, <span class="number">3</span>, <span class="number">20</span>, <span class="number">4</span>,<span class="number">5</span>, <span class="number">10</span>)) <span class="comment">// 20, returns the maximum value</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> randNum = <span class="built_in">Math</span>.random() <span class="comment">// creates random number between 0 to 0.999999</span></span><br><span class="line"><span class="built_in">console</span>.log(randNum)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Let us  create random number between 0 to 10</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> num = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random () * <span class="number">11</span>) <span class="comment">// creates random number between 0 and 10</span></span><br><span class="line"><span class="built_in">console</span>.log(num)</span><br><span class="line"></span><br><span class="line"><span class="comment">//Absolute value</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.abs(<span class="number">-10</span>))      <span class="comment">//10</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Square root</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">100</span>))     <span class="comment">// 10</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.sqrt(<span class="number">2</span>))      <span class="comment">//1.4142135623730951</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Power</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.pow(<span class="number">3</span>, <span class="number">2</span>)) <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.E) <span class="comment">// 2.718</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Logarithm</span></span><br><span class="line"><span class="comment">//Returns the natural logarithm of base E of x, Math.log(x)</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">2</span>))    <span class="comment">// 0.6931471805599453</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Math</span>.log(<span class="number">10</span>))   <span class="comment">// 2.302585092994046</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Trigonometry</span></span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.sin(<span class="number">60</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">0</span>)</span><br><span class="line"><span class="built_in">Math</span>.cos(<span class="number">60</span>)</span><br></pre></td></tr></table></figure><a id="more"></a>
 
 
 
@@ -150,6 +137,12 @@
 
 
 ]]></content>
+      <categories>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>30_days_of_javascript</tag>
+      </tags>
   </entry>
   <entry>
     <title>10_datas_of_js</title>
@@ -351,7 +344,12 @@
 
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>P</category>
+        <category>y</category>
+        <category>t</category>
+        <category>h</category>
+        <category>o</category>
+        <category>n</category>
       </categories>
       <tags>
         <tag>无限分类结构数据</tag>
@@ -1108,8 +1106,8 @@
         <category>IT技术</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>yaml</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1186,19 +1184,34 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/htwm_open_sesame/categories/index.html</url>
+    <title>归档</title>
+    <url>/htwm_open_sesame/archives/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>归档</title>
-    <url>/htwm_open_sesame/archives/index.html</url>
+    <title>categories</title>
+    <url>/htwm_open_sesame/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>标签</title>
     <url>/htwm_open_sesame/tags/index.html</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest-nomobile.min.js</url>
+    <content><![CDATA[!function(){
+	var userAgentInfo = navigator.userAgent;
+    var Agents = ["iPad", "iPhone", "Android", 
+          "SymbianOS", "Windows Phone",
+           "iPod", "webOS", "BlackBerry", "IEMobile"];
+    for (var v = 0; v < Agents.length; v++) {
+      if (userAgentInfo.indexOf(Agents[v]) > 0) {
+        return;
+      }
+    }
+	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
   <entry>
     <title></title>
@@ -1236,20 +1249,5 @@
     <title></title>
     <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js</url>
     <content><![CDATA[!function(){function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/htwm_open_sesame/lib/canvas-nest/canvas-nest-nomobile.min.js</url>
-    <content><![CDATA[!function(){
-	var userAgentInfo = navigator.userAgent;
-    var Agents = ["iPad", "iPhone", "Android", 
-          "SymbianOS", "Windows Phone",
-           "iPod", "webOS", "BlackBerry", "IEMobile"];
-    for (var v = 0; v < Agents.length; v++) {
-      if (userAgentInfo.indexOf(Agents[v]) > 0) {
-        return;
-      }
-    }
-	function o(w,v,i){return w.getAttribute(v)||i}function j(i){return document.getElementsByTagName(i)}function l(){var i=j("script"),w=i.length,v=i[w-1];return{l:w,z:o(v,"zIndex",-1),o:o(v,"opacity",0.5),c:o(v,"color","0,0,0"),n:o(v,"count",99)}}function k(){r=u.width=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth,n=u.height=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight}function b(){e.clearRect(0,0,r,n);var w=[f].concat(t);var x,v,A,B,z,y;t.forEach(function(i){i.x+=i.xa,i.y+=i.ya,i.xa*=i.x>r||i.x<0?-1:1,i.ya*=i.y>n||i.y<0?-1:1,e.fillRect(i.x-0.5,i.y-0.5,1,1);for(v=0;v<w.length;v++){x=w[v];if(i!==x&&null!==x.x&&null!==x.y){B=i.x-x.x,z=i.y-x.y,y=B*B+z*z;y<x.max&&(x===f&&y>=x.max/2&&(i.x-=0.03*B,i.y-=0.03*z),A=(x.max-y)/x.max,e.beginPath(),e.lineWidth=A/2,e.strokeStyle="rgba("+s.c+","+(A+0.2)+")",e.moveTo(i.x,i.y),e.lineTo(x.x,x.y),e.stroke())}}w.splice(w.indexOf(i),1)}),m(b)}var u=document.createElement("canvas"),s=l(),c="c_n"+s.l,e=u.getContext("2d"),r,n,m=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(i){window.setTimeout(i,1000/45)},a=Math.random,f={x:null,y:null,max:20000};u.id=c;u.style.cssText="position:fixed;top:0;left:0;z-index:"+s.z+";opacity:"+s.o;j("body")[0].appendChild(u);k(),window.onresize=k;window.onmousemove=function(i){i=i||window.event,f.x=i.clientX,f.y=i.clientY},window.onmouseout=function(){f.x=null,f.y=null};for(var t=[],p=0;s.n>p;p++){var h=a()*r,g=a()*n,q=2*a()-1,d=2*a()-1;t.push({x:h,y:g,xa:q,ya:d,max:6000})}setTimeout(function(){b()},100)}();]]></content>
   </entry>
 </search>
