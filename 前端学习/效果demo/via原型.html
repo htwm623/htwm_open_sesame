@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VGG Image Annotator version 0.0.1</title>
+  <style>
+  div{ position:relative; } canvas{ position:absolute; left:0; top:0; }
+  </style>
+</head>
+
+<body>
+<div>
+  <img id="image" src="./images/swan.jpg" alt="File not found or not supported">
+  <canvas id="regions">Browser not supported</canvas>
+</div>
+<pre id="view">x0,y0,x1,y1</pre>
+
+<script>
+var r = document.getElementById('regions'); // region layer
+var im = document.getElementById('image');  // image layer
+var ctx = r.getContext('2d', {alpha:true}); // draw context
+var x0, y0, x1, y1;                         // shape coordinates
+var v = document.getElementById('view');    // show coordinates
+
+im.addEventListener('load', function() {
+  r.width = im.width; r.height = im.height; // fit layers
+});
+
+r.addEventListener('mousedown', function(e) {
+  x0 = e.offsetX; y0 = e.offsetY;           // top-left corner
+});
+
+r.addEventListener('mouseup', function(e) {
+  x1 = e.offsetX; y1 = e.offsetY;           // bottom-right corner
+  ctx.strokeRect(x0, y0, x1 - x0, y1 - y0); // draw rectangle
+  v.innerHTML += '\n' + x0 + ',' + y0 + ',' + x1 + ',' + y1;
+});
+</script>
+</body>
+</html>
