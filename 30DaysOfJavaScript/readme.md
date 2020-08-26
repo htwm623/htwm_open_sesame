@@ -7,8 +7,8 @@
 | 序号 | 主题                                                         | 完成时间   |
 | ---- | ------------------------------------------------------------ | ---------- |
 | 01   | [Introduction](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/readMe.md) | 2020-08-20 |
-| 02   | [Data Types](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/02_Day_Data_types/02_day_data_types.md) |            |
-| 03   | [Booleans, Operators, Date](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day_Booleans_operators_date/03_booleans_operators_date.md) |            |
+| 02   | [Data Types](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/02_Day_Data_types/02_day_data_types.md) | 2020-08-22 |
+| 03   | [Booleans, Operators, Date](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day_Booleans_operators_date/03_booleans_operators_date.md) | 2020-08-27 |
 | 04   | [Conditionals](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/04_Day_Conditionals/04_day_conditionals.md) |            |
 | 05   | [Arrays](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/05_Day_Arrays/05_day_arrays.md) |            |
 | 06   | [Loops](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/06_Day_Loops/06_day_loops.md) |            |
