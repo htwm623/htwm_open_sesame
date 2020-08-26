@@ -9,10 +9,10 @@
 | 01   | [Introduction](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/readMe.md) | 2020-08-20 |
 | 02   | [Data Types](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/02_Day_Data_types/02_day_data_types.md) | 2020-08-22 |
 | 03   | [Booleans, Operators, Date](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/03_Day_Booleans_operators_date/03_booleans_operators_date.md) | 2020-08-27 |
-| 04   | [Conditionals](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/04_Day_Conditionals/04_day_conditionals.md) |            |
-| 05   | [Arrays](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/05_Day_Arrays/05_day_arrays.md) |            |
-| 06   | [Loops](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/06_Day_Loops/06_day_loops.md) |            |
-| 07   | [Functions](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/07_Day_Functions/07_day_functions.md) |            |
+| 04   | [Conditionals](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/04_Day_Conditionals/04_day_conditionals.md) | 2020-08-27 |
+| 05   | [Arrays](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/05_Day_Arrays/05_day_arrays.md) | 2020-08-27 |
+| 06   | [Loops](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/06_Day_Loops/06_day_loops.md) | 2020-08-27 |
+| 07   | [Functions](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/07_Day_Functions/07_day_functions.md) | 2020-08-27 |
 | 08   | [Objects](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/08_Day_Objects/08_day_objects.md) |            |
 | 09   | [Higher Order Functions](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/09_Day_Higher_order_functions/09_day_higher_order_functions.md) |            |
 | 10   | [Sets and Maps](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/10_Day_Sets_and_Maps/10_day_Sets_and_Maps.md) |            |

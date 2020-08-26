@@ -1,14 +1,5 @@
-const data = {
-  appSetting: {
-    params: [
-      {key: 'name', value: 'xiaoming', type: 'number', 'step': 0.001},
-      {key: 'name', value: 'xiaoming', type: 'string', 'step': 0.001},
-      {key: 'name', value: 'xiaoming', type: 'number', 'step': 0.001},
-      {key: 'name', value: 'xiaoming', type: 'number', 'step': 0.001},
-      {key: 'name', value: 'xiaoming', type: 'string', 'step': 0.001},
-      {key: 'name', value: 'xiaoming', type: 'number', 'step': 0.001},
-    ]
-  }
+const allNums = (...args) => {
+  console.log(args)
 }
 
-console.log(data)
+allNums(1,2,3,4,5)
