@@ -16,11 +16,11 @@
 | 08   | [Objects](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/08_Day_Objects/08_day_objects.md) | 2020-08-27 |
 | 09   | [Higher Order Functions](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/09_Day_Higher_order_functions/09_day_higher_order_functions.md) | 2020-08-29 |
 | 10   | [Sets and Maps](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/10_Day_Sets_and_Maps/10_day_Sets_and_Maps.md) | 2020-08-30 |
-| 11   | [Destructuring and Spreading](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/11_Day_Destructuring_and_spreading/11_day_destructuring_and_spreading.md) |            |
-| 12   | [Regular Expressions](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/12_Day_Regular_expressions/12_day_regular_expressions.md) |            |
-| 13   | [Console Object Methods](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/13_Day_Console_object_methods/13_day_console_object_methods.md) |            |
-| 14   | [Error Handling](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/14_Day_Error_handling/14_day_error_handling.md) |            |
-| 15   | [Classes](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/15_Day_Classes/15_day_classes.md) |            |
+| 11   | [Destructuring and Spreading](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/11_Day_Destructuring_and_spreading/11_day_destructuring_and_spreading.md) | 2020-08-31 |
+| 12   | [Regular Expressions](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/12_Day_Regular_expressions/12_day_regular_expressions.md) | 2020-08-31 |
+| 13   | [Console Object Methods](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/13_Day_Console_object_methods/13_day_console_object_methods.md) | 2020-08-31 |
+| 14   | [Error Handling](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/14_Day_Error_handling/14_day_error_handling.md) | 2020-08-31 |
+| 15   | [Classes](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/15_Day_Classes/15_day_classes.md) | 2020-08-31 |
 | 16   | [JSON](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/16_Day_JSON/16_day_json.md) |            |
 | 17   | [Web Storages](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/17_Day_Web_storages/17_day_web_storages.md) |            |
 | 18   | [Promises](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/18_Day_Promises/18_day_promises.md) |            |
