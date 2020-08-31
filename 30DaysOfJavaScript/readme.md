@@ -21,11 +21,11 @@
 | 13   | [Console Object Methods](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/13_Day_Console_object_methods/13_day_console_object_methods.md) | 2020-08-31 |
 | 14   | [Error Handling](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/14_Day_Error_handling/14_day_error_handling.md) | 2020-08-31 |
 | 15   | [Classes](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/15_Day_Classes/15_day_classes.md) | 2020-08-31 |
-| 16   | [JSON](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/16_Day_JSON/16_day_json.md) |            |
-| 17   | [Web Storages](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/17_Day_Web_storages/17_day_web_storages.md) |            |
-| 18   | [Promises](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/18_Day_Promises/18_day_promises.md) |            |
-| 19   | [Closure](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/19_Day_Closures/19_day_closures.md) |            |
-| 20   | [Writing Clean Code](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/20_Day_Writing_clean_codes/20_day_writing_clean_codes.md) |            |
+| 16   | [JSON](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/16_Day_JSON/16_day_json.md) | 2020-09-01 |
+| 17   | [Web Storages](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/17_Day_Web_storages/17_day_web_storages.md) | 2020-09-01 |
+| 18   | [Promises](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/18_Day_Promises/18_day_promises.md) | 2020-09-01 |
+| 19   | [Closure](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/19_Day_Closures/19_day_closures.md) | 2020-09-01 |
+| 20   | [Writing Clean Code](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/20_Day_Writing_clean_codes/20_day_writing_clean_codes.md) | 2020-09-01 |
 | 21   | [DOM](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/21_Day_DOM/21_day_dom.md) |            |
 | 22   | [Manipulating DOM Object](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/22_Day_Manipulating_DOM_object/22_day_manipulating_DOM_object.md) |            |
 | 23   | [Event Listeners](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/23_Day_Event_listeners/23_day_event_listeners.md) |            |
