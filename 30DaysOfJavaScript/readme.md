@@ -26,7 +26,7 @@
 | 18   | [Promises](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/18_Day_Promises/18_day_promises.md) | 2020-09-01 |
 | 19   | [Closure](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/19_Day_Closures/19_day_closures.md) | 2020-09-01 |
 | 20   | [Writing Clean Code](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/20_Day_Writing_clean_codes/20_day_writing_clean_codes.md) | 2020-09-01 |
-| 21   | [DOM](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/21_Day_DOM/21_day_dom.md) |            |
+| 21   | [DOM](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/21_Day_DOM/21_day_dom.md) | 2020-09-02 |
 | 22   | [Manipulating DOM Object](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/22_Day_Manipulating_DOM_object/22_day_manipulating_DOM_object.md) |            |
 | 23   | [Event Listeners](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/23_Day_Event_listeners/23_day_event_listeners.md) |            |
 | 24   | [Mini Project: Solar System](https://github.com/Asabeneh/30DaysOfJavaScript/blob/master/24_Day_Project_solar_system/24_day_project_solar_system.md) |            |
