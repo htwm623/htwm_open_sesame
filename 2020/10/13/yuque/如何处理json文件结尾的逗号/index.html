@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/htwm_open_sesame/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/htwm_open_sesame/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/htwm_open_sesame/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/htwm_open_sesame/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/htwm_open_sesame/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/htwm_open_sesame/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/htwm_open_sesame/',
+    scheme: 'Pisces',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="python如何处理json文件结尾多余的逗号问题描述, json文件结尾是不允许使用逗号的正确格式如下:1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;&amp;#125;但如果使用json作为配置文件时,人为输入可能如下1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;,&amp;#125;">
+<meta name="keywords" content="python,json">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何处理json文件结尾的逗号">
+<meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;2020&#x2F;10&#x2F;13&#x2F;yuque&#x2F;%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7&#x2F;index.html">
+<meta property="og:site_name" content="HTWM-623">
+<meta property="og:description" content="python如何处理json文件结尾多余的逗号问题描述, json文件结尾是不允许使用逗号的正确格式如下:1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;&amp;#125;但如果使用json作为配置文件时,人为输入可能如下1234&amp;#123;    &quot;key1&quot;: &quot;value1&quot;,    &quot;key2&quot;: &quot;value2&quot;,&amp;#125;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;gw.alipayobjects.com&#x2F;os&#x2F;lib&#x2F;twemoji&#x2F;11.2.0&#x2F;2&#x2F;svg&#x2F;1f602.svg#align=left&amp;display=inline&amp;height=18&amp;margin=%5Bobject%20Object%5D&amp;originHeight=150&amp;originWidth=150&amp;status=done&amp;style=none&amp;width=18">
+<meta property="og:updated_time" content="2020-12-08T16:17:08.251Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;gw.alipayobjects.com&#x2F;os&#x2F;lib&#x2F;twemoji&#x2F;11.2.0&#x2F;2&#x2F;svg&#x2F;1f602.svg#align=left&amp;display=inline&amp;height=18&amp;margin=%5Bobject%20Object%5D&amp;originHeight=150&amp;originWidth=150&amp;status=done&amp;style=none&amp;width=18">
+  <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/2020/10/13/yuque/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>如何处理json文件结尾的逗号 | HTWM-623</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/htwm_open_sesame/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HTWM-623</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">人之患在好为人师</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+        
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/htwm_open_sesame/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/htwm_open_sesame/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/htwm_open_sesame/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/htwm_open_sesame/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/htwm_open_sesame/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      
+    
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">
+          <i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2020/10/13/yuque/%E5%A6%82%E4%BD%95%E5%A4%84%E7%90%86json%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE%E7%9A%84%E9%80%97%E5%8F%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta name="referrer" content="no-referrer"/>
+      <meta itemprop="name" content="HTWM-623">
+      <meta itemprop="description" content="为什么别人的世界都是五颜六色,而我的世界却只有一种颜色,那就是乐色">
+      <meta itemprop="image" content="/htwm_open_sesame/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119010115.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HTWM-623">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            如何处理json文件结尾的逗号
+            
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-13 00:44:03" itemprop="dateCreated datePublished" datetime="2020-10-13T00:44:03+08:00">2020-10-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-09 00:17:08" itemprop="dateModified" datetime="2020-12-09T00:17:08+08:00">2020-12-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">后端开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><a name="f6d01664"></a></p><h1 id="python如何处理json文件结尾多余的逗号"><a href="#python如何处理json文件结尾多余的逗号" class="headerlink" title="python如何处理json文件结尾多余的逗号"></a>python如何处理json文件结尾多余的逗号</h1><p><br>问题描述, json文件结尾是不允许使用逗号的<br><br>正确格式如下:<br></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span>,</span><br><span class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><br>但如果使用json作为配置文件时,人为输入可能如下<br></p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"key1"</span>: <span class="string">"value1"</span>,</span><br><span class="line">    <span class="attr">"key2"</span>: <span class="string">"value2"</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a>
+
+
+
+
+
+
+<p><br>在使用上述格式的文件时, json.loads文件会报错<br>参考来源 <a href="https://stackoverflow.com/questions/23705304/can-json-loads-ignore-trailing-commas" target="_blank" rel="noopener">https://stackoverflow.com/questions/23705304/can-json-loads-ignore-trailing-commas</a><br></p>
+<p><a name="2eed9a76"></a></p>
+<h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p><br>使用 jsoncomment 包进行解析<br></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> jsoncomment <span class="keyword">import</span> JsonComment</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(filename) <span class="keyword">as</span> data_file:    </span><br><span class="line">    parser = JsonComment(json)</span><br><span class="line">    data = parser.load(data_file)</span><br></pre></td></tr></table></figure>
+
+<p><br>缺陷 会从字符串中删除逗号 例如<br></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">from</span> jsoncomment <span class="keyword">import</span> JsonComment</span><br><span class="line">string = <span class="string">'&#123;"key1": "&#123;my special value,&#125;"&#125;'</span></span><br><span class="line">parser = JsonComment()</span><br><span class="line">json_boj = parser.loads(string)</span><br><span class="line">print(json_boj)</span><br><span class="line"><span class="comment"># &#123;'key1': '&#123;my special value&#125;'&#125;</span></span><br><span class="line"><span class="comment"># 原本值中的字符串逗号也被删除了</span></span><br></pre></td></tr></table></figure>
+
+<p><br>局限: 原本值中的字符串逗号也被删除了<br></p>
+<p><a name="f3deb6e7"></a></p>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p><br>先通过python 将字符串进行eval,同时 替换null, true false例如<br></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ast, json</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">clean_json</span><span class="params">(str)</span>:</span></span><br><span class="line">  str = str.replace(<span class="string">'null'</span>, <span class="string">'None'</span>).replace(<span class="string">'true'</span>, <span class="string">'True'</span>).replace(<span class="string">'false'</span>, <span class="string">'False'</span>)</span><br><span class="line">  <span class="keyword">return</span> json.dumps(ast.literal_eval(str))</span><br></pre></td></tr></table></figure>
+
+<p><br>局限:<br></p>
+<ol>
+<li>会破坏原本字符串中包含 null, true, false</li>
+<li>即算使用 ast.literal_eval 也需要考虑一些安全性的问题</li>
+</ol>
+<p><a name="54bbba80"></a></p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><ul>
+<li>json最好写对 <img src="https://gw.alipayobjects.com/os/lib/twemoji/11.2.0/2/svg/1f602.svg#align=left&display=inline&height=18&margin=%5Bobject%20Object%5D&originHeight=150&originWidth=150&status=done&style=none&width=18" alt>, 如果作为需要手动添加内容的配置文件,最好还是改格式把</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/htwm_open_sesame/tags/python/" rel="tag"># python</a>
+            
+              <a href="/htwm_open_sesame/tags/json/" rel="tag"># json</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/htwm_open_sesame/2020/10/13/yuque/yaml%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F%E5%8F%8Apython%E8%A7%A3%E6%9E%90/" rel="next" title="yaml文件格式及python解析">
+                  <i class="fa fa-chevron-left"></i> yaml文件格式及python解析
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/htwm_open_sesame/2020/10/13/yuque/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8samba%E8%AE%BE%E7%BD%AE/" rel="prev" title="云服务器samba设置">
+                  云服务器samba设置 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python如何处理json文件结尾多余的逗号"><span class="nav-number">1.</span> <span class="nav-text">python如何处理json文件结尾多余的逗号</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#方法一"><span class="nav-number">1.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法二"><span class="nav-number">1.2.</span> <span class="nav-text">方法二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">1.3.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/htwm_open_sesame/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119010115.jpg"
+      alt="HTWM-623">
+  <p class="site-author-name" itemprop="name">HTWM-623</p>
+  <div class="site-description" itemprop="description">为什么别人的世界都是五颜六色,而我的世界却只有一种颜色,那就是乐色</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/htwm_open_sesame/archives/">
+        
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/htwm_open_sesame/categories/">
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/htwm_open_sesame/tags/">
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HTWM-623</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+    
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/htwm_open_sesame/lib/anime.min.js?v=3.1.0"></script>
+<script src="/htwm_open_sesame/js/utils.js?v=7.4.1"></script>
+<script src="/htwm_open_sesame/js/schemes/pisces.js?v=7.4.1"></script>
+<script src="/htwm_open_sesame/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/htwm_open_sesame/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

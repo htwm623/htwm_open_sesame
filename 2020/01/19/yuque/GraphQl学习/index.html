@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/htwm_open_sesame/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/htwm_open_sesame/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/htwm_open_sesame/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/htwm_open_sesame/images/logo.svg?v=7.4.1" color="#222">
+
+<link rel="stylesheet" href="/htwm_open_sesame/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/htwm_open_sesame/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/htwm_open_sesame/',
+    scheme: 'Pisces',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="Graph介绍 特点 请求需要的数据 不多不少 获取多个资源，只用一个请求 描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段   node监听运行修改文件命令 nodemon执行命令 GraphHelloWolrd```javascriptconst express = require(‘express’)const {buildSchema} = require(‘grap">
+<meta name="keywords" content="GraphQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GraphQl学习">
+<meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;2020&#x2F;01&#x2F;19&#x2F;yuque&#x2F;GraphQl%E5%AD%A6%E4%B9%A0&#x2F;index.html">
+<meta property="og:site_name" content="HTWM-623">
+<meta property="og:description" content="Graph介绍 特点 请求需要的数据 不多不少 获取多个资源，只用一个请求 描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段   node监听运行修改文件命令 nodemon执行命令 GraphHelloWolrd```javascriptconst express = require(‘express’)const {buildSchema} = require(‘grap">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-12-08T16:17:08.368Z">
+<meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/2020/01/19/yuque/GraphQl%E5%AD%A6%E4%B9%A0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>GraphQl学习 | HTWM-623</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/htwm_open_sesame/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">HTWM-623</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">人之患在好为人师</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+        
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/htwm_open_sesame/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/htwm_open_sesame/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/htwm_open_sesame/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/htwm_open_sesame/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+      
+    
+      
+      
+        
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/htwm_open_sesame/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      
+    
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger">
+          <i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://htwm623.github.io/htwm_open_sesame/htwm_open_sesame/2020/01/19/yuque/GraphQl%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta name="referrer" content="no-referrer"/>
+      <meta itemprop="name" content="HTWM-623">
+      <meta itemprop="description" content="为什么别人的世界都是五颜六色,而我的世界却只有一种颜色,那就是乐色">
+      <meta itemprop="image" content="/htwm_open_sesame/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119010115.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="HTWM-623">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            GraphQl学习
+            
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-19 13:21:35" itemprop="dateCreated datePublished" datetime="2020-01-19T13:21:35+08:00">2020-01-19</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-09 00:17:08" itemprop="dateModified" datetime="2020-12-09T00:17:08+08:00">2020-12-09</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">前端开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><a name="cd02615d"></a></p><h2 id="Graph介绍"><a href="#Graph介绍" class="headerlink" title="Graph介绍"></a>Graph介绍</h2><ul>
+<li>特点<ul>
+<li>请求需要的数据 不多不少</li>
+<li>获取多个资源，只用一个请求</li>
+<li>描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段</li>
+</ul>
+</li>
+<li>node监听运行修改文件命令 nodemon执行命令</li>
+<li>GraphHelloWolrd```javascript<br>const express = require(‘express’)<br>const {buildSchema} = require(‘graphql’)<br>const graphqlHTTP = require(‘express-graphql’)</li>
+</ul><a id="more"></a>
+
+<p>const schema = buildSchema(<code>type Account{
+    name: String
+    age: Int
+    sex: String
+    department: String
+  }
+  type Query {
+    hello: String
+    accountName: String
+    age: Int
+    account: Account
+  }</code>)</p>
+<p>const root = {<br>  hello: () =&gt; {<br>    return ‘hello world’<br>  },<br>  accountName: () =&gt; {<br>    return ‘xiaoming’<br>  },<br>  age: () =&gt; {<br>    return 18<br>  },<br>  account: () =&gt; {<br>    return {<br>      name: ‘nizi’,<br>      age: ‘18’,<br>      sex: ‘femail’,<br>      department: ‘school’<br>    }<br>  }<br>}</p>
+<p>const app = express()</p>
+<p>app.use(‘/graphql’, graphqlHTTP({<br>  schema: schema,<br>  rootValue: root,<br>  graphiql: true<br>}))</p>
+<p>app.listen(3000)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;a name=&quot;9WsJ8&quot;&gt;&lt;/a&gt;</span><br><span class="line">## 基本数据类型</span><br><span class="line"></span><br><span class="line">- 基本类型 String,Int,Float,Boolean和ID</span><br><span class="line">&lt;a name=&quot;DCuaR&quot;&gt;&lt;/a&gt;</span><br><span class="line">## 参数传递 </span><br><span class="line">query&lt;br /&gt;</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">query&#123;</span><br><span class="line">	getClassMates(classNo: 31)</span><br><span class="line">  account(username:&quot;xiaoming&quot;) &#123;</span><br><span class="line">    name</span><br><span class="line">    age</span><br><span class="line">    sex</span><br><span class="line">    department</span><br><span class="line">    salary(city:&quot;canton&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>示例2 js<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> &#123;buildSchema&#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"><span class="keyword">const</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">    type Account &#123;</span></span><br><span class="line"><span class="string">        name: String</span></span><br><span class="line"><span class="string">        age: Int</span></span><br><span class="line"><span class="string">        sex: String</span></span><br><span class="line"><span class="string">        department: String</span></span><br><span class="line"><span class="string">        salary(city: String): Int     </span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    type Query &#123;</span></span><br><span class="line"><span class="string">        getClassMates(classNo: Int!): [String]</span></span><br><span class="line"><span class="string">        account(username: String): Account</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = &#123;</span><br><span class="line">    getClassMates: <span class="function">(<span class="params">&#123;classNo&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> obj = &#123;</span><br><span class="line">            <span class="number">31</span>: [<span class="string">'张三'</span>],</span><br><span class="line">            <span class="number">61</span>: [<span class="string">'李四'</span>]</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> obj[classNo]</span><br><span class="line">    &#125;,</span><br><span class="line">    account: <span class="function">(<span class="params">&#123;username&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> name = username;</span><br><span class="line">        <span class="keyword">const</span> sex = <span class="string">'man'</span>;</span><br><span class="line">        <span class="keyword">const</span> age = <span class="number">18</span>;</span><br><span class="line">        <span class="keyword">const</span> department = <span class="string">"development"</span>;</span><br><span class="line">        <span class="keyword">const</span> salary = <span class="function">(<span class="params">&#123;city&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (city === <span class="string">'canton'</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">10000</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">3000</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            name,</span><br><span class="line">            sex,</span><br><span class="line">            age,</span><br><span class="line">            department,</span><br><span class="line">            salary</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">    schema: schema,</span><br><span class="line">    rootValue: root,</span><br><span class="line">    graphiql: <span class="literal">true</span></span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<p><a name="sdBuX"></a></p>
+<h2 id="GrqphQl-客户端访问"><a href="#GrqphQl-客户端访问" class="headerlink" title="GrqphQl 客户端访问"></a>GrqphQl 客户端访问</h2><p>示例3 获取示例2中的数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"getData()"</span>&gt;</span>获取数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">  <span class="function"><span class="keyword">function</span> <span class="title">getData</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> query = `</span></span><br><span class="line"><span class="javascript">    query Account($username: <span class="built_in">String</span>,<span class="attr">$city</span>: <span class="built_in">String</span>) &#123;</span></span><br><span class="line">      account(username: $username) &#123;</span><br><span class="line">        name</span><br><span class="line">        age</span><br><span class="line">        sex</span><br><span class="line">        salary(city: $city)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    `;</span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> variables = &#123;username: <span class="string">'xiaoming'</span>, city: <span class="string">"canton"</span>&#125;;</span></span><br><span class="line"><span class="actionscript">    fetch(<span class="string">'/graphql'</span>, &#123;</span></span><br><span class="line"><span class="actionscript">      method: <span class="string">"POST"</span>,</span></span><br><span class="line">      headers: &#123;</span><br><span class="line"><span class="actionscript">        <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>,</span></span><br><span class="line"><span class="actionscript">        <span class="string">"Accept"</span>: <span class="string">"application/json"</span></span></span><br><span class="line">      &#125;,</span><br><span class="line"><span class="javascript">      body: <span class="built_in">JSON</span>.stringify(&#123;</span></span><br><span class="line">        query: query,</span><br><span class="line">        variables: variables</span><br><span class="line">      &#125;)</span><br><span class="line"><span class="javascript">    &#125;).then(<span class="function"><span class="params">res</span> =&gt;</span> res.json)</span></span><br><span class="line"><span class="javascript">    .then(<span class="function"><span class="params">json</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(json)</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<p><a name="LdNqC"></a></p>
+<h2 id="使用Mutations-修改数据"><a href="#使用Mutations-修改数据" class="headerlink" title="使用Mutations 修改数据"></a>使用Mutations 修改数据</h2><p>示例 创建数据查询体<br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">  createAccount(input: &#123;</span><br><span class="line">    name: <span class="string">"xiaoming"</span>,</span><br><span class="line">    age:<span class="number">20</span></span><br><span class="line">    sex: <span class="string">"female"</span></span><br><span class="line">    department: <span class="string">"test"</span></span><br><span class="line">  &#125;) &#123;</span><br><span class="line">    name</span><br><span class="line">    age</span><br><span class="line">    sex</span><br><span class="line">    department</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br>示例 更新数据查询体<br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mutation &#123;</span><br><span class="line">  updateAccount(id: <span class="string">"xiaoming"</span>, <span class="attr">input</span>:&#123;</span><br><span class="line">    age:<span class="number">100</span></span><br><span class="line">  &#125;) &#123;</span><br><span class="line">    age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br>示例 查询数据 查询体<br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">query &#123;</span><br><span class="line">  account&#123;</span><br><span class="line">    name</span><br><span class="line">    sex</span><br><span class="line">    age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><br>示例 mutation.js文件<br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> &#123;buildSchema&#125; = <span class="built_in">require</span>(<span class="string">'graphql'</span>);</span><br><span class="line"><span class="keyword">const</span> graphqlHTTP = <span class="built_in">require</span>(<span class="string">'express-graphql'</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> schema = buildSchema(<span class="string">`</span></span><br><span class="line"><span class="string">  input AccountInput &#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Account &#123;</span></span><br><span class="line"><span class="string">    name: String</span></span><br><span class="line"><span class="string">    age: Int</span></span><br><span class="line"><span class="string">    sex: String</span></span><br><span class="line"><span class="string">    department: String</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Mutation &#123;</span></span><br><span class="line"><span class="string">    createAccount(input: AccountInput): Account</span></span><br><span class="line"><span class="string">    updateAccount(id: ID!, input: AccountInput): Account   </span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">  type Query &#123;</span></span><br><span class="line"><span class="string">    account: [Account] </span></span><br><span class="line"><span class="string">   &#125;</span></span><br><span class="line"><span class="string">`</span>);</span><br><span class="line"><span class="keyword">const</span> fakeDb = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> root = &#123;</span><br><span class="line">  account() &#123;</span><br><span class="line">    <span class="keyword">let</span> arr = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> fakeDb) &#123;</span><br><span class="line">      arr.push(fakeDb[key])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">  &#125;,</span><br><span class="line">  createAccount(&#123;input&#125;) &#123;</span><br><span class="line">    fakeDb[input.name] = input;</span><br><span class="line">    <span class="keyword">return</span> fakeDb[input.name]</span><br><span class="line">  &#125;,</span><br><span class="line">  updateAccount(&#123;id, input&#125;) &#123;</span><br><span class="line">    <span class="keyword">const</span> updatedAccount = <span class="built_in">Object</span>.assign(&#123;&#125;, fakeDb[id], input)</span><br><span class="line">    <span class="built_in">console</span>.log(id, updatedAccount)</span><br><span class="line">    fakeDb[id] = updatedAccount;</span><br><span class="line">    <span class="built_in">console</span>.log(fakeDb)</span><br><span class="line">    <span class="keyword">return</span> updatedAccount</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">app.use(<span class="string">'/graphql'</span>, graphqlHTTP(&#123;</span><br><span class="line">  schema: schema,</span><br><span class="line">  rootValue: root,</span><br><span class="line">  graphiql: <span class="literal">true</span></span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">app.use(express.static(<span class="string">'.'</span>))</span><br><span class="line">app.listen(<span class="number">3000</span>);</span><br></pre></td></tr></table></figure>
+
+<br>
+
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/htwm_open_sesame/tags/GraphQL/" rel="tag"># GraphQL</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/htwm_open_sesame/2020/01/03/%E7%BD%91%E8%AF%BE%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF%E9%9B%B6%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="next" title="前端零碎知识点">
+                  <i class="fa fa-chevron-left"></i> 前端零碎知识点
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/htwm_open_sesame/2020/02/02/yuque/%E4%BD%BF%E7%94%A8Jupyter%20Notebook%20%E5%AE%89%E8%A3%85%E5%85%B6%E4%BB%96%E5%86%85%E6%A0%B8/" rel="prev" title="使用Jupyter Notebook 安装其他内核">
+                  使用Jupyter Notebook 安装其他内核 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Graph介绍"><span class="nav-number">1.</span> <span class="nav-text">Graph介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GrqphQl-客户端访问"><span class="nav-number">2.</span> <span class="nav-text">GrqphQl 客户端访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Mutations-修改数据"><span class="nav-number">3.</span> <span class="nav-text">使用Mutations 修改数据</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/htwm_open_sesame/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191119010115.jpg"
+      alt="HTWM-623">
+  <p class="site-author-name" itemprop="name">HTWM-623</p>
+  <div class="site-description" itemprop="description">为什么别人的世界都是五颜六色,而我的世界却只有一种颜色,那就是乐色</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/htwm_open_sesame/archives/">
+        
+          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/htwm_open_sesame/categories/">
+          
+        
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/htwm_open_sesame/tags/">
+          
+        
+        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HTWM-623</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">
+      
+    主题 – <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.1
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+    
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/htwm_open_sesame/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/htwm_open_sesame/lib/anime.min.js?v=3.1.0"></script>
+<script src="/htwm_open_sesame/js/utils.js?v=7.4.1"></script>
+<script src="/htwm_open_sesame/js/schemes/pisces.js?v=7.4.1"></script>
+<script src="/htwm_open_sesame/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="/htwm_open_sesame/js/local-search.js?v=7.4.1"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>

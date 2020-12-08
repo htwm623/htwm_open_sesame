@@ -55,15 +55,15 @@
   };
 </script>
 
-  <meta name="description" content="tags: [无限分类结构数据]categories: [Python] 原文链接 12345678910source=[    &amp;#123;&quot;name&quot;:&quot;my document&quot;,&quot;id&quot;:1 , &quot;parentid&quot;: 0 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;photos&quot;,&quot;id&quot;:2 , &quot;parentid&quot;: 1 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;Frie">
-<meta name="keywords" content="keywords">
+  <meta name="description" content="原文链接 12345678910source=[    &amp;#123;&quot;name&quot;:&quot;my document&quot;,&quot;id&quot;:1 , &quot;parentid&quot;: 0 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;photos&quot;,&quot;id&quot;:2 , &quot;parentid&quot;: 1 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;Friend&quot;,&quot;id&quot;:3 , &quot;parentid&quot;: 2 &amp;#125;,">
+<meta name="keywords" content="python,json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python将无限分类结构数据转为json">
 <meta property="og:url" content="https:&#x2F;&#x2F;htwm623.github.io&#x2F;htwm_open_sesame&#x2F;2020&#x2F;03&#x2F;08&#x2F;yuque&#x2F;Python%E5%B0%86%E6%97%A0%E9%99%90%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E4%B8%BAjson&#x2F;index.html">
 <meta property="og:site_name" content="HTWM-623">
-<meta property="og:description" content="tags: [无限分类结构数据]categories: [Python] 原文链接 12345678910source=[    &amp;#123;&quot;name&quot;:&quot;my document&quot;,&quot;id&quot;:1 , &quot;parentid&quot;: 0 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;photos&quot;,&quot;id&quot;:2 , &quot;parentid&quot;: 1 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;Frie">
+<meta property="og:description" content="原文链接 12345678910source=[    &amp;#123;&quot;name&quot;:&quot;my document&quot;,&quot;id&quot;:1 , &quot;parentid&quot;: 0 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;photos&quot;,&quot;id&quot;:2 , &quot;parentid&quot;: 1 &amp;#125;,    &amp;#123;&quot;name&quot;:&quot;Friend&quot;,&quot;id&quot;:3 , &quot;parentid&quot;: 2 &amp;#125;,">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-09-26T13:30:32.103Z">
+<meta property="og:updated_time" content="2020-12-08T16:17:08.344Z">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://htwm623.github.io/htwm_open_sesame/2020/03/08/yuque/Python%E5%B0%86%E6%97%A0%E9%99%90%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E4%B8%BAjson/">
 
@@ -307,9 +307,26 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-26 21:30:32" itemprop="dateModified" datetime="2020-09-26T21:30:32+08:00">2020-09-26</time>
+                <time title="修改时间：2020-12-09 00:17:08" itemprop="dateModified" datetime="2020-12-09T00:17:08+08:00">2020-12-09</time>
               </span>
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/htwm_open_sesame/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">后端开发</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -323,12 +340,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <hr><p>tags: [无限分类结构数据]<br>categories: [Python]</p><hr><br><ul>
+        <br><ul>
 <li><a href="https://segmentfault.com/q/1010000008541784" target="_blank" rel="noopener">原文链接</a></li>
 </ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">source=[</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"my document"</span>,<span class="string">"id"</span>:<span class="number">1</span> , <span class="string">"parentid"</span>: <span class="number">0</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"photos"</span>,<span class="string">"id"</span>:<span class="number">2</span> , <span class="string">"parentid"</span>: <span class="number">1</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Friend"</span>,<span class="string">"id"</span>:<span class="number">3</span> , <span class="string">"parentid"</span>: <span class="number">2</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Wife"</span>,<span class="string">"id"</span>:<span class="number">4</span> , <span class="string">"parentid"</span>: <span class="number">2</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Company"</span>,<span class="string">"id"</span>:<span class="number">5</span> , <span class="string">"parentid"</span>: <span class="number">2</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"Program Files"</span>,<span class="string">"id"</span>:<span class="number">6</span> , <span class="string">"parentid"</span>: <span class="number">1</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"intel"</span>,<span class="string">"id"</span>:<span class="number">7</span> , <span class="string">"parentid"</span>: <span class="number">6</span> &#125;,</span><br><span class="line">    &#123;<span class="string">"name"</span>:<span class="string">"java"</span>,<span class="string">"id"</span>:<span class="number">8</span> , <span class="string">"parentid"</span>: <span class="number">6</span> &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure><a id="more"></a>
-
-
-
 
 
 
@@ -355,6 +369,17 @@
       
 
       <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/htwm_open_sesame/tags/python/" rel="tag"># python</a>
+            
+              <a href="/htwm_open_sesame/tags/json/" rel="tag"># json</a>
+            
+          </div>
+        
 
         
 
@@ -371,7 +396,7 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/htwm_open_sesame/2020/03/11/yuque/pandas%E8%AF%BB%E5%86%99csv%E5%8F%8A%E8%BF%BD%E5%8A%A0/" rel="prev" title="pandas读写csv及追加">
+                <a href="/htwm_open_sesame/2020/03/12/yuque/pandas%E8%AF%BB%E5%86%99csv%E5%8F%8A%E8%BF%BD%E5%8A%A0/" rel="prev" title="pandas读写csv及追加">
                   pandas读写csv及追加 <i class="fa fa-chevron-right"></i>
                 </a>
               
@@ -449,7 +474,7 @@
             <a href="/htwm_open_sesame/categories/">
           
         
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -462,7 +487,7 @@
             <a href="/htwm_open_sesame/tags/">
           
         
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
