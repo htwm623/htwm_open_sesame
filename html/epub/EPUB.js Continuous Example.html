@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)http://futurepress.github.io/epub.js/examples/continuous-scrolled.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EPUB.js Continuous Example</title>
+
+  <script src="./EPUB.js Continuous Example_files/epub.js.下载"></script>
+
+  <link rel="stylesheet" type="text/css" href="./EPUB.js Continuous Example_files/examples.css">
+
+  <style type="text/css">
+
+    .epub-container {
+      min-width: 320px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .epub-container .epub-view > iframe {
+        background: white;
+        box-shadow: 0 0 4px #ccc;
+        /*margin: 10px;
+        padding: 20px;*/
+    }
+
+  </style>
+</head>
+<body style="direction: ltr;">
+  <div id="viewer"></div>
+
+  <script>
+    var currentSectionIndex = 8;
+    // Load the opf
+    var book = ePub("data/(罗辑思维独家定制版) 查理·芒格 - 穷查理宝典-中信出版社 (2017).epub");
+    var rendition = book.renderTo(document.body, {
+        manager: "continuous",
+        flow: "scrolled",
+        width: "60%"
+      });
+    var displayed = rendition.display();
+
+
+    displayed.then(function(renderer){
+      // -- do stuff
+    });
+
+    // Navigation loaded
+    book.loaded.navigation.then(function(toc){
+      // console.log(toc);
+    });
+
+
+  </script>
+
+
+
+<div id="epubjs-container-9c913c3b-c5a8-49f0-a281-6822e94e83cf" class="epub-container" dir="ltr" style="word-spacing: 0px; line-height: 0; vertical-align: top; position: relative; width: 60%; overflow: visible; direction: ltr;"><div class="epub-view" ref="6" style="height: 4862px; width: 571.188px; overflow: hidden; position: relative; display: block; flex: initial; visibility: visible;"><iframe id="epubjs-view-8af88ae7-0913-4958-b176-091ffee84d16" scrolling="no" enable-annotation="true" style="overflow: hidden; border: none; visibility: visible; width: 571.188px; height: 4862px;" src="./EPUB.js Continuous Example_files/saved_resource.html"></iframe></div><div class="epub-view" ref="7" style="height: 3196px; width: 571.188px; overflow: hidden; position: relative; display: block; flex: initial; visibility: visible;"><iframe id="epubjs-view-58de45d0-3f95-4d7e-8f2b-92f917d1f6ba" scrolling="no" enable-annotation="true" style="overflow: hidden; border: none; visibility: visible; width: 571.188px; height: 3196px;" src="./EPUB.js Continuous Example_files/saved_resource(1).html"></iframe></div></div></body></html>

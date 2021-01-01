@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script src="jszip.min.js"></script>
+  <div id="area"></div>
+  
+  <script>
+    ready
+    var book = ePub("data/(罗辑思维独家定制版) 查理·芒格 - 穷查理宝典-中信出版社 (2017).epub");
+    var rendition = book.renderTo("area", {width: 600, height: 400});
+    var displayed = rendition.display();
+  </script>
+</body>
+</html>
