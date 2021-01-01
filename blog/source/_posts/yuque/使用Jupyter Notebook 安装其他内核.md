@@ -7,12 +7,15 @@ urlname: bvq0kc
 
 date: 2020-02-02 22:07:06 +0800
 
-tags: []
+tags: [jupyter]
+
+categories: [其他]
 
 ---
-<a name="l0Uar"></a>
+
+<a name="GiCcn"></a>
 ## javascript 内核安装
-参考[ijavascript](https://github.com/n-riesco/ijavascript)
+参考[ijavascript](https://github.com/n-riesco/ijavascript)<br />
 
 1. windows 
 ```bash
@@ -25,6 +28,7 @@ ijsinstall
 2. 正常运行 jupyter notebook 选择node 的内核即可
 
 
-
+<br />
+<br />
 
 

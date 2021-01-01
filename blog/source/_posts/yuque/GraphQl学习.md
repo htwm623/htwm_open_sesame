@@ -5,24 +5,24 @@ title: GraphQl学习
 
 urlname: bd7oz4
 
-date: 2020-01-05 19:44:21 +0800
+date: 2020-01-19 13:21:35 +0800
 
 tags: [GraphQL]
 
-categories: IT技术
+categories: [前端开发]
 
 ---
 
 <a name="cd02615d"></a>
 ## Graph介绍
 
+
 - 特点
-  - 请求需要的数据 不多不少
-  - 获取多个资源，只用一个请求
-  - 描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段
+   - 请求需要的数据 不多不少
+   - 获取多个资源，只用一个请求
+   - 描述所有可能类型的系统,便于维护,根据需求平滑眼镜演进,添加或隐藏字段
 - node监听运行修改文件命令 nodemon执行命令
-- GraphHelloWolrd
-```javascript
+- GraphHelloWolrd```javascript
 const express = require('express')
 const {buildSchema} = require('graphql')
 const graphqlHTTP = require('express-graphql')
@@ -75,13 +75,15 @@ app.listen(3000)
 ```
 
 
+
+
 <a name="9WsJ8"></a>
 ## 基本数据类型
 
 - 基本类型 String,Int,Float,Boolean和ID
 <a name="DCuaR"></a>
 ## 参数传递 
-query
+query<br />
 
 ```javascript
 query{
@@ -95,6 +97,7 @@ query{
   }
 }
 ```
+
 
 - 示例2 js
 ```javascript
@@ -156,6 +159,7 @@ app.use('/graphql', graphqlHTTP({
 app.listen(3000);
 ```
 
+<br />
 
 <a name="sdBuX"></a>
 ## GrqphQl 客户端访问
@@ -202,10 +206,11 @@ app.listen(3000);
 </html>
 ```
 
+<br />
 
 <a name="LdNqC"></a>
 ## 使用Mutations 修改数据
-示例 创建数据查询体
+示例 创建数据查询体<br />
 
 ```javascript
 mutation {
@@ -223,7 +228,7 @@ mutation {
 }
 ```
 
-示例 更新数据查询体
+<br />示例 更新数据查询体<br />
 
 ```javascript
 mutation {
@@ -235,7 +240,7 @@ mutation {
 }
 ```
 
-示例 查询数据 查询体
+<br />示例 查询数据 查询体<br />
 
 ```javascript
 query {
@@ -247,7 +252,7 @@ query {
 }
 ```
 
-示例 mutation.js文件
+<br />示例 mutation.js文件<br />
 
 ```javascript
 const express = require('express');
@@ -313,5 +318,6 @@ app.use(express.static('.'))
 app.listen(3000);
 ```
 
+<br />
 
 

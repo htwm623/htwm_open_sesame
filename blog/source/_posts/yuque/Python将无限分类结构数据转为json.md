@@ -7,15 +7,18 @@ urlname: avt8nt
 
 date: 2020-03-08 01:07:48 +0800
 
-tags: [无限分类结构数据]
+tags: [python,json]
 
-categories: Python
+categories: [后端开发]
 
 ---
 
 
+<br />
 
 - [原文链接](https://segmentfault.com/q/1010000008541784)
+
+
 
 ```python
 source=[
@@ -30,6 +33,7 @@ source=[
 ]
 ```
 
+
 1. 递归
 ```python
 def getChildren(id=0):
@@ -41,6 +45,8 @@ def getChildren(id=0):
 ```
 
 2. 哈希表
+
+
 
 ```python
 tree_dict = {}
@@ -58,5 +64,6 @@ for i in tree_dict:
     else:
         tree_data.append(tree_dict[i])
 ```
+
 
 
