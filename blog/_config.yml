@@ -84,7 +84,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: hexo-theme-matery
 
 search:
   path: search.xml
@@ -97,4 +97,4 @@ search:
 deploy:
   type: git
   repository: 
-     github: git@github.com:htwm623/htwm_open_sesame.git,gh-pages
+    github: git@github.com:htwm623/htwm_open_sesame.git,gh-pages
